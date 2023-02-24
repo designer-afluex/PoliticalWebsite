@@ -1,0 +1,491 @@
+﻿@model PoliticalWebsite.Models.Home
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/WebsiteLayout.cshtml";
+}
+
+<!-- page wrapper -->
+<div class="page-wrapper">
+    <!-- Page Content -->
+    <div class="page-content">
+
+        <!-- START Slider Demo 1 REVOLUTION SLIDER 6.5.24 -->
+        <p class="rs-p-wp-fix"></p>
+        <rs-module-wrap id="rev_slider_1_1_wrapper" data-alias="slider-demo-1" data-source="gallery"
+                        style="visibility:hidden;background:transparent;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
+            <rs-module id="rev_slider_1_1" data-version="6.5.24">
+                <rs-slides>
+                    <rs-slide style="position: absolute;" data-key="rs-1" data-title="Slide" data-thumb="" data-in="o:0;"
+                              data-out="a:false;">
+                        <img src="~/images/banner02.jpg" alt="slider01-5" title="slidebg1" width="1920" height="835"
+                             class="rev-slidebg tp-rs-img" data-parallax="off" data-no-retina="">
+                    </rs-slide>
+
+                    <rs-slide style="position: absolute;" data-key="rs-20" data-title="Slide" data-thumb="" data-in="o:0;"
+                              data-out="a:false;">
+                        <img src="~/images/banner03.jpg" alt="slider01-5" title="slidebg1" width="1920" height="835"
+                             class="rev-slidebg tp-rs-img" data-parallax="off" data-no-retina="">
+                    </rs-slide>
+
+                    <rs-slide style="position: absolute;" data-key="rs-21" data-title="Slide" data-thumb="" data-in="o:0;"
+                              data-out="a:false;">
+                        <img src="~/images/banner04.jpg" alt="slider01-5" title="slidebg1" width="1920" height="835"
+                             class="rev-slidebg tp-rs-img" data-parallax="off" data-no-retina="">
+                    </rs-slide>
+
+                </rs-slides>
+            </rs-module>
+
+        </rs-module-wrap>
+        <!-- END REVOLUTION SLIDER -->
+        <!-- About Start -->
+        <section class="section-lg pbmit-bg-color-light home1-about-us">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-4 col-xl-5 col-md-6">
+                        <div class="home1-about-us-img-left">
+                            <img src="~/images/about.png" class="rounded-circle img-fluid" style="width: 100%;" alt="">
+                        </div>
+                    </div>
+                    <div class="col-xxl-8 col-xl-7 col-md-6">
+                        <div class="pbmit-heading-subheading text-left">
+                            <h2 class="pbmit-title">सुरेंद्र चौरसिया के बारे में</h2>
+                            <div id="google_translate_element"></div>
+                            <div class="pbmit-heading-desc pe-5">
+                                सुरेंद्र चौरसिया वर्तमान में रामपुर कारखाना (देवरिया) जिले के विधायक है | सुरेंद्र चौरसिया जी सभी लोगों
+                                के बीच में लोकप्रिय नेता हैं। अपने कार्यालय में चौरसिया जी ने जनसुनवाई करके राज्य के लोगों की
+                                समस्याओं का निवारण करते हैं। उनकी कार्य प्रणाली और आम आदमी के प्रति संवेदनशीलता ने उन्हें एक
+                                विशेष दर्जा दिया और उन्हें जनता के बीच जनता के नेता के रूप में बहुत लोकप्रिय बना दिया।
+                                चौरसिया जी जनता दर्शन कार्यक्रम में आने वाले सभी लोगों तथा कुछ खास समूहों जैसे दिव्यांगों,
+                                वरिष्ठ नागरिकों व महिलाओं की समस्याओं को विशेष वरीयता दी जाती है |
+                            </div>
+                            <a href="/Home/About" class="pbmit-btn pbmit-btn-hover-secondary">
+                                <span>पार्टी के बारे में</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- <div class="col-xxl-3 col-xl-12 home1-about-us-img-right">
+                       <img src="images/single1.png" class="" alt="">
+                    </div> -->
+                </div>
+            </div>
+        </section>
+        <!-- About End -->
+        <!-- Service Start -->
+        <section class="section-lg">
+            <div class="home1-service-section">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-12 service-tbox-left home1-service-arrow">
+                        <div class=" pbmit-heading-subheading text-left">
+                            <h2 class="pbmit-title  text-white">
+                                हमारी गैलरी
+                            </h2>
+                            <div class="pbmit-heading-desc text-white">
+                                हम अपने बारे में उस परिपत्र के बारे में निम्नलिखित जानकारी प्रदान कर रहे हैं कि वास्तव में हम
+                                क्या हैं।
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-8 col-lg-12">
+                        <div class="swiper-slider" data-autoplay="false" data-dots="false" data-arrows="true"
+                             data-arrows-class="home1-service-arrow" data-columns="3" data-margin="30" data-effect="slide">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <!-- Slide1 -->
+                                    <article class="pbmit-service-style-2">
+                                        <div class="pbminfotech-post-item">
+                                            <div class="pbmit-service-img-wrapper">
+                                                <div class="pbmit-featured-wrapper">
+                                                    <a href="#">
+                                                        <img src="~/images/gallery/gallery-1.jpg" class="img-fluid gallery_img"
+                                                             alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <!-- Slide2 -->
+                                    <article class="pbmit-service-style-2">
+                                        <div class="pbminfotech-post-item">
+                                            <div class="pbmit-service-img-wrapper">
+                                                <div class="pbmit-featured-wrapper">
+                                                    <a href="#">
+                                                        <img src="~/images/gallery/gallery-2.jpg" class="gallery_img img-fluid"
+                                                             alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <!-- Slide3 -->
+                                    <article class="pbmit-service-style-2">
+                                        <div class="pbminfotech-post-item">
+                                            <div class="pbmit-service-img-wrapper">
+                                                <div class="pbmit-featured-wrapper">
+                                                    <a href="#">
+                                                        <img src="~/images/gallery/gallery-3.jpg" class="gallery_img img-fluid"
+                                                             alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <!-- Slide4 -->
+                                    <article class="pbmit-service-style-2">
+                                        <div class="pbminfotech-post-item">
+                                            <div class="pbmit-service-img-wrapper">
+                                                <div class="pbmit-featured-wrapper">
+                                                    <a href="#">
+                                                        <img src="~/images/gallery/gallery-4.jpg" class="gallery_img img-fluid"
+                                                             alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <!-- Slide5 -->
+                                    <article class="pbmit-service-style-2">
+                                        <div class="pbminfotech-post-item">
+                                            <div class="pbmit-service-img-wrapper">
+                                                <div class="pbmit-featured-wrapper">
+                                                    <a href="#">
+                                                        <img src="~/images/gallery/gallery-5.jpg" class="gallery_img img-fluid"
+                                                             alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <!-- Slide6 -->
+                                    <article class="pbmit-service-style-2">
+                                        <div class="pbminfotech-post-item">
+                                            <div class="pbmit-service-img-wrapper">
+                                                <div class="pbmit-featured-wrapper">
+                                                    <a href="#">
+                                                        <img src="~/images/gallery/gallery-6.jpg" class="gallery_img img-fluid"
+                                                             alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="swiper-slide">
+                                    <!-- Slide7 -->
+                                    <article class="pbmit-service-style-2">
+                                        <div class="pbminfotech-post-item">
+                                            <div class="pbmit-service-img-wrapper">
+                                                <div class="pbmit-featured-wrapper">
+                                                    <a href="#">
+                                                        <img src="~/images/gallery/gallery-7.jpg" class="gallery_img img-fluid"
+                                                             alt="">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Service End -->
+        <!-- Future Start -->
+        <section class="section-lgb pbmit-bg-color-light">
+            <div class="container">
+                <div class="pbmit-heading-subheading text-center pt-5">
+                    <h2 class="pbmit-title">हमारे राजनीतिक भविष्य में भाग लें</h2>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6 col-lg-12">
+                        <div class="wpem-event-action-url event-style-color tour">
+                            <div class="wpem-event-banner">
+                                <div class="wpem-event-banner-img"
+                                     style="background-image: url('/images/recent-post/event-1.jpg')">
+                                    <div class="wpem-event-date">
+                                        <div class="wpem-event-date-type">
+                                            <div class="wpem-from-date">
+                                                <div class="wpem-date">29</div>
+                                                <div class="wpem-month">Jul</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wpem-event-infomation">
+                                <div class="wpem-event-date">
+                                    <div class="wpem-event-date-type">
+                                        <div class="wpem-from-date">
+                                            <div class="wpem-date">29</div>
+                                            <div class="wpem-month">Jul</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wpem-event-details">
+                                    <div class="wpem-event-title">
+                                        <h3 class="wpem-heading-text">
+                                            <a href="#">आज शिवरात्रि के अवसर पर बैकुण्ठपुर शिव मंदिर पर आयोजित कुश्ती/दंगल में बतौर मुख्यातिथि सम्मिलित होकर खिलाड़ियों का उत्साह वर्धन किया।</a>
+                                        </h3>
+                                    </div>
+                                    <div class="pbmit-event-meta">
+                                        <div class="wpem-event-location">
+                                            <span class="wpem-event-location-text">Deoria, Uttar Pradesh</span>
+                                        </div>
+                                        <div class="wpem-event-date-time">
+                                            <span class="wpem-event-date-time-text">2021-07-29</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pbmit-event-arrow-link">
+                                <a href="#" class="event-style-color tour"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-12">
+                        <div class="wpem-event-action-url event-style-color tour">
+                            <div class="wpem-event-banner">
+                                <div class="wpem-event-banner-img"
+                                     style="background-image: url('/images/recent-post/event-2.jpg')">
+                                    <div class="wpem-event-date">
+                                        <div class="wpem-event-date-type">
+                                            <div class="wpem-from-date">
+                                                <div class="wpem-date">29</div>
+                                                <div class="wpem-month">Jul</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wpem-event-infomation">
+                                <div class="wpem-event-date">
+                                    <div class="wpem-event-date-type">
+                                        <div class="wpem-from-date">
+                                            <div class="wpem-date">29</div>
+                                            <div class="wpem-month">Jul</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wpem-event-details">
+                                    <div class="wpem-event-title">
+                                        <h3 class="wpem-heading-text">
+                                            <a href="#">आज शिवरात्रि के शुभ अवसर पर रामपुर कारख़ाना नगर में शिव बारात में सम्मिलित होकर आशीर्वाद प्राप्त किया।</a>
+                                        </h3>
+                                    </div>
+                                    <div class="pbmit-event-meta">
+                                        <div class="wpem-event-location">
+                                            <span class="wpem-event-location-text">Deoria, Uttar Pradesh</span>
+                                        </div>
+                                        <div class="wpem-event-date-time">
+                                            <span class="wpem-event-date-time-text"> 2018-01-18</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pbmit-event-arrow-link">
+                                <a href="#" class="event-style-color tour"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-6 col-lg-12">
+                        <div class="wpem-event-action-url event-style-color tour">
+                            <div class="wpem-event-banner">
+                                <div class="wpem-event-banner-img"
+                                     style="background-image: url('/images/recent-post/event-3.jpg')">
+                                    <div class="wpem-event-date">
+                                        <div class="wpem-event-date-type">
+                                            <div class="wpem-from-date">
+                                                <div class="wpem-date">29</div>
+                                                <div class="wpem-month">Jul</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wpem-event-infomation">
+                                <div class="wpem-event-date">
+                                    <div class="wpem-event-date-type">
+                                        <div class="wpem-from-date">
+                                            <div class="wpem-date">29</div>
+                                            <div class="wpem-month">Jul</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wpem-event-details">
+                                    <div class="wpem-event-title">
+                                        <h3 class="wpem-heading-text">
+                                            <a href="#">आज विधानसभा क्षेत्र के विभिन्न मांगलिक कार्यक्रम में सम्मिलित रहा।</a>
+                                        </h3>
+                                    </div>
+                                    <div class="pbmit-event-meta">
+                                        <div class="wpem-event-location">
+                                            <span class="wpem-event-location-text">Deoria, Uttar Pradesh</span>
+                                        </div>
+                                        <div class="wpem-event-date-time">
+                                            <span class="wpem-event-date-time-text">2018-04-22</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pbmit-event-arrow-link">
+                                <a href="#" class="event-style-color tour"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-12">
+                        <div class="wpem-event-action-url event-style-color tour">
+                            <div class="wpem-event-banner">
+                                <div class="wpem-event-banner-img"
+                                     style="background-image: url('/images/recent-post/event-4.jpg')">
+                                    <div class="wpem-event-date">
+                                        <div class="wpem-event-date-type">
+                                            <div class="wpem-from-date">
+                                                <div class="wpem-date">29</div>
+                                                <div class="wpem-month">Jul</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wpem-event-infomation">
+                                <div class="wpem-event-date">
+                                    <div class="wpem-event-date-type">
+                                        <div class="wpem-from-date">
+                                            <div class="wpem-date">29</div>
+                                            <div class="wpem-month">Jul</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wpem-event-details">
+                                    <div class="wpem-event-title">
+                                        <h3 class="wpem-heading-text">
+                                            <a href="#">पूर्व मंत्री स्वर्गीय दुर्गा प्रसाद मिश्र जी के पुण्य तिथि के अवसर पर उनके पैतृक गाँव बगुची पहुँचकर उन्हें श्रद्धा सुमन सुमन अर्पित किया।</a>
+                                        </h3>
+                                    </div>
+                                    <div class="pbmit-event-meta">
+                                        <div class="wpem-event-location">
+                                            <span class="wpem-event-location-text">Deoria, Uttar Pradesh</span>
+                                        </div>
+                                        <div class="wpem-event-date-time">
+                                            <span class="wpem-event-date-time-text"> 2019-01-16</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pbmit-event-arrow-link">
+                                <a href="#" class="event-style-color tour"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center pt-3">
+                    <a href="/Home/Events" class="pbmit-btn pbmit-btn-hover-secondary">
+                        <span>All Events</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Future End -->
+        <!-- Portfolio Start -->
+        <section class="section-lg">
+            <div class="pbmit-heading-subheading text-center">
+                <h2 class="pbmit-title"> नवीनतम समाचार और प्रेस</h2>
+            </div>
+            <div class="container">
+                <div class="swiper-slider" data-autoplay="false" data-dots="true" data-arrows="false" data-columns="1"
+                     data-margin="" data-effect="slide">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <!-- Slide1 -->
+                            <article class="pbmit-static-box-style-1">
+                                <div class="pbmit-imgbox col-md-6 col-sm-12"
+                                     style="background-image:url('/images/recent-post/blog_2.jpg')">
+                                    <div class="pbmit-imgbox-wrapper">
+                                        <img src="~/images/recent-post/blog_2.jpg" alt="Political Commentator" />
+                                    </div>
+                                </div>
+                                <div class="pbmit-contentbox col-md-6 col-sm-12">
+                                    <div class="pbminfotech-box-number">
+                                        <h4>2011</h4>
+                                    </div>
+                                    <div class="pbminfotech-box-title">
+                                        <h4>Political Commentator</h4>
+                                    </div>
+                                    <div class="pbminfotech-static-box-desc">
+                                        The point of using it has a more-or-less normal
+                                        distribution of letters, as opposed to using making it look like readable English.
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- Slide2 -->
+                            <article class="pbmit-static-box-style-1">
+                                <div class="pbmit-imgbox col-md-6 col-sm-12"
+                                     style="background-image:url('/images/recent-post/blog_3.jpg')">
+                                    <div class="pbmit-imgbox-wrapper">
+                                        <img src="~/images/recent-post/blog_3.jpg" alt="Political Commentator" />
+                                    </div>
+                                </div>
+                                <div class="pbmit-contentbox col-md-6 col-sm-12">
+                                    <div class="pbminfotech-box-number">
+                                        <h4>2013</h4>
+                                    </div>
+                                    <div class="pbminfotech-box-title">
+                                        <h4>Value of Partisanship</h4>
+                                    </div>
+                                    <div class="pbminfotech-static-box-desc">
+                                        The point of using it has a more-or-less normal
+                                        distribution of letters, as opposed to using making it look like readable English.
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- Slide3 -->
+                            <article class="pbmit-static-box-style-1">
+                                <div class="pbmit-imgbox col-md-6 col-sm-12"
+                                     style="background-image:url('/images/recent-post/blog_2.jpg')">
+                                    <div class="pbmit-imgbox-wrapper">
+                                        <img src="images/recent-post/blog_2.jpg" alt="Political Commentator" />
+                                    </div>
+                                </div>
+                                <div class="pbmit-contentbox col-md-6 col-sm-12">
+                                    <div class="pbminfotech-box-number">
+                                        <h4>2016</h4>
+                                    </div>
+                                    <div class="pbminfotech-box-title">
+                                        <h4>Nature of commitment</h4>
+                                    </div>
+                                    <div class="pbminfotech-static-box-desc">
+                                        The point of using it has a more-or-less normal
+                                        distribution of letters, as opposed to using making it look like readable English.
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Portfolio End -->
+    </div>
+    <!-- Page Content End -->
+</div>
+<!-- page wrapper End -->
+

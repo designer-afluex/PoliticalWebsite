@@ -18,63 +18,63 @@ namespace PoliticalWebsite.Controllers
             return View();
         }
 
-        //public ActionResult Login()
-        //{
-        //    Session.Abandon();
-        //    return View();
-        //}
+        public ActionResult Login()
+        {
+            Session.Abandon();
+            return View();
+        }
 
-        //public ActionResult LoginAction(Home obj)
-        //{
-        //    string FormName = "";
-        //    string Controller = "";
-        //    try
-        //    {
-        //        Home Modal = new Home();
-        //        DataSet ds = obj.Login();
-        //        if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
-        //        {
-        //            if (ds.Tables[0].Rows[0]["Msg"].ToString() == "1")
-        //            {
-        //                if (ds.Tables[0].Rows[0]["UserType"].ToString() == "Admin")
-        //                {
-        //                    Session["Pk_adminId"] = ds.Tables[0].Rows[0]["Pk_adminId"].ToString();
-        //                    Session["LoginId"] = ds.Tables[0].Rows[0]["LoginId"].ToString();
-        //                    Session["UsertypeName"] = ds.Tables[0].Rows[0]["UsertypeName"].ToString();
-        //                    Session["Name"] = ds.Tables[0].Rows[0]["Name"].ToString();
-        //                    FormName = "AdminDashboard";
-        //                    Controller = "Admin";
-        //                }
-        //                else
-        //                {
-        //                    TempData["Login"] = "Incorrect LoginId Or Password";
-        //                    FormName = "Login";
-        //                    Controller = "Home";
-        //                }
-        //            }
-        //            else
-        //            {
-        //                TempData["Login"] = "Incorrect LoginId Or Password";
-        //                FormName = "Login";
-        //                Controller = "Home";
+        public ActionResult LoginAction(Home obj)
+        {
+            string FormName = "";
+            string Controller = "";
+            try
+            {
+                Home Modal = new Home();
+                DataSet ds = obj.Login();
+                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                {
+                    if (ds.Tables[0].Rows[0]["Msg"].ToString() == "1")
+                    {
+                        if (ds.Tables[0].Rows[0]["UserType"].ToString() == "Admin")
+                        {
+                            Session["Pk_adminId"] = ds.Tables[0].Rows[0]["Pk_adminId"].ToString();
+                            Session["LoginId"] = ds.Tables[0].Rows[0]["LoginId"].ToString();
+                            Session["UsertypeName"] = ds.Tables[0].Rows[0]["UsertypeName"].ToString();
+                            Session["Name"] = ds.Tables[0].Rows[0]["Name"].ToString();
+                            FormName = "AdminDashboard";
+                            Controller = "Admin";
+                        }
+                        else
+                        {
+                            TempData["Login"] = "Incorrect LoginId Or Password";
+                            FormName = "Login";
+                            Controller = "Home";
+                        }
+                    }
+                    else
+                    {
+                        TempData["Login"] = "Incorrect LoginId Or Password";
+                        FormName = "Login";
+                        Controller = "Home";
 
-        //            }
-        //        }
-        //        else
-        //        {
-        //            TempData["Login"] = "Incorrect LoginId Or Password";
-        //            FormName = "Login";
-        //            Controller = "Home";
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        TempData["Login"] = ex.Message;
-        //        FormName = "Login";
-        //        Controller = "Home";
-        //    }
-        //    return RedirectToAction(FormName, Controller);
-        //}
+                    }
+                }
+                else
+                {
+                    TempData["Login"] = "Incorrect LoginId Or Password";
+                    FormName = "Login";
+                    Controller = "Home";
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["Login"] = ex.Message;
+                FormName = "Login";
+                Controller = "Home";
+            }
+            return RedirectToAction(FormName, Controller);
+        }
 
 
         public ActionResult About()

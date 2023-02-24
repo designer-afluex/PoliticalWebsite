@@ -20,7 +20,7 @@ namespace PoliticalWebsite.Controllers
 
         public ActionResult Login()
         {
-            Session.Abandon();
+            //Session.Abandon();
             return View();
         }
 
@@ -42,6 +42,7 @@ namespace PoliticalWebsite.Controllers
                             Session["LoginId"] = ds.Tables[0].Rows[0]["LoginId"].ToString();
                             Session["UsertypeName"] = ds.Tables[0].Rows[0]["UsertypeName"].ToString();
                             Session["Name"] = ds.Tables[0].Rows[0]["Name"].ToString();
+
                             FormName = "AdminDashboard";
                             Controller = "Admin";
                         }

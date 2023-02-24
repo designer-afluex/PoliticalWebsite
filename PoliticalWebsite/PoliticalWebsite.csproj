@@ -138,8 +138,10 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AdminBaseController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MasterController.cs" />
     <Compile Include="Filters\SimpleAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -147,6 +149,7 @@
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Connection.cs" />
     <Compile Include="Models\Home.cs" />
+    <Compile Include="Models\Master.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -164,6 +167,8 @@
     <Content Include="Views\Home\NewsPressRelease.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Admin\AdminDashboard.cshtml" />
+    <Content Include="Views\Master\AddNews.cshtml" />
+    <Content Include="Views\Master\NewsList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1971,7 +1971,7 @@ blockquote.wp-block-quote.is-style-large{
     letter-spacing: 0;
     border-radius: 5px;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 500;
     font-style: normal;
     background-color: var(--pbmit-global-color);
     -webkit-transition: all .25s ease-in-out;

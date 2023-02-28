@@ -25,6 +25,7 @@ namespace PoliticalWebsite.Controllers
                 ViewBag.GalleryImage = Ds.Tables[0].Rows[0]["GalleryImage"].ToString();
                 ViewBag.NewsImage = Ds.Tables[0].Rows[0]["NewsImage"].ToString();
                 ViewBag.EventImage = Ds.Tables[0].Rows[0]["EventImage"].ToString();
+                ViewBag.Contact = Ds.Tables[0].Rows[0]["Contact"].ToString();
             }
             catch (Exception ex)
             {
@@ -47,7 +48,7 @@ namespace PoliticalWebsite.Controllers
                     obj.Name = r["Name"].ToString();
                     obj.Email = r["Email"].ToString();
                     obj.Mobile = r["Mobile"].ToString();
-                    obj.Subject = r["Example"].ToString();
+                    obj.Subject = r["Subject"].ToString();
                     obj.Message = r["Message"].ToString();
                     lst.Add(obj);
                 }

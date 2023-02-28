@@ -1,0 +1,142 @@
+﻿@model PoliticalWebsite.Models.Master
+
+@{
+    ViewBag.Title = "AddEvent";
+    Layout = "~/Views/Shared/Admin_LayoutPage.cshtml";
+}
+
+
+@using (Html.BeginForm("AddEvent", "Master", FormMethod.Post, new { @id = "form1", enctype = "multipart/form-data" }))
+{
+    <span style="color: red">
+        @TempData["msg"]
+    </span>
+    <br /><br />
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <fieldset>
+                        <div>
+                            <h2>Event Banner</h2>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Event Heading <span style="color: red">*</span></label>
+                                    @Html.TextBoxFor(m => m.Discription, new { @placeholder = "Event Heading", @class = "form-control" })
+                                    @Html.HiddenFor(m => m.EventID)
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Town/Village</label>
+                                    @Html.TextBoxFor(m => m.Town_Village, new { @placeholder = "Town/Village", @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>City <span style="color: red">*</span></label>
+                                    @Html.TextBoxFor(m => m.City, new { @placeholder = "City", @class = "form-control"})
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                        <div id="datepicker-popup" class="input-group date datepicker">
+                                            <label>Date <span style="color: red">*</span></label>
+                                            @Html.TextBoxFor(m => m.Date, new { @placeholder = "Date", @class = "form-control",@autocomplete="off" })
+                                            <span class="input-group-addon input-group-append border-left">
+                                                <span class="mdi mdi-calendar input-group-text"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Upload Event Banner <span style="color: red">*</span></label><br />
+                                    <input type="file" id="Event" name="Event" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <div class="form-group">
+                                    @Html.HiddenFor(m => m.Pk_EventId)
+                                    @if (Model == null)
+                                    {
+                                        <input type="submit" id="btnSave" name="btnSave" class="btn btn-success pull-right" value="Save" onclick="return saveEvent();" />
+                                    }
+                                    else
+                                    {
+                                        <input type="submit" id="btnUpdate" name="btnUpdate" class="btn btn-success pull-right" value="Update" onclick="return saveEvent();" />
+                                    }
+                                    <a href="/Master/EventimageList" class="btn btn-primary pull-right">Event List</a>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script type="text/javascript">
+    $('#Date').datepicker({
+        format: 'dd/mm/yyyy',
+        changeYear: true,
+        changeMonth: true,
+        maxDate: 0
+    });
+</script>
+
+
+<style>
+    .errortext {
+        border: 2px solid red !important;
+    }
+}
+</style>
+<script>
+    function saveEvent() {
+        $(".errortext").removeClass("errortext");
+        if ($('#Discription').val() == '') {
+            $("#Discription").addClass('errortext');
+            $('#Discription').focus();
+            return false;
+        }
+        if ($('#City').val() == '') {
+            $("#City").addClass('errortext');
+            $('#City').focus();
+            return false;
+        }
+        if ($('#Date').val() == '') {
+            $("#Date").addClass('errortext');
+            $('#Date').focus();
+            return false;
+        }
+        if ($('#Event').val() == '') {
+            $("#Event").addClass('errortext');
+            $('#Event').focus();
+            return false;
+        }
+    }
+
+
+</script>
+
+
+
+
+
+
+
+

@@ -2,50 +2,56 @@
 
 @{
     ViewBag.Title = "AddNews";
-    Layout = "~/Views/Shared/WebsiteLayout.cshtml";
+    Layout = "~/Views/Shared/Admin_LayoutPage.cshtml";
 }
 
-<div class="row">
-    <div class="col-lg-12">
-        <br />
-        @*<h4 class="page-header">Ewallet Deduction</h4>*@
-    </div>
-    <!-- /.col-lg-12 -->
-</div>
-
-<!-- /.row -->
-@using (Html.BeginForm("NewsList", "Master", FormMethod.Post, new { @id = "form1", enctype = "multipart/form-data" }))
+@using (Html.BeginForm("AddNews", "Master", FormMethod.Post, new { @id = "form1", enctype = "multipart/form-data" }))
 {
     <span style="color: red">
-        @TempData["News"]
+        @TempData["msg"]
     </span>
+    <br /><br />
     <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">
-                <div class="panel-heading">
-                    Add News
-                    <a href="/Master/#" class="btn btn-sm btn-primary pull-right">News List</a>
-                </div>
                 <div class="panel-body">
                     <fieldset>
-
-                        <div class="row">
-                            <div class="col-lg-3"></div>
-                            <div class="col-lg-6">
+                        <div>
+                            <h2>News Banner</h2>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-lg-4">
                                 <div class="form-group">
                                     <label>News Heading <span style="color: red">*</span></label>
-                                    @Html.TextBoxFor(m => m.NewsHeading, new { @placeholder = "News Heading", @class = "form-control" })
+                                    @Html.TextBoxFor(m => m.Discription, new { @placeholder = "News Heading", @class = "form-control" })
                                     @Html.HiddenFor(m => m.NewsID)
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <div id="datepicker-popup" class="input-group date datepicker">
+                                        <label>Date <span style="color: red">*</span></label>
+                                        @Html.TextBoxFor(m => m.Date, new { @placeholder = "Date", @class = "form-control", @autocomplete = "off" })
+                                        <span class="input-group-addon input-group-append border-left">
+                                            <span class="mdi mdi-calendar input-group-text"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>News Message <span style="color: red">*</span></label>
+                                    @Html.TextBoxFor(m => m.Message, new { @placeholder = "News Heading", @class = "form-control" })
                                 </div>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-lg-3"></div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label>New Body <span style="color: red">*</span></label>
-                                    @Html.TextAreaFor(m => m.NewsBody, new { @placeholder = "News Body", @class = "form-control" })
+                                    <label>Upload News Banner <span style="color: red">*</span></label><br />
+                                    <input type="file" id="News" name="News" class="form-control" />
                                 </div>
                             </div>
                         </div>
@@ -53,14 +59,16 @@
                         <div class="row">
                             <div class="col-lg-9">
                                 <div class="form-group">
+                                    @Html.HiddenFor(m => m.Pk_NewsId)
                                     @if (Model == null)
                                     {
-                                        <input type="submit" id="btnSaveNews" name="btnSaveNews" class="btn btn-success pull-right" value="Save" onclick="return saveNews();" />
+                                        <input type="submit" id="btnSave" name="btnSave" class="btn btn-success pull-right" value="Save" onclick="return saveNews();" />
                                     }
                                     else
                                     {
-                                        <input type="submit" class="btn btn-success pull-right" value="Update" onclick="return updateNews();" />
+                                        <input type="submit" id="btnUpdate" name="btnUpdate" class="btn btn-success pull-right" value="Update" onclick="return updateNews();" />
                                     }
+                                    <a href="/Master/NewsimageList" class="btn btn-primary pull-right">News List</a>
                                 </div>
                             </div>
                         </div>
@@ -77,75 +85,33 @@
     }
 </style>
 <script>
-
     function saveNews() {
         $(".errortext").removeClass("errortext");
-        if ($('#NewsHeading').val() == '') {
-            $("#NewsHeading").addClass('errortext');
-            $('#NewsHeading').focus();
+        if ($('#Discription').val() == '') {
+            $("#Discription").addClass('errortext');
+            $('#Discription').focus();
             return false;
         }
-        if ($('#NewsBody').val() == '') {
-            $("#NewsBody").addClass('errortext');
-            $('#NewsBody').focus();
+       
+        if ($('#Date').val() == '') {
+            $("#Date").addClass('errortext');
+            $('#Date').focus();
             return false;
         }
-
-
-        $.ajax({
-            url: "/Master/SaveNews",
-            Type: "Get",
-            DataType: "JSON",
-            data: { NewsHeading: $("#NewsHeading").val(), NewsBody: $("#NewsBody").val() },
-            success: function (data) {
-                alert(data.Result);
-                window.location.href = '@Url.Action("NewsList", "Master")';
-
-            }
-
-        });
+        if ($('#Message').val() == '') {
+            $("#Message").addClass('errortext');
+            $('#Message').focus();
+            return false;
+        }
+        if ($('#News').val() == '') {
+            $("#News").addClass('errortext');
+            $('#News').focus();
+            return false;
+        }
     }
-
-    function isNumberKey(evt) {
-
-        var charCode = (evt.which) ? evt.which : event.keyCode;
-        if (charCode != 46 && charCode > 31
-          && (charCode < 48 || charCode > 57))
-            return false;
-
-        return true;
-    }
-
-
-
-    function updateNews() {
-        $(".errortext").removeClass("errortext");
-        if ($('#NewsHeading').val() == '') {
-            $("#NewsHeading").addClass('errortext');
-            $('#NewsHeading').focus();
-            return false;
-        }
-        if ($('#NewsBody').val() == '') {
-            $("#NewsBody").addClass('errortext');
-            $('#NewsBody').focus();
-            return false;
-        }
-
-
-        $.ajax({
-            url: "/Master/UpdateNews",
-            Type: "Get",
-            DataType: "JSON",
-            data: { NewsID : $("#NewsID").val(), NewsHeading: $("#NewsHeading").val(), NewsBody: $("#NewsBody").val() },
-            success: function (data) {
-                alert(data.Result);
-                window.location.href = '@Url.Action("NewsList", "Master")';
-
-            }
-
-        });
-    }
-
 </script>
+
+
+
 
 

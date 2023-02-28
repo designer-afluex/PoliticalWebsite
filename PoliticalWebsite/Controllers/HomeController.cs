@@ -173,7 +173,7 @@ namespace PoliticalWebsite.Controllers
                 {
                     if (ds.Tables[0].Rows[0][0].ToString() == "1")
                     {
-                        TempData["Contact"] = "Contact Details Saved Successfully !!";
+                        TempData["Contact"] = "आपका संपर्क विवरण सफलतापूर्वक सहेज लिया गया है !!";
                     }
                     else if (ds.Tables[0].Rows[0][0].ToString() == "0")
                     {

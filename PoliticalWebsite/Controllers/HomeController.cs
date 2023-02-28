@@ -15,61 +15,60 @@ namespace PoliticalWebsite.Controllers
 
         public ActionResult Index(Home model)
         {
-            //List<Home> lst = new List<Home>();
-            //DataSet ds = model.GalleryimageList();
+            List<Home> lst = new List<Home>();
+            DataSet ds = model.GalleryimageList();
 
-            //if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
-            //{
-            //    foreach (DataRow r in ds.Tables[0].Rows)
-            //    {
-            //        Home obj = new Home();
-            //        obj.Pk_GalleryId = r["Pk_GalleryId"].ToString();
-            //        obj.GalleryImage = r["GalleryImage"].ToString();
-            //        obj.Discription = r["Discription"].ToString();
-            //        lst.Add(obj);
-            //    }
-            //    model.lstgallery = lst;
-            //}
+            if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            {
+                foreach (DataRow r in ds.Tables[0].Rows)
+                {
+                    Home obj = new Home();
+                    obj.Pk_GalleryId = r["Pk_GalleryId"].ToString();
+                    obj.GalleryImage = r["GalleryImage"].ToString();
+                    obj.Discription = r["Discription"].ToString();
+                    lst.Add(obj);
+                }
+                model.lstgallery = lst;
+            }
 
-            //List<Home> lst1 = new List<Home>();
-            //DataSet ds1 = model.EventimageList();
+            List<Home> lst1 = new List<Home>();
+            DataSet ds1 = model.EventimageList();
 
-            //if (ds1 != null && ds1.Tables.Count > 0 && ds1.Tables[0].Rows.Count > 0)
-            //{
-            //    foreach (DataRow r in ds1.Tables[0].Rows)
-            //    {
-            //        Home obj = new Home();
-            //        obj.Pk_EventId = r["Pk_EventId"].ToString();
-            //        obj.EventImage = r["EventImage"].ToString();
-            //        obj.Discription = r["Discription"].ToString();
-            //        obj.Date = r["Date"].ToString();
-            //        obj.City = r["City"].ToString();
-            //        obj.Town_Village = r["Town_Village"].ToString();
-            //        lst1.Add(obj);
-            //    }
-            //    model.lstevent = lst1;
-            //}
+            if (ds1 != null && ds1.Tables.Count > 0 && ds1.Tables[0].Rows.Count > 0)
+            {
+                foreach (DataRow r in ds1.Tables[0].Rows)
+                {
+                    Home obj = new Home();
+                    obj.Pk_EventId = r["Pk_EventId"].ToString();
+                    obj.EventImage = r["EventImage"].ToString();
+                    obj.Discription = r["Discription"].ToString();
+                    obj.Date = r["Date"].ToString();
+                    obj.City = r["City"].ToString();
+                    obj.Town_Village = r["Town_Village"].ToString();
+                    lst1.Add(obj);
+                }
+                model.lstevent = lst1;
+            }
 
-            //List<Home> lst2 = new List<Home>();
-            //DataSet ds2 = model.NewsimageList();
+            List<Home> lst2 = new List<Home>();
+            DataSet ds2 = model.NewsimageList();
 
-            //if (ds2 != null && ds2.Tables.Count > 0 && ds2.Tables[0].Rows.Count > 0)
-            //{
-            //    foreach (DataRow r in ds2.Tables[0].Rows)
-            //    {
-            //        Home obj = new Home();
-            //        obj.Pk_NewsId = r["Pk_NewsId"].ToString();
-            //        obj.NewsImage = r["NewsImage"].ToString();
-            //        obj.Discription = r["Discription"].ToString();
-            //        obj.Message = r["Message"].ToString();
-            //        obj.Date = r["Date"].ToString();
-            //        obj.Year = r["Year"].ToString();
-            //        lst2.Add(obj);
-            //    }
-            //    model.lstNews = lst2;
-            //}
-            //return View(model);
-            return View();
+            if (ds2 != null && ds2.Tables.Count > 0 && ds2.Tables[0].Rows.Count > 0)
+            {
+                foreach (DataRow r in ds2.Tables[0].Rows)
+                {
+                    Home obj = new Home();
+                    obj.Pk_NewsId = r["Pk_NewsId"].ToString();
+                    obj.NewsImage = r["NewsImage"].ToString();
+                    obj.Discription = r["Discription"].ToString();
+                    obj.Message = r["Message"].ToString();
+                    obj.Date = r["Date"].ToString();
+                    obj.Year = r["Year"].ToString();
+                    lst2.Add(obj);
+                }
+                model.lstNews = lst2;
+            }
+            return View(model);
         }
 
         public ActionResult Login()

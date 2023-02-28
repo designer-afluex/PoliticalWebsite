@@ -140,6 +140,6 @@ D:\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\roslyn\VBCSCompiler
 D:\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\PoliticalWebsite.dll.config
 D:\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\PoliticalWebsite.dll
 D:\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\PoliticalWebsite.pdb
-D:\Repository-Projects\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.csprojResolveAssemblyReference.cache
 D:\Repository-Projects\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.dll
 D:\Repository-Projects\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.pdb
+D:\Repository-Projects\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.csprojResolveAssemblyReference.cache

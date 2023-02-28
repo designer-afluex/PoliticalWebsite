@@ -38,7 +38,7 @@
                     <li class="nav-item nav-profile dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
                             <div class="flex-grow-1">
-                                 <img class="b-r-50" src="../assets/images/usericon.jpg" alt="">
+                                 <img class="b-r-50" src="/images/logo-icon.png" alt="">
                                <span>@Session["Name"]</span> (<span>@Session["LoginId"]</span>)
                             </div>
                         </a>
@@ -79,16 +79,10 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="collapse" href="#ui-basi" aria-expanded="false" aria-controls="ui-basic">
+                        <a class="nav-link" href="/Admin/ContactDetails">
                             <i class="mdi mdi-view-dashboard-outline menu-icon"></i>
-                            <span class="menu-title">Report</span>
-                            <i class="menu-arrow"></i>
+                            <span class="menu-title">All Contact Details</span>
                         </a>
-                        <div class="collapse" id="ui-basi">
-                            <ul class="nav flex-column sub-menu">
-                                <li class="nav-item"> <a class="nav-link" href="/Admin/ContactDetails">Contact Details</a></li>
-                            </ul>
-                        </div>
                     </li>
                 </ul>
             </nav>
@@ -103,8 +97,7 @@
                 <footer class="footer">
                     <div class="d-sm-flex justify-content-center justify-content-sm-between">
                         <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2023 Surendra Chaurasia, All Rights Reserved.</span>
-                        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Designed and developed by<a href="https://afluex.com/" target="_blank"> Afluex Multiservices LLP</a></span>
-                    </div>
+                     </div>
                 </footer>
                 <!-- partial -->
             </div>
@@ -130,6 +123,8 @@
     <script src="/assets/js/formpickers.js"></script>
     <script src="/assets/js/form-repeater.js"></script>
     <!-- endinject -->
+    <!-- Custom js for this page-->
+    <script src="/assets/js/data-table.js"></script>
     <!-- Custom js for this page-->
     <script src="/assets/js/dashboard.js"></script>
 </body>

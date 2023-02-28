@@ -10265,6 +10265,7 @@ select.form-control:not([size]):not([multiple]), select.asColorPicker-input:not(
 select.tt-query:not([size]):not([multiple]),
 select.tt-hint:not([size]):not([multiple]) {
   height: calc(2.25rem + 2px);
+  margin-top:3px;
 }
 
 select.form-control:focus::-ms-value, select.asColorPicker-input:focus::-ms-value, .dataTables_wrapper select:focus::-ms-value,
@@ -12198,6 +12199,7 @@ input[type="button"].btn-block {
   position: relative;
   display: flex;
   flex-wrap: wrap;
+  top:-5px;
   align-items: stretch;
   width: 100%;
 }
@@ -21041,7 +21043,7 @@ code {
 .jsgrid .jsgrid-table .jsgrid-filter-row select, .jsgrid .jsgrid-table .jsgrid-filter-row input[type=number], .select2-container--default .select2-selection--single, .select2-container--default .select2-selection--single .select2-search__field, .typeahead,
 .tt-query,
 .tt-hint {
-  border: 1px solid #f3f3f3;
+  border: 1px solid #1b1b1b45;
   font-weight: 400;
   font-size: 0.8125rem;
 }
@@ -21052,7 +21054,7 @@ select.tt-query,
 select.tt-hint {
   padding: .4375rem .75rem;
   border: 0;
-  outline: 1px solid #f3f3f3;
+  outline: 1px solid #1b1b1b45;
   color: #c9c8c8;
 }
 

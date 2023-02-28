@@ -124,4 +124,3 @@ D:\Repository-Projects\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin
 D:\Repository-Projects\Repository-Projects\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.csprojResolveAssemblyReference.cache
 D:\Repository-Projects\Repository-Projects\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.dll
 D:\Repository-Projects\Repository-Projects\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.pdb
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.csprojResolveAssemblyReference.cache

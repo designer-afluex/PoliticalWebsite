@@ -14,7 +14,7 @@ namespace PoliticalWebsite.Models
         public string Email { get; set; }
         public string Mobile { get; set; }
         public string Message { get; set; }
-        public string ExampleId { get; set; }
+        public string Subject { get; set; }
         public string LoginId { get; set; }
         public string Password { get; set; }
 
@@ -61,7 +61,7 @@ namespace PoliticalWebsite.Models
                  new SqlParameter("@Email",Email),
                   new SqlParameter("@Mobile",Mobile),
                    new SqlParameter("@Message",Message),
-                    new SqlParameter("@ExampleId",ExampleId),
+                    new SqlParameter("@Subject",Subject),
                      new SqlParameter("@AddedBy",AddedBy)
             };
             DataSet ds = Connection.ExecuteQuery("SaveContactDetails", para);

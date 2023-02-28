@@ -1169,9 +1169,9 @@ h2.pbmit-title{
 .widget .post-date{
     font-family: var(--pbmit-heading-typography-font-family);
     font-size: 16px;
-    line-height: 18px;
+    line-height: 25px;
     letter-spacing: -0.5px;
-    font-weight: 600;
+    font-weight: 500;
 }
 .search-form input{
     height: 58px;
@@ -2203,20 +2203,20 @@ article.post .post-entry-meta i {
 .contact-section-left {
     background-color: var(--pbmit-secondary-color);
     border-radius: 5px;
-    margin: 100px -90px 100px 90px;
+    margin: 50px -90px 100px 90px;
     padding: 70px 60px 70px 70px;
 }
 .contact-form {
     box-shadow: 0px 0px 21px 0px rgb(0 0 0 / 9%);
     margin: 0px 15px 0px 0px;
-    padding:140px 60px 144px 130px;
+    padding:50px 60px 144px 130px;
 }
-.contact-section-bg{
+/*.contact-section-bg{
     background-image: url(../images/bg/bg03.png);
     background-position: top left;
     background-repeat: no-repeat;
     background-size: auto;
-}
+}*/
 .contact-section .faq-section-bg{
     margin-top: 0;
     padding: 200px 0px 0px 0px;

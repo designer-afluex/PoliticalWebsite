@@ -121,22 +121,7 @@ D:\Repository-Projects\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin
 D:\Repository-Projects\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\PoliticalWebsite.dll.config
 D:\Repository-Projects\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\PoliticalWebsite.dll
 D:\Repository-Projects\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\PoliticalWebsite.pdb
-D:\Repository-Projects\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\Microsoft.AI.DependencyCollector.xml
-D:\Repository-Projects\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\Microsoft.AI.ServerTelemetryChannel.xml
-D:\Repository-Projects\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\Microsoft.AI.Web.xml
-D:\Repository-Projects\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\Microsoft.AI.WindowsServer.xml
-D:\Repository-Projects\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\Microsoft.ApplicationInsights.xml
-D:\Repository-Projects\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Repository-Projects\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\System.Web.Razor.xml
-D:\Repository-Projects\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\System.Web.Webpages.xml
-D:\Repository-Projects\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\System.Web.Webpages.Deployment.xml
-D:\Repository-Projects\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\System.Web.Webpages.Razor.xml
-D:\Repository-Projects\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\System.Web.Helpers.xml
-D:\Repository-Projects\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\System.Web.Mvc.xml
-D:\Repository-Projects\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\Newtonsoft.Json.xml
-D:\Repository-Projects\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\System.Net.Http.Formatting.xml
-D:\Repository-Projects\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\System.Web.Http.xml
-D:\Repository-Projects\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\System.Web.Http.WebHost.xml
 D:\Repository-Projects\Repository-Projects\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.csprojResolveAssemblyReference.cache
 D:\Repository-Projects\Repository-Projects\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.dll
 D:\Repository-Projects\Repository-Projects\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.pdb
+F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.csprojResolveAssemblyReference.cache

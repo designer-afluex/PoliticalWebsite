@@ -33,5 +33,28 @@ namespace PoliticalWebsite.Controllers
             return View();
         }
 
+        public ActionResult ContactDetails(Admin model)
+        {
+            List<Admin> lst = new List<Admin>();
+            DataSet ds = model.ContactDetails();
+
+            if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            {
+                foreach (DataRow r in ds.Tables[0].Rows)
+                {
+                    Admin obj = new Admin();
+                    obj.Pk_ContactId = r["Pk_ContactId"].ToString();
+                    obj.Name = r["Name"].ToString();
+                    obj.Email = r["Email"].ToString();
+                    obj.Mobile = r["Mobile"].ToString();
+                    obj.Subject = r["Example"].ToString();
+                    obj.Message = r["Message"].ToString();
+                    lst.Add(obj);
+                }
+                model.lstcontact = lst;
+            }
+            return View(model);
+        }
+
     }
 }

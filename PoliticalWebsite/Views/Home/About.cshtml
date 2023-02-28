@@ -73,7 +73,41 @@
                 <div class="swiper-slider" data-autoplay="false" data-dots="true" data-arrows="false"
                      data-columns="1" data-margin="" data-effect="slide">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                         @if (Model != null)
+                        {
+                            if (Model.lstNews != null)
+                            {
+                                int i = 0;
+                                foreach (var item in Model.lstNews)
+                                {
+
+                                    <div class="swiper-slide">
+                                        <!-- Slide1 -->
+                                        <article class="pbmit-static-box-style-1">
+                                            <div class="pbmit-imgbox col-md-6 col-sm-12"
+                                                 style="background-image:url('@item.NewsImage')">
+                                                <div class="pbmit-imgbox-wrapper">
+                                                    <img src="@item.NewsImage" alt="Political Commentator" />
+                                                </div>
+                                            </div>
+                                            <div class="pbmit-contentbox col-md-6 col-sm-12">
+                                                <div class="pbminfotech-box-number">
+                                                    <h4>@item.Year</h4>
+                                                </div>
+                                                <div class="pbminfotech-box-title">
+                                                    <h4>Political Commentator</h4>
+                                                </div>
+                                                <div class="pbminfotech-static-box-desc">
+                                                    @item.Discription
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    i++;
+                                }
+                            }
+                        }
+                        @*<div class="swiper-slide">
                             <!-- Slide1 -->
                             <article class="pbmit-static-box-style-1">
                                 <div class="pbmit-imgbox col-md-6 col-sm-12"
@@ -144,7 +178,7 @@
                                     </div>
                                 </div>
                             </article>
-                        </div>
+                        </div>*@
                     </div>
                 </div>
             </div>

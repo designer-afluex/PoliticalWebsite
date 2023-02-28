@@ -271,6 +271,11 @@
     <Content Include="assets\vendors\summernote\dist\summernote-bs4.min.js" />
     <Content Include="assets\vendors\tinymce\themes\modern\theme.js" />
     <Content Include="assets\vendors\tinymce\tinymce.min.js" />
+    <Content Include="BannerImages\4b71cc35-51e7-4f62-a440-ac4e89f99f8c.jpg" />
+    <Content Include="BannerImages\8647326d-e51f-4c58-a8c8-b7bcf77afaf8.jpg" />
+    <Content Include="BannerImages\a066f2e2-5d4c-4056-ada6-79e2c92d675d.jpg" />
+    <Content Include="BannerImages\b5030cca-23a3-47c7-b888-f4e2d6f381fe.png" />
+    <Content Include="BannerImages\d403ff60-7ef6-46e4-b1c6-7d5242bc4e48.jpg" />
     <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
     <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
     <Content Include="bin\Microsoft.AI.DependencyCollector.xml" />
@@ -325,15 +330,19 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AdminBaseController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MasterController.cs" />
     <Compile Include="Filters\SimpleAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\Common.cs" />
     <Compile Include="Models\Connection.cs" />
     <Compile Include="Models\Home.cs" />
+    <Compile Include="Models\Master.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
@@ -365,6 +374,14 @@
     <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
     <Content Include="Views\Shared\Admin_LayoutPage.cshtml" />
+    <Content Include="Views\Master\AddNews.cshtml" />
+    <Content Include="Views\Master\NewsList.cshtml" />
+    <Content Include="Views\Master\AddGallery.cshtml" />
+    <Content Include="Views\Master\AddEvent.cshtml" />
+    <Content Include="Views\Master\GalleryimageList.cshtml" />
+    <Content Include="Views\Master\EventimageList.cshtml" />
+    <Content Include="Views\Master\NewsimageList.cshtml" />
+    <None Include="Properties\PublishProfiles\PoliticalWebsite.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -379,6 +396,7 @@
     <Folder Include="images\" />
     <Folder Include="js\" />
     <Folder Include="revolution\" />
+    <Folder Include="Views\Master\Banner\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

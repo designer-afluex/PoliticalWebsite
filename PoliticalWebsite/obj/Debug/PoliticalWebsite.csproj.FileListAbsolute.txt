@@ -14,41 +14,6 @@ F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\roslyn\VBCSCo
 F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\PoliticalWebsite.dll.config
 F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\PoliticalWebsite.dll
 F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\PoliticalWebsite.pdb
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\Microsoft.AI.Agent.Intercept.dll
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\Microsoft.AI.DependencyCollector.dll
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\Microsoft.AI.PerfCounterCollector.dll
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\Microsoft.AI.ServerTelemetryChannel.dll
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\Microsoft.AI.Web.dll
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\Microsoft.AI.WindowsServer.dll
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\Microsoft.ApplicationInsights.dll
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\Microsoft.Web.Infrastructure.dll
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\Newtonsoft.Json.dll
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\System.Net.Http.Formatting.dll
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\System.Web.Helpers.dll
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\System.Web.Http.dll
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\System.Web.Http.WebHost.dll
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\System.Web.Mvc.dll
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\System.Web.Razor.dll
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\System.Web.Webpages.Deployment.dll
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\System.Web.Webpages.dll
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\System.Web.Webpages.Razor.dll
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\Microsoft.AI.DependencyCollector.xml
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\Microsoft.AI.ServerTelemetryChannel.xml
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\Microsoft.AI.Web.xml
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\Microsoft.AI.WindowsServer.xml
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\Microsoft.ApplicationInsights.xml
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\System.Web.Razor.xml
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\System.Web.Webpages.xml
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\System.Web.Webpages.Deployment.xml
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\System.Web.Webpages.Razor.xml
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\System.Web.Helpers.xml
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\System.Web.Mvc.xml
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\Newtonsoft.Json.xml
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\System.Net.Http.Formatting.xml
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\System.Web.Http.xml
-F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\bin\System.Web.Http.WebHost.xml
 F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.dll
 F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.pdb
 C:\Users\User\OneDrive\Desktop\PoliticalWebsite\PoliticalWebsite\bin\ApplicationInsights.config
@@ -159,6 +124,7 @@ D:\Repository-Projects\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin
 D:\Repository-Projects\Repository-Projects\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.csprojResolveAssemblyReference.cache
 D:\Repository-Projects\Repository-Projects\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.dll
 D:\Repository-Projects\Repository-Projects\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.pdb
+F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.csprojResolveAssemblyReference.cache
 D:\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\ApplicationInsights.config
 D:\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\roslyn\csc.exe
 D:\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -175,6 +141,5 @@ D:\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\roslyn\VBCSCompiler
 D:\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\PoliticalWebsite.dll.config
 D:\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\PoliticalWebsite.dll
 D:\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\PoliticalWebsite.pdb
-D:\Repository-Projects\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.csprojResolveAssemblyReference.cache
 D:\Repository-Projects\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.dll
 D:\Repository-Projects\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.pdb

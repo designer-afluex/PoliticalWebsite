@@ -47,7 +47,7 @@ namespace PoliticalWebsite.Controllers
                     obj.Name = r["Name"].ToString();
                     obj.Email = r["Email"].ToString();
                     obj.Mobile = r["Mobile"].ToString();
-                    obj.Subject = r["Example"].ToString();
+                    obj.Subject = r["Subject"].ToString();
                     obj.Message = r["Message"].ToString();
                     lst.Add(obj);
                 }

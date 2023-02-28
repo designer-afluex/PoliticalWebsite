@@ -1,0 +1,95 @@
+﻿@model PoliticalWebsite.Models.Master
+
+@{
+    ViewBag.Title = "SliderBannerList";
+    Layout = "~/Views/Shared/Admin_LayoutPage.cshtml";
+}
+
+
+
+<form action="/Master/SliderBannerList" id="form1" method="post">
+    <p style="color: red">
+        <span style="color:red">@TempData["msg"]</span>
+    </p>
+    <div class="page-header">
+        <div class="page-block">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="page-header-title">
+                        <h4 class="m-b-10">Slider Banner List</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pcoded-inner-content">
+        <div class="main-body">
+            <div class="page-wrapper">
+                <div class="page-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- HTML5 Export Buttons table start -->
+                            <div class="card">
+                                <div class="card-header table-card-header">
+                                    <p style="color: red">
+
+                                    </p>
+                                    <a class="btn btn-primary btn-sm" style="margin-left:76%" href="/Master/AddSliderBanner">Add Banner</a>
+                                </div>
+                                <div class="card-block">
+                                    <div class="dt-responsive table-responsive">
+                                        <table id="basic-btn" class="table table-striped table-bordered nowrap">
+                                            <thead>
+                                                <tr>
+                                                    <th>S No.</th>
+                                                    <th>Slider Banner</th>
+                                                    <th>Action</th>
+                                                    <th></th>
+                                                </tr>
+
+                                            </thead>
+                                            <tbody>
+                                                @if (Model != null)
+                                                {
+                                                    if (Model.lstSliderBanner != null)
+                                                    {
+                                                        int i = 1;
+                                                        foreach (var Item in Model.lstSliderBanner)
+                                                        {
+                                                            <tr>
+                                                                <td>@i</td>
+                                                                <td>
+                                                                    <img src=@Html.DisplayFor(m => Item.SliderBannerImage) alt="Image" style="width:100px;height:80px;border-radius:0px" />
+                                                                </td>
+                                                                <td>
+                                                                    <a class="btn btn-sm btn-info" href="/Master/AddSliderBanner?Id=@Item.Pk_SliderBannerId">Edit</a>
+                                                                    <a class="btn btn-sm btn-danger" href="/Master/DeleteSliderBanner?Id=@Item.Pk_SliderBannerId" onclick="return confirm('Are you sure you want to delete this banner ?')">Delete</a>
+                                                                </td>
+                                                                <td></td>
+                                                            </tr>
+                                                            i = i + 1;
+                                                        }
+                                                    }
+                                                }
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                    <th></th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+

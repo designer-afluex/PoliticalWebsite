@@ -383,6 +383,8 @@
     <Content Include="Views\Master\NewsimageList.cshtml" />
     <None Include="Properties\PublishProfiles\PoliticalWebsite.pubxml" />
     <Content Include="Views\Admin\ContactDetails.cshtml" />
+    <Content Include="Views\Master\AddSliderBanner.cshtml" />
+    <Content Include="Views\Master\SliderBannerList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

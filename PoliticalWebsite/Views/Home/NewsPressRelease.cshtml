@@ -48,34 +48,18 @@
                                     <div class="post-thumbnail pbmit-blog-style-2 ">
                                         <div class="pbmit-featured-container">
                                             <div class="pbmit-featured-wrapper">
-                                                <img src="~/images/recent-post/blog_1.jpg" class="img-fluid w-100" alt="" />
+                                                <img src="@ViewBag.TopMainNewsImage" class="img-fluid w-100" alt="" />
                                             </div>
                                             <div class="pbmit-meta-date-wrapper">
-                                                <span class="pbmit-date">20</span>
-                                                <span class="pbmit-month"> JUL</span>
+                                                <span class="pbmit-date">@ViewBag.Month</span>
+                                                <span class="pbmit-month">@ViewBag.Day</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="post-content">
-                                        <h3 class="post-box-title"> Principle stability in the future with activity </h3>
-                                        <div class="pbmit-meta-container">
-                                            <div class="pbmit-meta-author-wrapper pbmit-meta-line">
-                                                <a href="#" title="Posted by admin" rel="author">
-                                                    <i class="pbmit-base-icon-user-circle"></i> admin
-                                                </a>
-                                            </div>
-                                            <div class="pbmit-meta-category pbmit-meta-line">
-                                                <i class="pbmit-base-icon-bookmark"></i>
-                                                <a href="#" rel="category tag">Politics</a>
-                                            </div>
-                                            <div class="pbmit-meta-comment-wrapper pbmit-meta-line">
-                                                <span class="pbmit-meta pbmit-meta-comments">
-                                                    <i class="pbmit-base-icon-comment"></i> one
-                                                    <span class="pbmit-meta pbmit-meta-comments">Comments</span>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <p>The point of using is that it has a more-or-less normal distribution of letters, as opposed to using making it look like readable English. Many desktop publishing packages and web page editors now use their…</p>
+                                        <h3 class="post-box-title">@ViewBag.TopMainDiscription</h3>
+                                        
+                                        <p>@ViewBag.TopMessage</p>
                                         <div class="d-flex align-item-center justify-content-between">
                                             <a href="#" class="pbmit-btn">
                                                 <span>Read More</span>
@@ -87,34 +71,19 @@
                                     <div class="post-thumbnail pbmit-blog-style-2 ">
                                         <div class="pbmit-featured-container">
                                             <div class="pbmit-featured-wrapper">
-                                                <img src="~/images/recent-post/blog_2.jpg" class="img-fluid w-100" alt="" />
+                                                <img src="@ViewBag.MainNewsImage" class="img-fluid w-100" alt="" />
                                             </div>
                                             <div class="pbmit-meta-date-wrapper">
-                                                <span class="pbmit-date">10</span>
-                                                <span class="pbmit-month"> JUN</span>
+                                                <span class="pbmit-date">@ViewBag.MainMonth</span>
+                                                <span class="pbmit-month">@ViewBag.MainDay</span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="post-content">
-                                        <h3 class="post-box-title">How to invent a law & pass it in parliament</h3>
-                                        <div class="pbmit-meta-container">
-                                            <div class="pbmit-meta-author-wrapper pbmit-meta-line">
-                                                <a href="#" title="Posted by admin" rel="author">
-                                                    <i class="pbmit-base-icon-user-circle"></i> admin
-                                                </a>
-                                            </div>
-                                            <div class="pbmit-meta-category pbmit-meta-line">
-                                                <i class="pbmit-base-icon-bookmark"></i>
-                                                <a href="#" rel="category tag">Press</a>
-                                            </div>
-                                            <div class="pbmit-meta-comment-wrapper pbmit-meta-line">
-                                                <span class="pbmit-meta pbmit-meta-comments">
-                                                    <i class="pbmit-base-icon-comment"></i> one
-                                                    <span class="pbmit-meta pbmit-meta-comments">Comments</span>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <p>The point of using is that it has a more-or-less normal distribution of letters, as opposed to using making it look like readable English. Many desktop publishing packages and web page editors now use their…</p>
+                                        @*<h3 class="post-box-title">How to invent a law & pass it in parliament</h3>*@
+                                        <h3 class="post-box-title">@ViewBag.MainDiscription</h3>
+                                        
+                                        <p>@ViewBag.MainMessage</p>
                                         <div class="d-flex align-item-center justify-content-between">
                                             <a href="#" class="pbmit-btn">
                                                 <span>Read More</span>
@@ -129,44 +98,28 @@
                         <aside class="sidebar">
                             <aside class="widget widget-recent-post">
                                 <h2 class="widget-title">नवीनतम पोस्ट</h2>
-                                <ul class="recent-post-list">
-                                    <li class="recent-post-list-li">
-                                        <a class="recent-post-thum" href="#">
-                                            <img src="~/images/recent-post/blog_1.jpg" class="img-fluid" alt="" />
-                                        </a>
-                                        <div class="media-body">
-                                            <a href="#">Principle stability in the future with activity</a>
-                                            <span class="post-date">July 20, 2020</span>
-                                        </div>
-                                    </li>
-                                    <li class="recent-post-list-li">
-                                        <a class="recent-post-thum" href="#">
-                                            <img src="~/images/recent-post/blog_2.jpg" class="img-fluid" alt="" />
-                                        </a>
-                                        <div class="media-body">
-                                            <a href="#">How to invent a law &amp; pass it in parliament</a>
-                                            <span class="post-date">June 10, 2020</span>
-                                        </div>
-                                    </li>
-                                    <li class="recent-post-list-li">
-                                        <a class="recent-post-thum" href="#">
-                                            <img src="~/images/recent-post/blog_3.jpg" class="img-fluid" alt="" />
-                                        </a>
-                                        <div class="media-body">
-                                            <a href="#">Our humanity of  Preparing Youth for Success</a>
-                                            <span class="post-date">May 31, 2020</span>
-                                        </div>
-                                    </li>
-                                    <li class="recent-post-list-li">
-                                        <a class="recent-post-thum" href="#">
-                                            <img src="~/images/recent-post/blog_1.jpg" class="img-fluid" alt="" />
-                                        </a>
-                                        <div class="media-body">
-                                            <a href="#">President deflects on claims of senate attempt</a>
-                                            <span class="post-date">May 26, 2020</span>
-                                        </div>
-                                    </li>
-                                </ul>
+                                    @if (Model != null)
+                                    {
+                                        if (Model.lstNews != null)
+                                        {
+                                            int i = 0;
+                                            foreach (var item in Model.lstNews)
+                                            {
+                                                <ul class="recent-post-list">
+                                                        <li class="recent-post-list-li">
+                                                            <a class="recent-post-thum" href="#">
+                                                                <img src="@item.NewsImage" class="img-fluid" alt="" />
+                                                            </a>
+                                                            <div class="media-body">
+                                                                <a href="#">@item.Discription</a>
+                                                                <span class="post-date">@item.Date</span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                i++;
+                                            }
+                                        }
+                                    }
                             </aside>
                             <div class="row">
                                 <div class="col-lg-12">

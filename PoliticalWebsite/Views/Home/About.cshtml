@@ -35,7 +35,7 @@
     <!-- Page Content -->
     <div class="page-content">
         <!-- About Start -->
-        <section class="section-lgt home-3-about-section pbmit-bg-color-light pb-5">
+        <section class="section-lgt home-3-about-section pb-5">
             <div class="container">
                 <div class="row justify-content-between">
                     <div class="col-xl-4 col-lg-12 text-lg-center">
@@ -65,127 +65,7 @@
             </div>
         </section>
         <!-- About End -->
-        <!-- Portfolio Start -->
-        <section class="section-lg">
-            <div class="pbmit-heading-subheading text-center">
-                <h2 class="pbmit-title">नवीनतम समाचार और प्रेस</h2>
-            </div>
-            <div class="container">
-                <div class="swiper-slider" data-autoplay="false" data-dots="true" data-arrows="false"
-                     data-columns="1" data-margin="" data-effect="slide">
-                    <div class="swiper-wrapper">
-                        @if (Model != null)
-                        {
-                            if (Model.lstNews != null)
-                            {
-                                int i = 0;
-                                foreach (var item in Model.lstNews)
-                                {
-
-                                    <div class="swiper-slide">
-                                        <!-- Slide1 -->
-                                        <article class="pbmit-static-box-style-1">
-                                            <div class="pbmit-imgbox col-md-6 col-sm-12"
-                                                 style="background-image:url('@item.NewsImage')">
-                                                <div class="pbmit-imgbox-wrapper">
-                                                    <img src="@item.NewsImage" alt="Political Commentator" />
-                                                </div>
-                                            </div>
-                                            <div class="pbmit-contentbox col-md-6 col-sm-12">
-                                                <div class="pbminfotech-box-number">
-                                                    <h4>@item.Year</h4>
-                                                </div>
-                                                <div class="pbminfotech-box-title">
-                                                    <h4>Political Commentator</h4>
-                                                </div>
-                                                <div class="pbminfotech-static-box-desc">
-                                                    @item.Discription
-                                                </div>
-                                            </div>
-                                        </article>
-                                    </div>
-                                    i++;
-                                }
-                            }
-                        }
-                        @*<div class="swiper-slide">
-                                <!-- Slide1 -->
-                                <article class="pbmit-static-box-style-1">
-                                    <div class="pbmit-imgbox col-md-6 col-sm-12"
-                                         style="background-image:url('/images/recent-post/blog_2.jpg')">
-                                        <div class="pbmit-imgbox-wrapper">
-                                            <img src="/images/recent-post/blog_2.jpg" alt="Political Commentator" />
-                                        </div>
-                                    </div>
-                                    <div class="pbmit-contentbox col-md-6 col-sm-12">
-                                        <div class="pbminfotech-box-number">
-                                            <h4>2011</h4>
-                                        </div>
-                                        <div class="pbminfotech-box-title">
-                                            <h4>Political Commentator</h4>
-                                        </div>
-                                        <div class="pbminfotech-static-box-desc">
-                                            The point of using it has a
-                                            more-or-less normal distribution of letters, as opposed to using making it
-                                            look like readable English.
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="swiper-slide">
-                                <!-- Slide2 -->
-                                <article class="pbmit-static-box-style-1">
-                                    <div class="pbmit-imgbox col-md-6 col-sm-12"
-                                         style="background-image:url('/images/recent-post/blog_3.jpg')">
-                                        <div class="pbmit-imgbox-wrapper">
-                                            <img src="/images/recent-post/blog_3.jpg" alt="Political Commentator" />
-                                        </div>
-                                    </div>
-                                    <div class="pbmit-contentbox col-md-6 col-sm-12">
-                                        <div class="pbminfotech-box-number">
-                                            <h4>2013</h4>
-                                        </div>
-                                        <div class="pbminfotech-box-title">
-                                            <h4>Value of Partisanship</h4>
-                                        </div>
-                                        <div class="pbminfotech-static-box-desc">
-                                            The point of using it has a
-                                            more-or-less normal distribution of letters, as opposed to using making it
-                                            look like readable English.
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="swiper-slide">
-                                <!-- Slide3 -->
-                                <article class="pbmit-static-box-style-1">
-                                    <div class="pbmit-imgbox col-md-6 col-sm-12"
-                                         style="background-image:url('/images/recent-post/blog_2.jpg')">
-                                        <div class="pbmit-imgbox-wrapper">
-                                            <img src="/images/recent-post/blog_2.jpg" alt="Political Commentator" />
-                                        </div>
-                                    </div>
-                                    <div class="pbmit-contentbox col-md-6 col-sm-12">
-                                        <div class="pbminfotech-box-number">
-                                            <h4>2016</h4>
-                                        </div>
-                                        <div class="pbminfotech-box-title">
-                                            <h4>Nature of commitment</h4>
-                                        </div>
-                                        <div class="pbminfotech-static-box-desc">
-                                            The point of using it has a
-                                            more-or-less normal distribution of letters, as opposed to using making it
-                                            look like readable English.
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>*@
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Portfolio End -->
-
+        
         <section class="section-lgx pbmit-bg-color-light">
             <div class="container">
                 <div class="pbmit-timeline">
@@ -373,6 +253,129 @@
             </div>
         </section>
         <!-- Our History End -->
+
+        <!-- Portfolio Start -->
+        <section class="section-lg">
+            <div class="pbmit-heading-subheading text-center">
+                <h2 class="pbmit-title">नवीनतम समाचार और प्रेस</h2>
+            </div>
+            <div class="container">
+                <div class="swiper-slider" data-autoplay="false" data-dots="true" data-arrows="false"
+                     data-columns="1" data-margin="" data-effect="slide">
+                    <div class="swiper-wrapper">
+                        @if (Model != null)
+                        {
+                            if (Model.lstNews != null)
+                            {
+                                int i = 0;
+                                foreach (var item in Model.lstNews)
+                                {
+
+                                    <div class="swiper-slide">
+                                        <!-- Slide1 -->
+                                        <article class="pbmit-static-box-style-1">
+                                            <div class="pbmit-imgbox col-md-6 col-sm-12"
+                                                 style="background-image:url('@item.NewsImage')">
+                                                <div class="pbmit-imgbox-wrapper">
+                                                    <img src="@item.NewsImage" alt="Political Commentator" />
+                                                </div>
+                                            </div>
+                                            <div class="pbmit-contentbox col-md-6 col-sm-12">
+                                                <div class="pbminfotech-box-number">
+                                                    <h4>@item.Year</h4>
+                                                </div>
+                                                <div class="pbminfotech-box-title">
+                                                    <h4>Political Commentator</h4>
+                                                </div>
+                                                <div class="pbminfotech-static-box-desc">
+                                                    @item.Discription
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    i++;
+                                }
+                            }
+                        }
+                        @*<div class="swiper-slide">
+                            <!-- Slide1 -->
+                            <article class="pbmit-static-box-style-1">
+                                <div class="pbmit-imgbox col-md-6 col-sm-12"
+                                     style="background-image:url('/images/recent-post/blog_2.jpg')">
+                                    <div class="pbmit-imgbox-wrapper">
+                                        <img src="/images/recent-post/blog_2.jpg" alt="Political Commentator" />
+                                    </div>
+                                </div>
+                                <div class="pbmit-contentbox col-md-6 col-sm-12">
+                                    <div class="pbminfotech-box-number">
+                                        <h4>2011</h4>
+                                    </div>
+                                    <div class="pbminfotech-box-title">
+                                        <h4>Political Commentator</h4>
+                                    </div>
+                                    <div class="pbminfotech-static-box-desc">
+                                        The point of using it has a
+                                        more-or-less normal distribution of letters, as opposed to using making it
+                                        look like readable English.
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- Slide2 -->
+                            <article class="pbmit-static-box-style-1">
+                                <div class="pbmit-imgbox col-md-6 col-sm-12"
+                                     style="background-image:url('/images/recent-post/blog_3.jpg')">
+                                    <div class="pbmit-imgbox-wrapper">
+                                        <img src="/images/recent-post/blog_3.jpg" alt="Political Commentator" />
+                                    </div>
+                                </div>
+                                <div class="pbmit-contentbox col-md-6 col-sm-12">
+                                    <div class="pbminfotech-box-number">
+                                        <h4>2013</h4>
+                                    </div>
+                                    <div class="pbminfotech-box-title">
+                                        <h4>Value of Partisanship</h4>
+                                    </div>
+                                    <div class="pbminfotech-static-box-desc">
+                                        The point of using it has a
+                                        more-or-less normal distribution of letters, as opposed to using making it
+                                        look like readable English.
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="swiper-slide">
+                            <!-- Slide3 -->
+                            <article class="pbmit-static-box-style-1">
+                                <div class="pbmit-imgbox col-md-6 col-sm-12"
+                                     style="background-image:url('/images/recent-post/blog_2.jpg')">
+                                    <div class="pbmit-imgbox-wrapper">
+                                        <img src="/images/recent-post/blog_2.jpg" alt="Political Commentator" />
+                                    </div>
+                                </div>
+                                <div class="pbmit-contentbox col-md-6 col-sm-12">
+                                    <div class="pbminfotech-box-number">
+                                        <h4>2016</h4>
+                                    </div>
+                                    <div class="pbminfotech-box-title">
+                                        <h4>Nature of commitment</h4>
+                                    </div>
+                                    <div class="pbminfotech-static-box-desc">
+                                        The point of using it has a
+                                        more-or-less normal distribution of letters, as opposed to using making it
+                                        look like readable English.
+                                    </div>
+                                </div>
+                            </article>
+                        </div>*@
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Portfolio End -->
+
+
     </div>
     <!-- Page Content End -->
 

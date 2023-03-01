@@ -12,7 +12,6 @@ namespace PoliticalWebsite.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-
         public ActionResult Index(Home model)
         {
             List<Home> lst = new List<Home>();
@@ -291,8 +290,3 @@ namespace PoliticalWebsite.Controllers
         }
     }
 }
-
-
-
-
-    

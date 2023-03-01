@@ -11,7 +11,7 @@ namespace PoliticalWebsite.Controllers
     public class AdminController : Controller
     {
         // GET: Admin
-        public ActionResult Index()
+         public ActionResult Index()
         {
             return View();
         }
@@ -25,6 +25,7 @@ namespace PoliticalWebsite.Controllers
                 ViewBag.GalleryImage = Ds.Tables[0].Rows[0]["GalleryImage"].ToString();
                 ViewBag.NewsImage = Ds.Tables[0].Rows[0]["NewsImage"].ToString();
                 ViewBag.EventImage = Ds.Tables[0].Rows[0]["EventImage"].ToString();
+                ViewBag.Contact = Ds.Tables[0].Rows[0]["Contact"].ToString();
             }
             catch (Exception ex)
             {
@@ -55,6 +56,5 @@ namespace PoliticalWebsite.Controllers
             }
             return View(model);
         }
-
     }
 }

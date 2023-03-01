@@ -5,125 +5,126 @@
     Layout = "~/Views/Shared/WebsiteLayout.cshtml";
 }
 
+
 @using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { @id = "form1", enctype = "multipart/form-data" }))
 {
-<div class="page-wrapper">
-    <!-- Title Bar -->
-    <div class="pbmit-title-bar-wrapper">
-        <div class="container">
-            <div class="pbmit-title-bar-content">
-                <div class="pbmit-title-bar-content-inner">
-                    <div class="pbmit-tbar">
-                        <div class="pbmit-tbar-inner container">
-                            <h1 class="pbmit-tbar-title">संपर्क करें</h1>
+    <div class="page-wrapper">
+        <!-- Title Bar -->
+        <div class="pbmit-title-bar-wrapper">
+            <div class="container">
+                <div class="pbmit-title-bar-content">
+                    <div class="pbmit-title-bar-content-inner">
+                        <div class="pbmit-tbar">
+                            <div class="pbmit-tbar-inner container">
+                                <h1 class="pbmit-tbar-title">संपर्क करें</h1>
+                            </div>
                         </div>
-                    </div>
-                    <div class="pbmit-breadcrumb pt-2">
-                        <div class="pbmit-breadcrumb-inner">
-                            <span><a title="" href="index.html" class="home"><span>होम</span></a></span>
-                            <span class="sep"><i class="pbmit-base-icon-angle-double-right"></i></span>
-                            <span><span class="post-root post post-post current-item"> संपर्क करें</span></span>
+                        <div class="pbmit-breadcrumb pt-2">
+                            <div class="pbmit-breadcrumb-inner">
+                                <span><a title="" href="index.html" class="home"><span>होम</span></a></span>
+                                <span class="sep"><i class="pbmit-base-icon-angle-double-right"></i></span>
+                                <span><span class="post-root post post-post current-item"> संपर्क करें</span></span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Title Bar End-->
-    <!-- Contact Us Content -->
-    <div class="page-content">
-        <!-- Contact -->
-        <section class="section-lgt contact-section">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-md-12 text-center">
-                        <div class="pbmit-heading-subheading">
-                            <h2 class="pbmit-title mb-3">सहायता की आवश्यकता होने पर आप <br /> हमसे जुड़ सकते हैं!!</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <section class="contact-section-bg">
+        <!-- Title Bar End-->
+        <!-- Contact Us Content -->
+        <div class="page-content">
+            <!-- Contact -->
+            <section class="section-lgt contact-section">
                 <div class="container">
                     <div class="row g-0">
-                        <div class="col-md-5">
-                            <div class="contact-section-left">
-                                <div class="pbmit-ihbox pbmit-ihbox-style-4">
-                                    <div class="pbmit-ihbox-box d-flex align-items-center">
-                                        <div class="pbmit-ihbox-icon">
-                                            <div class="pbmit-ihbox-icon-wrapper">
-                                                <i class="pbmit-politicia-icon pbmit-politicia-icon-placeholder"></i>
+                        <div class="col-md-12 text-center">
+                            <div class="pbmit-heading-subheading">
+                                <h2 class="pbmit-title mb-3">सहायता की आवश्यकता होने पर आप <br /> हमसे जुड़ सकते हैं!!</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <section class="contact-section-bg">
+                    <div class="container">
+                        <div class="row g-0">
+                            <div class="col-md-5">
+                                <div class="contact-section-left">
+                                    <div class="pbmit-ihbox pbmit-ihbox-style-4">
+                                        <div class="pbmit-ihbox-box d-flex align-items-center">
+                                            <div class="pbmit-ihbox-icon">
+                                                <div class="pbmit-ihbox-icon-wrapper">
+                                                    <i class="pbmit-politicia-icon pbmit-politicia-icon-placeholder"></i>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="pbmit-ihbox-contents">
-                                            <h2 class="pbmit-element-title">हमारा स्थान</h2>
-                                            <div>विधानसभा रामपुर कारखाना, देवरिया, उत्तर प्रदेश, भारत</div>
+                                            <div class="pbmit-ihbox-contents">
+                                                <h2 class="pbmit-element-title">हमारा स्थान</h2>
+                                                <div>विधानसभा रामपुर कारखाना, देवरिया, उत्तर प्रदेश, भारत</div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="pbmit-ihbox pbmit-ihbox-style-4">
-                                    <div class="pbmit-ihbox-box d-flex align-items-center">
-                                        <div class="pbmit-ihbox-icon">
-                                            <div class="pbmit-ihbox-icon-wrapper">
-                                                <i class="pbmit-politicia-icon pbmit-politicia-icon-telephone"></i>
+                                    <div class="pbmit-ihbox pbmit-ihbox-style-4">
+                                        <div class="pbmit-ihbox-box d-flex align-items-center">
+                                            <div class="pbmit-ihbox-icon">
+                                                <div class="pbmit-ihbox-icon-wrapper">
+                                                    <i class="pbmit-politicia-icon pbmit-politicia-icon-telephone"></i>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="pbmit-ihbox-contents">
-                                            <h2 class="pbmit-element-title">फ़ोन नंबर</h2>
-                                            <div>094507 78819</div>
+                                            <div class="pbmit-ihbox-contents">
+                                                <h2 class="pbmit-element-title">फ़ोन नंबर</h2>
+                                                <div>094507 78819</div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="pbmit-ihbox pbmit-ihbox-style-4">
-                                    <div class="pbmit-ihbox-box d-flex align-items-center">
-                                        <div class="pbmit-ihbox-icon">
-                                            <div class="pbmit-ihbox-icon-wrapper">
-                                                <i class="pbmit-politicia-icon pbmit-politicia-icon-email"></i>
+                                    <div class="pbmit-ihbox pbmit-ihbox-style-4">
+                                        <div class="pbmit-ihbox-box d-flex align-items-center">
+                                            <div class="pbmit-ihbox-icon">
+                                                <div class="pbmit-ihbox-icon-wrapper">
+                                                    <i class="pbmit-politicia-icon pbmit-politicia-icon-email"></i>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="pbmit-ihbox-contents">
-                                            <h2 class="pbmit-element-title">हमारा ईमेल पता</h2>
-                                            <div>surendrachaurasia@gmail.com</div>
+                                            <div class="pbmit-ihbox-contents">
+                                                <h2 class="pbmit-element-title">हमारा ईमेल पता</h2>
+                                                <div>surendrachaurasia@gmail.com</div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="col-md-7">
-                            <div class="contact-form">
-                                <div class="row mb-3 g-3">
-                                    <span style="color:red">@TempData["Contact"]</span>
-                                    <div class="col-lg-6 col-sm-6">
-                                        @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @Placeholder = "आपका नाम" })
-                                    </div>
-                                    <div class="col-lg-6 col-sm-6">
-                                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @Placeholder = "आपका ईमेल" })
-                                    </div>
-                                    <div class="col-lg-6 col-sm-6">
-                                        @Html.TextBoxFor(m => m.Mobile, new { @class = "form-control", @Placeholder = "आपका फोन नं.", @onkeypress = "return isNumberOrDecimal(event);", @maxlength = "10" })
-                                    </div>
-                                    <div class="col-lg-6 col-sm-6">
-                                        @Html.TextBoxFor(m => m.Subject, new { @class = "form-control", @Placeholder = "विषय" })
-                                    </div>
-                                    <div class="col-lg-12 col-sm-12">
-                                        @Html.TextAreaFor(m => m.Message, new { @class = "form-control", @Placeholder = "आपका संदेश", @rows = "4", @style = "height:150px;" })
-                                    </div>
-                                    <div class="col-lg-12 col-sm-12 mt-5 pb-4">
-                                        <input class="pbmit-btn pbmit-btn-global pbmit-btn-hover-secondary" type="submit" onclick="return validateform();" value="मेसेज भेजें" id="btnSave" name="btnSave" />
+                            <div class="col-md-7">
+                                <div class="contact-form">
+                                    <div class="row mb-3 g-3">
+                                        <span style="color:red">@TempData["Contact"]</span>
+                                        <div class="col-lg-6 col-sm-6">
+                                            @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @Placeholder = "आपका नाम" })
+                                        </div>
+                                        <div class="col-lg-6 col-sm-6">
+                                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @Placeholder = "आपका ईमेल" })
+                                        </div>
+                                        <div class="col-lg-6 col-sm-6">
+                                            @Html.TextBoxFor(m => m.Mobile, new { @class = "form-control", @Placeholder = "आपका फोन नं.", @onkeypress = "return isNumberOrDecimal(event);", @maxlength = "10" })
+                                        </div>
+                                        <div class="col-lg-6 col-sm-6">
+                                            @Html.TextBoxFor(m => m.Subject, new { @class = "form-control", @Placeholder = "विषय" })
+                                        </div>
+                                        <div class="col-lg-12 col-sm-12">
+                                            @Html.TextAreaFor(m => m.Message, new { @class = "form-control", @Placeholder = "आपका संदेश", @rows = "4", @style = "height:150px;" })
+                                        </div>
+                                        <div class="col-lg-12 col-sm-12 mt-5 pb-4">
+                                            <input class="pbmit-btn pbmit-btn-global pbmit-btn-hover-secondary" type="submit" onclick="return validateform();" value="मेसेज भेजें" id="btnSave" name="btnSave" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </section>
-        </section>
-        <!-- Contact End -->
+            <!-- Contact End -->
+        </div>
+        <!-- Contact Us Content End -->
     </div>
-    <!-- Contact Us Content End -->
-</div>
-<!-- Page Wrapper End -->
+    <!-- Page Wrapper End -->
 }
 
 
@@ -179,3 +180,4 @@
         background-color: #fff0f0 !important;
     }
 </style>
+

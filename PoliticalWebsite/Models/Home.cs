@@ -56,7 +56,7 @@ namespace PoliticalWebsite.Models
 
         public DataSet SaveContactUs()
         {
-            SqlParameter[] para = { 
+            SqlParameter[] para = {
                 new SqlParameter("@Name",Name),
                  new SqlParameter("@Email",Email),
                   new SqlParameter("@Mobile",Mobile),

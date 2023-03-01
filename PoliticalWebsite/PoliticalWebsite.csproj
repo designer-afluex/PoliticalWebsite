@@ -9,7 +9,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{28BEDBEC-01BB-4DA6-AB7D-FED707D89ED6}</ProjectGuid>
+    <ProjectGuid>{0BA5947E-6C76-4B15-BE5F-C4D04FE2518D}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -168,6 +168,8 @@
     <Content Include="assets\images\lightbox\thumb-v-v-2.jpg" />
     <Content Include="assets\images\lightbox\thumb-v-y-1.jpg" />
     <Content Include="assets\images\lightbox\thumb-v-y-2.jpg" />
+    <Content Include="assets\images\login-bg.jpg" />
+    <Content Include="assets\images\login-bg2.jpg" />
     <Content Include="assets\images\logo-mini.svg" />
     <Content Include="assets\images\logo.svg" />
     <Content Include="assets\images\samples\1280x768\1.jpg" />
@@ -271,11 +273,79 @@
     <Content Include="assets\vendors\summernote\dist\summernote-bs4.min.js" />
     <Content Include="assets\vendors\tinymce\themes\modern\theme.js" />
     <Content Include="assets\vendors\tinymce\tinymce.min.js" />
+    <Content Include="BannerImages\068bbed1-4c7f-4e1b-9744-2eb069e8f3df.jpg" />
+    <Content Include="BannerImages\0c6e1c8f-0ad3-47fe-a801-870e9d121170.jpg" />
+    <Content Include="BannerImages\10713661-8066-4408-93fd-79218451e3f3.jpg" />
+    <Content Include="BannerImages\124bab4a-0246-4631-991a-e042bb68ea82.jpg" />
+    <Content Include="BannerImages\1b8d358a-0050-4829-94cf-ff93cb3fb243.png" />
+    <Content Include="BannerImages\1e4ed77d-9826-428f-855d-64406a705f7d.jpg" />
+    <Content Include="BannerImages\1e57af42-dee4-44eb-a274-618fdebb3eea.jpg" />
+    <Content Include="BannerImages\1fb3f53b-8d2b-48a9-9839-dec4a9d48376.jpg" />
+    <Content Include="BannerImages\264e3bf3-56cc-4266-acab-c52d2b1d9d4f.jpg" />
+    <Content Include="BannerImages\2ae0c85c-13ee-4fe5-8416-64f6164f0490.jpg" />
+    <Content Include="BannerImages\34c3297b-7eeb-484f-9ed4-4147ccb440bb.jpg" />
+    <Content Include="BannerImages\419e9eed-565e-468f-8797-b443cce360d0.jpg" />
+    <Content Include="BannerImages\453dbd53-9358-49e5-bca8-e281704ce9b5.jpg" />
+    <Content Include="BannerImages\45bd2a3b-3798-44ad-baa6-3256aa1a15a5.jpg" />
+    <Content Include="BannerImages\46a82126-3e24-4d4c-b888-b5a86f5e120e.jpg" />
+    <Content Include="BannerImages\486c466d-b707-43f3-a0a7-73ee19b76490.jpg" />
+    <Content Include="BannerImages\48ac71b4-e2f0-4e84-a47a-ffc2085c0df4.png" />
     <Content Include="BannerImages\4b71cc35-51e7-4f62-a440-ac4e89f99f8c.jpg" />
+    <Content Include="BannerImages\515ee874-4959-4b75-9e2d-11f61914b9aa.jpg" />
+    <Content Include="BannerImages\51d9e076-a07f-40b6-abbe-8940e8e08a44.jpg" />
+    <Content Include="BannerImages\531bc711-9d4e-4db6-bde9-b9c67031f479.jpg" />
+    <Content Include="BannerImages\5cc2122c-cdb8-4205-a9f0-14ae23d40fee.jpg" />
+    <Content Include="BannerImages\6791596a-e590-4c0d-ab66-472650ca5605.jpeg" />
+    <Content Include="BannerImages\681037d0-9a4d-4fa9-8699-cf14e17b686d.jpg" />
+    <Content Include="BannerImages\69318162-e122-4b87-a305-123d23ebe809.jpg" />
+    <Content Include="BannerImages\6989250f-dfe7-4b2f-a49a-f00c055a73c1.jpg" />
+    <Content Include="BannerImages\6a5f99b1-46df-4568-b981-d111ec05a464.jpg" />
+    <Content Include="BannerImages\6f0ef6fa-a284-47d1-b3c1-0821ff10fdd6.jpg" />
+    <Content Include="BannerImages\6ff2402e-59e9-42e6-a9c8-66c9f6ae23ee.jpg" />
+    <Content Include="BannerImages\70ffffbc-1f2c-499b-b207-e34fe410e8bc.jpeg" />
+    <Content Include="BannerImages\71dddf7f-9319-4390-9bc2-4d119eb4b6b4.jpg" />
+    <Content Include="BannerImages\73a3b0b9-4866-48e9-8bc3-c5c9a11707ba.jpg" />
+    <Content Include="BannerImages\7ac78040-8256-4708-ac42-2220f1f12602.jpg" />
+    <Content Include="BannerImages\7edf09fd-2809-4d29-8e54-535abbcdabfb.jpg" />
     <Content Include="BannerImages\8647326d-e51f-4c58-a8c8-b7bcf77afaf8.jpg" />
+    <Content Include="BannerImages\8a1015a1-5089-4131-9998-3466fbf6c408.jpg" />
+    <Content Include="BannerImages\8a32150c-56a9-468f-9fad-dfe979a89707.jpg" />
+    <Content Include="BannerImages\8c6ad967-1468-4b6c-a7fd-6b4668dff218.jpg" />
+    <Content Include="BannerImages\8f3f96a5-4d99-4c61-8461-e17e0aa9487f.jpg" />
+    <Content Include="BannerImages\903acec0-90a7-45bd-b182-24a7e513b4e2.jpg" />
+    <Content Include="BannerImages\931c1b7c-dccb-4e95-bdbc-70a3f9ad230d.jpg" />
+    <Content Include="BannerImages\9614cb1c-1f87-4bbe-a5b2-3f78bfa1a6d2.jpg" />
+    <Content Include="BannerImages\993a19f9-72bd-40bd-bdb5-8348a77ab108.jpeg" />
+    <Content Include="BannerImages\998feab7-2915-4f64-9ce7-dd55e01006b4.jpg" />
+    <Content Include="BannerImages\9d1ba595-815b-4f3f-aeed-da14cebbfa80.jpg" />
+    <Content Include="BannerImages\9decc276-674d-4c64-abce-7aeae33f7dc2.jpg" />
+    <Content Include="BannerImages\9efa2a9f-4173-4626-a90a-d104dce5bd9b.jpg" />
+    <Content Include="BannerImages\9f318c96-3bca-4cd9-b916-12c80a8fb2e3.jpg" />
     <Content Include="BannerImages\a066f2e2-5d4c-4056-ada6-79e2c92d675d.jpg" />
+    <Content Include="BannerImages\a077dfc3-4349-4b51-9717-859f42f41be0.jpg" />
+    <Content Include="BannerImages\a1d118ef-8a87-4480-82c1-b9ba3bef63f3.png" />
+    <Content Include="BannerImages\a4a5c70b-3b6a-4b56-abf3-7bdfbb1b3cba.jpg" />
+    <Content Include="BannerImages\b03e00a4-cec9-4744-a56c-f562b429b8ef.jpeg" />
     <Content Include="BannerImages\b5030cca-23a3-47c7-b888-f4e2d6f381fe.png" />
+    <Content Include="BannerImages\b7e4a37c-2e9f-4959-9665-a12f79d54367.jpg" />
+    <Content Include="BannerImages\b9c6ca87-66b2-437d-9e0a-589550c5a407.jpg" />
+    <Content Include="BannerImages\b9e15295-4836-4d26-b1c7-779fa87fc10e.jpg" />
+    <Content Include="BannerImages\bd8d4a8d-aae8-41b4-a12f-16351d3c2e77.jpg" />
+    <Content Include="BannerImages\d0f68b20-ce20-4583-b8b1-37ebb9d8c99a.jpg" />
     <Content Include="BannerImages\d403ff60-7ef6-46e4-b1c6-7d5242bc4e48.jpg" />
+    <Content Include="BannerImages\d64c1a4b-7de6-4745-98ad-6ea04ecb5a07.jpg" />
+    <Content Include="BannerImages\d99235da-909b-4fdb-a230-30ed7e70f1c1.jpeg" />
+    <Content Include="BannerImages\db6fe080-2431-4cec-a6ed-1c0beba89852.jpg" />
+    <Content Include="BannerImages\dc5f2c2e-a8ba-4dca-989b-9b4e5062d814.png" />
+    <Content Include="BannerImages\df0959eb-9ff3-40e6-ba42-6a0c47ebf159.jpg" />
+    <Content Include="BannerImages\e02401d0-90f4-49c9-bd3d-d399ecccd915.jpg" />
+    <Content Include="BannerImages\e2a603d7-8ecf-47f3-b7bd-f573b1f94e56.jpg" />
+    <Content Include="BannerImages\ef6d7cd7-3689-421f-a2ff-424c14c5aba7.jpg" />
+    <Content Include="BannerImages\f970d76c-b80e-48d2-9874-945568dd0ae0.jpeg" />
+    <Content Include="BannerImages\f985d01a-df85-4d36-96c2-777329dd27de.jpg" />
+    <Content Include="BannerImages\fcf47f1b-4d4c-4e79-8049-83e34333e671.jpg" />
+    <Content Include="BannerImages\fd595752-536e-47d7-bdd3-81abcef7a32c.jpg" />
+    <Content Include="BannerImages\ffd3c95d-5726-4e14-a293-1041f3359bd4.jpg" />
     <Content Include="bin\Microsoft.AI.Agent.Intercept.dll" />
     <Content Include="bin\Microsoft.AI.DependencyCollector.dll" />
     <Content Include="bin\Microsoft.AI.DependencyCollector.xml" />
@@ -322,9 +392,98 @@
     <Content Include="bin\System.Web.Webpages.Razor.dll" />
     <Content Include="bin\System.Web.Webpages.Razor.xml" />
     <Content Include="bin\System.Web.Webpages.xml" />
+    <Content Include="css\aos.css" />
+    <Content Include="css\base.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\css2-1.css" />
+    <Content Include="css\css2.css" />
+    <Content Include="css\flaticon.css" />
+    <Content Include="css\fontawesome.css" />
+    <Content Include="css\magnific-popup.css" />
+    <Content Include="css\pbminfotech-base-icons.css" />
+    <Content Include="css\responsive.css" />
+    <Content Include="css\shortcode.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\swiper.min.css" />
+    <Content Include="css\themify-icons.css" />
+    <Content Include="fonts\Flaticon.svg" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\pbminfotech-base-icons.svg" />
     <Content Include="Global.asax" />
+    <Content Include="js\aos.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\circle-progress.js" />
+    <Content Include="js\footer.js" />
+    <Content Include="js\header.js" />
+    <Content Include="js\instagram.js" />
+    <Content Include="js\jquery.appear.js" />
+    <Content Include="js\jquery.countdown.min.js" />
+    <Content Include="js\jquery.magnific-popup.min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\jquery.waypoints.min.js" />
+    <Content Include="js\numinate.min.js" />
+    <Content Include="js\popper.min.js" />
+    <Content Include="js\scripts.js" />
+    <Content Include="js\swiper.min.js" />
+    <Content Include="js\translator.js" />
+    <Content Include="obj\Debug\PoliticalWebsite.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\PoliticalWebsite.dll" />
+    <Content Include="obj\Debug\PoliticalWebsite.pdb" />
+    <Content Include="revolution\images\heading-img.png" />
+    <Content Include="revolution\images\slidebg1.png" />
+    <Content Include="revolution\images\slider-img-01.png" />
+    <Content Include="revolution\images\slider-img-02.png" />
+    <Content Include="revolution\images\slider-img-03.png" />
+    <Content Include="revolution\images\slider-img-04.png" />
+    <Content Include="revolution\images\slider02-img-01.jpg" />
+    <Content Include="revolution\images\slider02-img-02.jpg" />
+    <Content Include="revolution\images\slider02-img-03.jpg" />
+    <Content Include="revolution\images\slider03-img-01.jpg" />
+    <Content Include="revolution\images\slider03-img-02.jpg" />
+    <Content Include="revolution\images\slider03-img-03.jpg" />
+    <Content Include="revolution\rbtools.min.js" />
+    <Content Include="revolution\rs6.css" />
+    <Content Include="revolution\rs6.min.js" />
+    <Content Include="revolution\rslider.js" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="assets\fonts\Roboto\Roboto-Bold.woff2" />
+    <Content Include="assets\fonts\Roboto\Roboto-Light.woff2" />
+    <Content Include="assets\fonts\Roboto\Roboto-Medium.woff2" />
+    <Content Include="assets\fonts\Roboto\Roboto-Regular.woff2" />
+    <Content Include="assets\vendors\iconfonts\mdi\font\fonts\materialdesignicons-webfont.woff2" />
+    <Content Include="fonts\Flaticon-1.eot" />
+    <Content Include="fonts\Flaticon.eot" />
+    <Content Include="fonts\Flaticon.ttf" />
+    <Content Include="fonts\Flaticon.woff" />
+    <Content Include="fonts\Flaticon.woff2" />
+    <Content Include="fonts\fontawesome-webfont-1.eot" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\pbminfotech-base-icons.eot" />
+    <Content Include="fonts\pbminfotech-base-icons.ttf" />
+    <Content Include="fonts\pbminfotech-base-icons.woff" />
+    <Content Include="fonts\pbminfotech-base-icons.woff2" />
+    <Content Include="fonts\themify.eot" />
+    <Content Include="fonts\themify.ttf" />
+    <Content Include="fonts\themify.woff" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\PoliticalWebsite.csprojResolveAssemblyReference.cache" />
+    <Content Include="bin\ApplicationInsights.config" />
+    <Content Include="bin\PoliticalWebsite.dll.config" />
+    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
+    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
+    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
+    <None Include="scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="scripts\jquery-1.10.2.js" />
+    <Content Include="scripts\jquery-1.10.2.min.js" />
+    <None Include="scripts\jquery.validate-vsdoc.js" />
+    <Content Include="scripts\jquery.validate.js" />
+    <Content Include="scripts\jquery.validate.min.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -354,35 +513,24 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Views\Shared\Admin_LayoutPage.cshtml" />
     <Content Include="Views\Shared\WebsiteLayout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Admin\AdminDashboard.cshtml" />
+    <Content Include="scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Admin\ContactDetails.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Events.cshtml" />
     <Content Include="Views\Home\Gallery.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\NewsPressRelease.cshtml" />
-    <Content Include="Views\Home\Login.cshtml" />
-    <Content Include="Views\Admin\AdminDashboard.cshtml" />
-    <Content Include="assets\fonts\Roboto\Roboto-Bold.woff2" />
-    <Content Include="assets\fonts\Roboto\Roboto-Light.woff2" />
-    <Content Include="assets\fonts\Roboto\Roboto-Medium.woff2" />
-    <Content Include="assets\fonts\Roboto\Roboto-Regular.woff2" />
-    <Content Include="assets\vendors\iconfonts\mdi\font\fonts\materialdesignicons-webfont.woff2" />
-    <Content Include="bin\ApplicationInsights.config" />
-    <Content Include="bin\PoliticalWebsite.dll.config" />
-    <Content Include="bin\roslyn\Microsoft.CSharp.Core.targets" />
-    <Content Include="bin\roslyn\Microsoft.VisualBasic.Core.targets" />
-    <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
-    <Content Include="Views\Shared\Admin_LayoutPage.cshtml" />
-    <Content Include="Views\Master\AddNews.cshtml" />
-    <Content Include="Views\Master\NewsList.cshtml" />
     <Content Include="Views\Master\AddGallery.cshtml" />
-    <Content Include="Views\Master\AddEvent.cshtml" />
     <Content Include="Views\Master\GalleryimageList.cshtml" />
+    <Content Include="Views\Master\AddEvent.cshtml" />
     <Content Include="Views\Master\EventimageList.cshtml" />
+    <Content Include="Views\Master\AddNews.cshtml" />
     <Content Include="Views\Master\NewsimageList.cshtml" />
-    <None Include="Properties\PublishProfiles\PoliticalWebsite.pubxml" />
-    <Content Include="Views\Admin\ContactDetails.cshtml" />
     <Content Include="Views\Master\AddSliderBanner.cshtml" />
     <Content Include="Views\Master\SliderBannerList.cshtml" />
     <None Include="Web.Debug.config">
@@ -394,12 +542,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="css\" />
-    <Folder Include="fonts\" />
-    <Folder Include="images\" />
-    <Folder Include="js\" />
-    <Folder Include="revolution\" />
-    <Folder Include="Views\Master\Banner\" />
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="Views\AdminBase\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -414,9 +558,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>52574</DevelopmentServerPort>
+          <DevelopmentServerPort>54749</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:52574/</IISUrl>
+          <IISUrl>http://localhost:54749/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

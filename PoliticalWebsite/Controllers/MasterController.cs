@@ -13,7 +13,6 @@ namespace PoliticalWebsite.Controllers
     public class MasterController : AdminBaseController
     {
         // GET: Master
-
         #region SliderBannerMaster
 
         public ActionResult AddSliderBanner(string Id)
@@ -360,7 +359,7 @@ namespace PoliticalWebsite.Controllers
         [HttpPost]
         [ActionName("AddEvent")]
         [OnAction(ButtonName = "btnSave")]
-        public ActionResult SaveEventAction(HttpPostedFileBase Event, string Discription,string City,string Town_Village, string Date)
+        public ActionResult SaveEventAction(HttpPostedFileBase Event, string Discription, string City, string Town_Village, string Date)
         {
             Master obj = new Master();
             try
@@ -528,7 +527,7 @@ namespace PoliticalWebsite.Controllers
         [HttpPost]
         [ActionName("AddNews")]
         [OnAction(ButtonName = "btnSave")]
-        public ActionResult SaveNewsAction(HttpPostedFileBase News, string Discription,string Date,string Message)
+        public ActionResult SaveNewsAction(HttpPostedFileBase News, string Discription, string Date, string Message)
         {
             Master obj = new Master();
             try
@@ -653,6 +652,5 @@ namespace PoliticalWebsite.Controllers
             return RedirectToAction("NewsimageList", "Master");
         }
         #endregion
-
     }
 }

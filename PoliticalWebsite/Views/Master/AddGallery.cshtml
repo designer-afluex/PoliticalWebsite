@@ -6,56 +6,40 @@
 }
 
 
-@using (Html.BeginForm("AddGallery", "Master", FormMethod.Post, new { @id = "form1", enctype = "multipart/form-data" }))
+
+@using (Html.BeginForm("AddGallery", "Master", FormMethod.Post, new { @id = "form1", @class = "forms-sample", enctype = "multipart/form-data" }))
 {
-    <span style="color: red">
-        @TempData["msg"]
-    </span>
-    <br/><br/>
+
     <div class="row">
-        <div class="col-lg-12">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <fieldset>
-                        <div>
-                            <h2>Gallery Banner</h2>
-                        </div>
-                        <div class="row mt-4">
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label>Gallery Heading <span style="color: red">*</span></label>
-                                    @Html.TextBoxFor(m => m.Discription, new { @placeholder = "Gallery Heading", @class = "form-control" })
-                                    @Html.HiddenFor(m => m.GalleryID)
-                                </div>
-                            </div>
-                        </div>
+        <div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <span style="color: red">
+                        @TempData["msg"]
+                    </span><br />
+                    <h3 class="card-title">Gallery Banner</h3>
+                    <div class="form-group">
+                        <label>Gallery Heading <span style="color: red">*</span></label>
+                        @Html.TextBoxFor(m => m.Discription, new { @placeholder = "Gallery Heading", @class = "form-control" })
+                        @Html.HiddenFor(m => m.GalleryID)
+                    </div>
+                    <div class="form-group">
+                        <label>Upload Gallery Banner <span style="color: red">*</span></label><br />
+                        <input type="file" id="Gallery" name="Gallery" class="form-control" />
+                    </div>
 
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label>Upload Gallery Banner <span style="color: red">*</span></label><br />
-                                    <input type="file" id="Gallery" name="Gallery" class="form-control" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-9">
-                                <div class="form-group">
-                                    @Html.HiddenFor(m => m.Pk_GalleryId)
-                                    @if (Model == null)
-                                    {
-                                        <input type="submit" id="btnSave" name="btnSave" class="btn btn-success pull-right" value="Save" onclick="return savegallery();" />
-                                    }
-                                    else
-                                    {
-                                        <input type="submit" id="btnUpdate" name="btnUpdate" class="btn btn-success pull-right" value="Update" onclick="return savegallery();" />
-                                    }
-                                    <a href="/Master/GalleryimageList" class="btn btn-primary pull-right">Gallery List</a>
-                                </div>
-                            </div>
-                        </div>
-                    </fieldset>
+                    <div class="form-group">
+                        @Html.HiddenFor(m => m.Pk_GalleryId)
+                        @if (Model == null)
+                        {
+                            <input type="submit" id="btnSave" name="btnSave" class="btn btn-success pull-right" value="Save" onclick="return savegallery();" />
+                        }
+                        else
+                        {
+                            <input type="submit" id="btnUpdate" name="btnUpdate" class="btn btn-success pull-right" value="Update" onclick="return savegallery();" />
+                        }
+                        <a href="/Master/GalleryimageList" class="btn btn-primary pull-right">Gallery List</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -68,22 +52,24 @@
     }
 </style>
 <script>
-    function savegallery() {
-        $(".errortext").removeClass("errortext");
-        if ($('#Discription').val() == '') {
-            $("#Discription").addClass('errortext');
-            $('#Discription').focus();
-            return false;
-        }
-        if ($('#Gallery').val() == '') {
-            $("#Gallery").addClass('errortext');
-            $('#Gallery').focus();
-            return false;
-        }
-    }
+                        function savegallery() {
+                            $(".errortext").removeClass("errortext");
+                            if ($('#Discription').val() == '') {
+                                $("#Discription").addClass('errortext');
+                                $('#Discription').focus();
+                                return false;
+                            }
+                            if ($('#Gallery').val() == '') {
+                                $("#Gallery").addClass('errortext');
+                                $('#Gallery').focus();
+                                return false;
+                            }
+                        }
 
 
 </script>
+
+
 
 
 

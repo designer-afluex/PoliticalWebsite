@@ -22,7 +22,7 @@ namespace PoliticalWebsite.Models
         public string Pk_GalleryId { get; set; }
         public string Gallery { get; set; }
         public string GalleryImage { get; set; }
-        public List<Master> lstgallery { get; set; }  
+        public List<Master> lstgallery { get; set; }
         #endregion
 
         #region EventMaster
@@ -103,10 +103,10 @@ namespace PoliticalWebsite.Models
 
         #region GalleryMaster
 
-        public DataSet SaveGalleryBanner()  
+        public DataSet SaveGalleryBanner()
         {
             SqlParameter[] para = {
-                    new SqlParameter("@GalleryImage", Gallery),   
+                    new SqlParameter("@GalleryImage", Gallery),
                     new SqlParameter("@Discription", Discription),
                     new SqlParameter("@AddedBy", AddedBy)
 
@@ -153,7 +153,7 @@ namespace PoliticalWebsite.Models
         {
             SqlParameter[] para = {
                     new SqlParameter("@EventImage", Event),
-                    new SqlParameter("@Discription", Discription),  
+                    new SqlParameter("@Discription", Discription),
                     new SqlParameter("@City", City),
                     new SqlParameter("@Town_Village", Town_Village),
                     new SqlParameter("@Date", Date),

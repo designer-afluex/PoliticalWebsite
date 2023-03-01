@@ -101,31 +101,31 @@
                         <div class="swiper-slider" data-autoplay="false" data-dots="false" data-arrows="true"
                              data-arrows-class="home1-service-arrow" data-columns="3" data-margin="30" data-effect="slide">
                             <div class="swiper-wrapper">
-                                    @if (Model != null)
+                                @if (Model != null)
+                                {
+                                    if (Model.lstgallery != null)
                                     {
-                                        if (Model.lstgallery != null)
+                                        int i = 0;
+                                        foreach (var item in Model.lstgallery)
                                         {
-                                            int i = 0;
-                                            foreach (var item in Model.lstgallery)
-                                            {
-                                                <div class="swiper-slide">
-                                                    <article class="pbmit-service-style-2">
-                                                        <div class="pbminfotech-post-item">
-                                                            <div class="pbmit-service-img-wrapper">
-                                                                <div class="pbmit-featured-wrapper">
-                                                                    <a href="@item.GalleryImage">
-                                                                        <img src="@item.GalleryImage" class="img-fluid gallery_img"
-                                                                             alt="Political_Image" style="height:320px">
-                                                                    </a>
-                                                                </div>
+                                            <div class="swiper-slide">
+                                                <article class="pbmit-service-style-2">
+                                                    <div class="pbminfotech-post-item">
+                                                        <div class="pbmit-service-img-wrapper">
+                                                            <div class="pbmit-featured-wrapper">
+                                                                <a href="@item.GalleryImage">
+                                                                    <img src="@item.GalleryImage" class="img-fluid gallery_img"
+                                                                         alt="Political_Image" style="height:320px">
+                                                                </a>
                                                             </div>
                                                         </div>
-                                                    </article>
-                                                </div>
-                                                i++;
-                                            }
+                                                    </div>
+                                                </article>
+                                            </div>
+                                            i++;
                                         }
                                     }
+                                }
                             </div>
                         </div>
                     </div>
@@ -179,7 +179,7 @@
                                                 </div>
                                                 <div class="pbmit-event-meta">
                                                     <div class="wpem-event-location">
-                                                        <span class="wpem-event-location-text">@item.City</span>
+                                                        <span class="wpem-event-location-text">@item.Town_Village @item.City</span>
                                                     </div>
                                                     <div class="wpem-event-date-time">
                                                         <span class="wpem-event-date-time-text">@item.Date</span>
@@ -252,4 +252,5 @@
     <!-- Page Content End -->
 </div>
 <!-- page wrapper End -->
+
 

@@ -1,0 +1,112 @@
+﻿@model PoliticalWebsite.Models.Home
+
+@{
+    ViewBag.Title = "Events";
+    Layout = "~/Views/Shared/WebsiteLayout.cshtml";
+}
+
+
+<!-- Page Wrapper -->
+<div class="page-wrapper">
+
+    <!-- Title Bar -->
+    <div class="pbmit-title-bar-wrapper">
+        <div class="container">
+            <div class="pbmit-title-bar-content">
+                <div class="pbmit-title-bar-content-inner">
+                    <div class="pbmit-tbar">
+                        <div class="pbmit-tbar-inner container">
+                            <h1 class="pbmit-tbar-title">आयोजन</h1>
+                        </div>
+                    </div>
+                    <div class="pbmit-breadcrumb">
+                        <div class="pbmit-breadcrumb-inner">
+                            <span><a title="" href="/Home/Index" class="home"><span>होम</span></a></span>
+                            <span class="sep"><i class="pbmit-base-icon-angle-double-right"></i></span>
+                            <span><span class="post-root post post-post current-item">हमारा आयोजन</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Title Bar End-->
+    <!-- Page Content -->
+    <div class="page-content">
+
+        <!-- Future Start -->
+        <section class="section-lgb pbmit-bg-color-light">
+            <div class="container">
+                <div class="pbmit-heading-subheading text-center pt-5">
+                    <h2 class="pbmit-title">हमारे राजनीतिक भविष्य में भाग लें</h2>
+                </div>
+
+                <div class="row">
+                    @if (Model != null)
+                    {
+                        if (Model.lstevent != null)
+                        {
+                            int i = 0;
+                            foreach (var item in Model.lstevent)
+                            {
+                                <div class="col-xl-6 col-lg-12">
+                                    <div class="wpem-event-action-url event-style-color tour">
+                                        <div class="wpem-event-banner">
+                                            <div class="wpem-event-banner-img"
+                                                 style="background-image: url('@item.EventImage')">
+                                                <div class="wpem-event-date">
+                                                    <div class="wpem-event-date-type">
+                                                        <div class="wpem-from-date">
+                                                            <div class="wpem-date">29</div>
+                                                            <div class="wpem-month">Jul</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="wpem-event-infomation">
+                                            <div class="wpem-event-date">
+                                                <div class="wpem-event-date-type">
+                                                    <div class="wpem-from-date">
+                                                        <div class="wpem-date">29</div>
+                                                        <div class="wpem-month">Jul</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="wpem-event-details">
+                                                <div class="wpem-event-title">
+                                                    <h3 class="wpem-heading-text">
+                                                        <a href="#">@item.Discription</a>
+                                                    </h3>
+                                                </div>
+                                                <div class="pbmit-event-meta">
+                                                    <div class="wpem-event-location">
+                                                        <span class="wpem-event-location-text">@item.Town_Village @item.City</span>
+                                                    </div>
+                                                    <div class="wpem-event-date-time">
+                                                        <span class="wpem-event-date-time-text">@item.Date</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="pbmit-event-arrow-link">
+                                            <a href="#" class="event-style-color tour"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                i++;
+                            }
+                        }
+                    }
+                </div>
+            </div>
+        </section>
+        <!-- Future End -->
+
+    </div>
+    <!-- Page Content End -->
+
+</div>
+<!-- Page Wrapper End -->
+
+

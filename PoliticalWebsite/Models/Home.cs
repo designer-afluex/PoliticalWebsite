@@ -18,6 +18,13 @@ namespace PoliticalWebsite.Models
         public string LoginId { get; set; }
         public string Password { get; set; }
 
+        #region SliderBannerMaster
+        public string Pk_SliderBannerId { get; set; }
+        public string SliderBannerID { get; set; }
+        public string SliderBannerImage { get; set; }
+        public List<Home> lstSliderBanner { get; set; }
+        #endregion
+
         #region GalleryMaster
         public List<Home> lstgallery { get; set; }
         public string GalleryImage { get; set; }
@@ -65,6 +72,13 @@ namespace PoliticalWebsite.Models
                      new SqlParameter("@AddedBy",AddedBy)
             };
             DataSet ds = Connection.ExecuteQuery("SaveContactDetails", para);
+            return ds;
+        }
+
+        public DataSet SliderBannerList()
+        {
+            SqlParameter[] para = { new SqlParameter("@Pk_SliderBannerId", SliderBannerID) };
+            DataSet ds = Connection.ExecuteQuery("SliderBannerDetails", para);
             return ds;
         }
 

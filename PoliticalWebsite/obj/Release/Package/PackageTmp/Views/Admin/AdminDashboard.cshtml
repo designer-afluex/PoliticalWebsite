@@ -1,0 +1,51 @@
+﻿@model PoliticalWebsite.Models.Admin
+
+@{
+    ViewBag.Title = "AdminDashboard";
+    Layout = "~/Views/Shared/Admin_LayoutPage.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+        <div class="card bg-gradient-primary text-white text-center card-shadow-primary">
+            <a href="/Master/GalleryimageList" style="text-decoration:none;color:white">
+                <div class="card-body">
+                    <h3 class="font-weight-normal">Gallery</h3>
+                    <h2 class="mb-0">@ViewBag.GalleryImage</h2>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+        <div class="card bg-gradient-danger text-white text-center card-shadow-danger">
+            <a href="/Master/EventimageList" style="text-decoration:none;color:white">
+                <div class="card-body">
+                    <h3 class="font-weight-normal">Events</h3>
+                    <h2 class="mb-0">@ViewBag.EventImage</h2>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+        <div class="card bg-gradient-warning text-white text-center card-shadow-warning">
+            <a href="/Master/NewsimageList" style="text-decoration:none;color:white">
+                <div class="card-body">
+                    <h3 class="font-weight-normal">News Press Release</h3>
+                    <h2 class="mb-0">@ViewBag.NewsImage</h2>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+        <div class="card bg-gradient-info text-white text-center card-shadow-info">
+            <a href="/Master/NewsimageList" style="text-decoration:none;color:white">
+                <div class="card-body">
+                    <h3 class="font-weight-normal">Contact Details</h3>
+                    <h2 class="mb-0">@ViewBag.Contact</h2>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+

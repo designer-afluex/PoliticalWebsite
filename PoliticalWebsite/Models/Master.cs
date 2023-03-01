@@ -33,6 +33,7 @@ namespace PoliticalWebsite.Models
         public string Discription { get; set; }
         public List<Master> lstevent { get; set; }
         public string Date { get; set; }
+        public string EventDate { get; set; }
         public string City { get; set; }
         public string Town_Village { get; set; }
         #endregion
@@ -49,6 +50,7 @@ namespace PoliticalWebsite.Models
         public string AddedBy { get; set; }
         public string UpdatedBy { get; set; }
         public string Message { get; set; }
+        public string NewsDate { get; set; }
 
         #endregion
 
@@ -156,7 +158,7 @@ namespace PoliticalWebsite.Models
                     new SqlParameter("@Discription", Discription),
                     new SqlParameter("@City", City),
                     new SqlParameter("@Town_Village", Town_Village),
-                    new SqlParameter("@Date", Date),
+                    new SqlParameter("@Date", EventDate),
                     new SqlParameter("@AddedBy", AddedBy)
 
             };
@@ -179,7 +181,7 @@ namespace PoliticalWebsite.Models
                     new SqlParameter("@Discription", Discription),
                      new SqlParameter("@City", City),
                     new SqlParameter("@Town_Village", Town_Village),
-                    new SqlParameter("@Date", Date),
+                    new SqlParameter("@Date", EventDate),
                     new SqlParameter("@UpdatedBy", AddedBy)
 
             };
@@ -207,7 +209,7 @@ namespace PoliticalWebsite.Models
                     new SqlParameter("@NewsImage", News),
                     new SqlParameter("@Discription", Discription),
                      new SqlParameter("@Message", Message),
-                    new SqlParameter("@Date", Date),
+                    new SqlParameter("@Date", NewsDate),
                     new SqlParameter("@AddedBy", AddedBy)
 
             };
@@ -229,7 +231,7 @@ namespace PoliticalWebsite.Models
                     new SqlParameter("@NewsImage", News),
                     new SqlParameter("@Discription", Discription),
                     new SqlParameter("@Message", Message),
-                     new SqlParameter("@Date", Date),
+                     new SqlParameter("@Date", NewsDate),
                     new SqlParameter("@UpdatedBy", AddedBy)
 
             };

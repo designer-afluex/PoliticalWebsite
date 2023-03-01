@@ -9,12 +9,20 @@ namespace PoliticalWebsite.Models
 {
     public class Master
     {
+        #region SliderBannerMaster
+        public string SliderBannerID { get; set; }
+        public string Pk_SliderBannerId { get; set; }
+        public string SliderBanner { get; set; }
+        public string SliderBannerImage { get; set; }
+        public List<Master> lstSliderBanner { get; set; }
+        #endregion
+
         #region GalleryMaster
         public string GalleryID { get; set; }
         public string Pk_GalleryId { get; set; }
         public string Gallery { get; set; }
         public string GalleryImage { get; set; }
-        public List<Master> lstgallery { get; set; }  
+        public List<Master> lstgallery { get; set; }
         #endregion
 
         #region EventMaster
@@ -45,12 +53,60 @@ namespace PoliticalWebsite.Models
         #endregion
 
 
-        #region GalleryMaster
 
-        public DataSet SaveGalleryBanner()  
+
+        #region SliderBannerMaster
+
+        public DataSet SaveSliderBanner()
         {
             SqlParameter[] para = {
-                    new SqlParameter("@GalleryImage", Gallery),   
+                    new SqlParameter("@SliderBannerImage", SliderBanner),
+                    new SqlParameter("@AddedBy", AddedBy)
+
+            };
+
+            DataSet ds = Connection.ExecuteQuery("SaveSliderBanner", para);
+            return ds;
+        }
+        public DataSet SliderBannerList()
+        {
+            SqlParameter[] para = { new SqlParameter("@Pk_SliderBannerId", SliderBannerID) };
+            DataSet ds = Connection.ExecuteQuery("SliderBannerDetails", para);
+            return ds;
+        }
+
+        public DataSet UpdateSliderBanner()
+        {
+            SqlParameter[] para = {
+                    new SqlParameter("@SliderBannerID", SliderBannerID),
+                    new SqlParameter("@SliderBannerImage", SliderBanner),
+                    new SqlParameter("@UpdatedBy", AddedBy)
+
+            };
+
+            DataSet ds = Connection.ExecuteQuery("UpdateSliderBanner", para);
+            return ds;
+        }
+
+        public DataSet DeleteSliderBanner()
+        {
+            SqlParameter[] para = { new SqlParameter("@SliderBannerID", SliderBannerID),
+                                  new SqlParameter("@DeletedBy", AddedBy),};
+
+            DataSet ds = Connection.ExecuteQuery("DeleteSliderBanner", para);
+            return ds;
+        }
+
+        #endregion
+
+
+
+        #region GalleryMaster
+
+        public DataSet SaveGalleryBanner()
+        {
+            SqlParameter[] para = {
+                    new SqlParameter("@GalleryImage", Gallery),
                     new SqlParameter("@Discription", Discription),
                     new SqlParameter("@AddedBy", AddedBy)
 
@@ -97,7 +153,7 @@ namespace PoliticalWebsite.Models
         {
             SqlParameter[] para = {
                     new SqlParameter("@EventImage", Event),
-                    new SqlParameter("@Discription", Discription),  
+                    new SqlParameter("@Discription", Discription),
                     new SqlParameter("@City", City),
                     new SqlParameter("@Town_Village", Town_Village),
                     new SqlParameter("@Date", Date),

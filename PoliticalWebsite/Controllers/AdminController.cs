@@ -11,7 +11,7 @@ namespace PoliticalWebsite.Controllers
     public class AdminController : Controller
     {
         // GET: Admin
-        public ActionResult Index()
+         public ActionResult Index()
         {
             return View();
         }
@@ -56,6 +56,5 @@ namespace PoliticalWebsite.Controllers
             }
             return View(model);
         }
-
     }
 }

@@ -67,6 +67,21 @@ namespace PoliticalWebsite.Controllers
                 }
                 model.lstNews = lst2;
             }
+
+            List<Home> lst3 = new List<Home>();
+            DataSet ds3 = model.SliderBannerList();
+
+            if (ds3 != null && ds3.Tables.Count > 0 && ds3.Tables[0].Rows.Count > 0)
+            {
+                foreach (DataRow r in ds3.Tables[0].Rows)
+                {
+                    Home obj = new Home();
+                    obj.Pk_SliderBannerId = r["Pk_SliderBannerId"].ToString();
+                    obj.SliderBannerImage = r["SliderBannerImage"].ToString();
+                    lst3.Add(obj);
+                }
+                model.lstSliderBanner = lst3;
+            }
             return View(model);
         }
 

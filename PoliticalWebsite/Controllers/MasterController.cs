@@ -341,6 +341,7 @@ namespace PoliticalWebsite.Controllers
                         obj.Town_Village = ds.Tables[0].Rows[0]["Town_Village"].ToString();
                         obj.City = ds.Tables[0].Rows[0]["City"].ToString();
                     }
+                    ViewBag.City = ds.Tables[0].Rows[0]["City"].ToString();
                 }
                 catch (Exception ex)
                 {
@@ -373,7 +374,7 @@ namespace PoliticalWebsite.Controllers
                 obj.City = City;
                 obj.Town_Village = Town_Village;
                 obj.Date = Date;
-                //obj.Date = string.IsNullOrEmpty(obj.Date) ? null : Common.ConvertToSystemDate(obj.Date, "dd/MM/yyyy");
+                obj.EventDate = string.IsNullOrEmpty(obj.Date) ? null : Common.ConvertToSystemDate(obj.Date, "dd/MM/yyyy");
                 obj.AddedBy = Session["PK_AdminId"].ToString();
                 DataSet ds = obj.SaveEventBanner();
                 if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
@@ -436,7 +437,7 @@ namespace PoliticalWebsite.Controllers
                 obj.City = City;
                 obj.Town_Village = Town_Village;
                 obj.Date = Date;
-                //obj.Date = string.IsNullOrEmpty(obj.Date) ? null : Common.ConvertToSystemDate(obj.Date, "dd/MM/yyyy");
+                obj.EventDate = string.IsNullOrEmpty(obj.Date) ? null : Common.ConvertToSystemDate(obj.Date, "dd/MM/yyyy");
                 obj.AddedBy = Session["PK_AdminId"].ToString();
                 DataSet ds = obj.UpdateEventBanner();
                 if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
@@ -540,7 +541,7 @@ namespace PoliticalWebsite.Controllers
                 obj.Discription = Discription;
                 obj.Message = Message;
                 obj.Date = Date;
-                //obj.Date = string.IsNullOrEmpty(obj.Date) ? null : Common.ConvertToSystemDate(obj.Date, "dd/MM/yyyy");
+                obj.NewsDate = string.IsNullOrEmpty(obj.Date) ? null : Common.ConvertToSystemDate(obj.Date, "dd/MM/yyyy");
                 obj.AddedBy = Session["PK_AdminId"].ToString();
                 DataSet ds = obj.SaveNewsBanner();
                 if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
@@ -600,7 +601,7 @@ namespace PoliticalWebsite.Controllers
                 obj.Discription = Discription;
                 obj.Message = Message;
                 obj.Date = Date;
-                //obj.Date = string.IsNullOrEmpty(obj.Date) ? null : Common.ConvertToSystemDate(obj.Date, "dd/MM/yyyy");
+                obj.NewsDate = string.IsNullOrEmpty(obj.Date) ? null : Common.ConvertToSystemDate(obj.Date, "dd/MM/yyyy");
                 obj.AddedBy = Session["PK_AdminId"].ToString();
                 DataSet ds = obj.UpdateNewsBanner();
                 if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)

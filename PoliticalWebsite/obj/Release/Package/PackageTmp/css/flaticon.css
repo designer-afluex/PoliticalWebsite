@@ -1,0 +1,436 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 30/11/2020 05:59
+  	*/
+
+ @font-face {
+      font-family: "Flaticon";
+      src: url("../fonts/Flaticon.eot");
+      src: url("../fonts/Flaticon-1.eot") format("embedded-opentype"),
+           url("../fonts/Flaticon.woff2") format("woff2"),
+           url("../fonts/Flaticon.woff") format("woff"),
+           url("../fonts/Flaticon.ttf") format("truetype"),
+           url("../fonts/Flaticon.svg") format("svg");
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+      @font-face {
+        font-family: "Flaticon";
+        src: url("../fonts/Flaticon.svg") format("svg");
+      }
+    }
+    
+    [class^="pbmit-politicia-icon-"]:before, [class*=" pbmit-politicia-icon-"]:before,
+    [class^="pbmit-politicia-icon-"]:after, [class*=" pbmit-politicia-icon-"]:after {   
+      font-family: Flaticon;
+    font-style: normal;
+    }
+    
+  .pbmit-politicia-icon-charity:before {
+      content: "\f101";
+  }
+  .pbmit-politicia-icon-flag:before {
+      content: "\f102";
+  }
+  .pbmit-politicia-icon-activism:before {
+      content: "\f103";
+  }
+  .pbmit-politicia-icon-investor:before {
+      content: "\f104";
+  }
+  .pbmit-politicia-icon-consumer:before {
+      content: "\f105";
+  }
+  .pbmit-politicia-icon-social-responsibility:before {
+      content: "\f106";
+  }
+  .pbmit-politicia-icon-solidarity:before {
+      content: "\f107";
+  }
+  .pbmit-politicia-icon-home:before {
+      content: "\f108";
+  }
+  .pbmit-politicia-icon-family:before {
+      content: "\f109";
+  }
+  .pbmit-politicia-icon-environment:before {
+      content: "\f10a";
+  }
+  .pbmit-politicia-icon-woman:before {
+      content: "\f10b";
+  }
+  .pbmit-politicia-icon-law-book:before {
+      content: "\f10c";
+  }
+  .pbmit-politicia-icon-equality:before {
+      content: "\f10d";
+  }
+  .pbmit-politicia-icon-gender-equality:before {
+      content: "\f10e";
+  }
+  .pbmit-politicia-icon-human-rights:before {
+      content: "\f10f";
+  }
+  .pbmit-politicia-icon-no-war:before {
+      content: "\f110";
+  }
+  .pbmit-politicia-icon-vote:before {
+      content: "\f111";
+  }
+  .pbmit-politicia-icon-world:before {
+      content: "\f112";
+  }
+  .pbmit-politicia-icon-civil-rights:before {
+      content: "\f113";
+  }
+  .pbmit-politicia-icon-equality-1:before {
+      content: "\f114";
+  }
+  .pbmit-politicia-icon-pray:before {
+      content: "\f115";
+  }
+  .pbmit-politicia-icon-vote-1:before {
+      content: "\f116";
+  }
+  .pbmit-politicia-icon-auction:before {
+      content: "\f117";
+  }
+  .pbmit-politicia-icon-hand-shake:before {
+      content: "\f118";
+  }
+  .pbmit-politicia-icon-pacifism:before {
+      content: "\f119";
+  }
+  .pbmit-politicia-icon-balance:before {
+      content: "\f11a";
+  }
+  .pbmit-politicia-icon-family-1:before {
+      content: "\f11b";
+  }
+  .pbmit-politicia-icon-planet-earth:before {
+      content: "\f11c";
+  }
+  .pbmit-politicia-icon-planet-earth-1:before {
+      content: "\f11d";
+  }
+  .pbmit-politicia-icon-planet-earth-2:before {
+      content: "\f11e";
+  }
+  .pbmit-politicia-icon-house:before {
+      content: "\f11f";
+  }
+  .pbmit-politicia-icon-sprout:before {
+      content: "\f120";
+  }
+  .pbmit-politicia-icon-pacifism-1:before {
+      content: "\f121";
+  }
+  .pbmit-politicia-icon-family-2:before {
+      content: "\f122";
+  }
+  .pbmit-politicia-icon-hospital:before {
+      content: "\f123";
+  }
+  .pbmit-politicia-icon-blood-donation:before {
+      content: "\f124";
+  }
+  .pbmit-politicia-icon-equality-2:before {
+      content: "\f125";
+  }
+  .pbmit-politicia-icon-peace:before {
+      content: "\f126";
+  }
+  .pbmit-politicia-icon-school:before {
+      content: "\f127";
+  }
+  .pbmit-politicia-icon-office:before {
+      content: "\f128";
+  }
+  .pbmit-politicia-icon-hospital-1:before {
+      content: "\f129";
+  }
+  .pbmit-politicia-icon-bank:before {
+      content: "\f12a";
+  }
+  .pbmit-politicia-icon-graduated:before {
+      content: "\f12b";
+  }
+  .pbmit-politicia-icon-megaphone:before {
+      content: "\f12c";
+  }
+  .pbmit-politicia-icon-megaphone-1:before {
+      content: "\f12d";
+  }
+  .pbmit-politicia-icon-capitol:before {
+      content: "\f12e";
+  }
+  .pbmit-politicia-icon-debate:before {
+      content: "\f12f";
+  }
+  .pbmit-politicia-icon-choice:before {
+      content: "\f130";
+  }
+  .pbmit-politicia-icon-vote-2:before {
+      content: "\f131";
+  }
+  .pbmit-politicia-icon-newspaper:before {
+      content: "\f132";
+  }
+  .pbmit-politicia-icon-rating:before {
+      content: "\f133";
+  }
+  .pbmit-politicia-icon-speech:before {
+      content: "\f134";
+  }
+  .pbmit-politicia-icon-capitol-1:before {
+      content: "\f135";
+  }
+  .pbmit-politicia-icon-jigsaw:before {
+      content: "\f136";
+  }
+  .pbmit-politicia-icon-demand:before {
+      content: "\f137";
+  }
+  .pbmit-politicia-icon-suitcase:before {
+      content: "\f138";
+  }
+  .pbmit-politicia-icon-briefcase:before {
+      content: "\f139";
+  }
+  .pbmit-politicia-icon-open-book:before {
+      content: "\f13a";
+  }
+  .pbmit-politicia-icon-book:before {
+      content: "\f13b";
+  }
+  .pbmit-politicia-icon-graduation-cap:before {
+      content: "\f13c";
+  }
+  .pbmit-politicia-icon-economy:before {
+      content: "\f13d";
+  }
+  .pbmit-politicia-icon-business-and-finance:before {
+      content: "\f13e";
+  }
+  .pbmit-politicia-icon-economy-1:before {
+      content: "\f13f";
+  }
+  .pbmit-politicia-icon-economy-2:before {
+      content: "\f140";
+  }
+  .pbmit-politicia-icon-general:before {
+      content: "\f141";
+  }
+  .pbmit-politicia-icon-medal:before {
+      content: "\f142";
+  }
+  .pbmit-politicia-icon-veteran:before {
+      content: "\f143";
+  }
+  .pbmit-politicia-icon-veteran-1:before {
+      content: "\f144";
+  }
+  .pbmit-politicia-icon-healthcare:before {
+      content: "\f145";
+  }
+  .pbmit-politicia-icon-heartbeat:before {
+      content: "\f146";
+  }
+  .pbmit-politicia-icon-pills:before {
+      content: "\f147";
+  }
+  .pbmit-politicia-icon-social-care:before {
+      content: "\f148";
+  }
+  .pbmit-politicia-icon-vote-3:before {
+      content: "\f149";
+  }
+  .pbmit-politicia-icon-vote-4:before {
+      content: "\f14a";
+  }
+  .pbmit-politicia-icon-baby-boy:before {
+      content: "\f14b";
+  }
+  .pbmit-politicia-icon-donation:before {
+      content: "\f14c";
+  }
+  .pbmit-politicia-icon-donation-1:before {
+      content: "\f14d";
+  }
+  .pbmit-politicia-icon-manifesto:before {
+      content: "\f14e";
+  }
+  .pbmit-politicia-icon-policy:before {
+      content: "\f14f";
+  }
+  .pbmit-politicia-icon-policy-1:before {
+      content: "\f150";
+  }
+  .pbmit-politicia-icon-freedom:before {
+      content: "\f151";
+  }
+  .pbmit-politicia-icon-discussion:before {
+      content: "\f152";
+  }
+  .pbmit-politicia-icon-tolerance:before {
+      content: "\f153";
+  }
+  .pbmit-politicia-icon-private:before {
+      content: "\f154";
+  }
+  .pbmit-politicia-icon-equality-3:before {
+      content: "\f155";
+  }
+  .pbmit-politicia-icon-unity:before {
+      content: "\f156";
+  }
+  .pbmit-politicia-icon-megaphone-2:before {
+      content: "\f157";
+  }
+  .pbmit-politicia-icon-dove:before {
+      content: "\f158";
+  }
+  .pbmit-politicia-icon-ribbon:before {
+      content: "\f159";
+  }
+  .pbmit-politicia-icon-law:before {
+      content: "\f15a";
+  }
+  .pbmit-politicia-icon-financial:before {
+      content: "\f15b";
+  }
+  .pbmit-politicia-icon-police-line:before {
+      content: "\f15c";
+  }
+  .pbmit-politicia-icon-morality:before {
+      content: "\f15d";
+  }
+  .pbmit-politicia-icon-donation-2:before {
+      content: "\f15e";
+  }
+  .pbmit-politicia-icon-justice:before {
+      content: "\f15f";
+  }
+  .pbmit-politicia-icon-rejection:before {
+      content: "\f160";
+  }
+  .pbmit-politicia-icon-public-speaking:before {
+      content: "\f161";
+  }
+  .pbmit-politicia-icon-courthouse:before {
+      content: "\f162";
+  }
+  .pbmit-politicia-icon-police:before {
+      content: "\f163";
+  }
+  .pbmit-politicia-icon-slavery:before {
+      content: "\f164";
+  }
+  .pbmit-politicia-icon-gavel:before {
+      content: "\f165";
+  }
+  .pbmit-politicia-icon-blm:before {
+      content: "\f166";
+  }
+  .pbmit-politicia-icon-freedom-of-speech:before {
+      content: "\f167";
+  }
+  .pbmit-politicia-icon-no-war-1:before {
+      content: "\f168";
+  }
+  .pbmit-politicia-icon-tshirt:before {
+      content: "\f169";
+  }
+  .pbmit-politicia-icon-solidarity-1:before {
+      content: "\f16a";
+  }
+  .pbmit-politicia-icon-earthquake:before {
+      content: "\f16b";
+  }
+  .pbmit-politicia-icon-heart:before {
+      content: "\f16c";
+  }
+  .pbmit-politicia-icon-food-donation:before {
+      content: "\f16d";
+  }
+  .pbmit-politicia-icon-world-humanitarian-day:before {
+      content: "\f16e";
+  }
+  .pbmit-politicia-icon-medical-kit:before {
+      content: "\f16f";
+  }
+  .pbmit-politicia-icon-refugee-camp:before {
+      content: "\f170";
+  }
+  .pbmit-politicia-icon-protest:before {
+      content: "\f171";
+  }
+  .pbmit-politicia-icon-food-donation-1:before {
+      content: "\f172";
+  }
+  .pbmit-politicia-icon-charity-1:before {
+      content: "\f173";
+  }
+  .pbmit-politicia-icon-food-donation-2:before {
+      content: "\f174";
+  }
+  .pbmit-politicia-icon-solidarity-2:before {
+      content: "\f175";
+  }
+  .pbmit-politicia-icon-cv:before {
+      content: "\f176";
+  }
+  .pbmit-politicia-icon-cut:before {
+      content: "\f177";
+  }
+  .pbmit-politicia-icon-tax:before {
+      content: "\f178";
+  }
+  .pbmit-politicia-icon-tax-1:before {
+      content: "\f179";
+  }
+  .pbmit-politicia-icon-blackboard:before {
+      content: "\f17a";
+  }
+  .pbmit-politicia-icon-play-button:before {
+      content: "\f17b";
+  }
+  .pbmit-politicia-icon-worldwide:before {
+      content: "\f17c";
+  }
+  .pbmit-politicia-icon-phone:before {
+      content: "\f17d";
+  }
+  .pbmit-politicia-icon-phone-1:before {
+      content: "\f17e";
+  }
+  .pbmit-politicia-icon-telephone:before {
+      content: "\f17f";
+  }
+  .pbmit-politicia-icon-location:before {
+      content: "\f180";
+  }
+  .pbmit-politicia-icon-placeholder:before {
+      content: "\f181";
+  }
+  .pbmit-politicia-icon-mail:before {
+      content: "\f182";
+  }
+  .pbmit-politicia-icon-email:before {
+      content: "\f183";
+  }
+  .pbmit-politicia-icon-shopping-bag:before {
+      content: "\f184";
+  }
+  .pbmit-politicia-icon-loupe:before {
+      content: "\f185";
+  }
+  .pbmit-politicia-icon-play-button-1:before {
+      content: "\f186";
+  }
+  .pbmit-politicia-icon-play:before {
+      content: "\f187";
+  }
+  

@@ -50,6 +50,7 @@ namespace PoliticalWebsite.Controllers
                     obj.Mobile = r["Mobile"].ToString();
                     obj.Subject = r["Subject"].ToString();
                     obj.Message = r["Message"].ToString();
+                    obj.Date = r["Date"].ToString();
                     lst.Add(obj);
                 }
                 model.lstcontact = lst;

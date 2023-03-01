@@ -6,7 +6,7 @@
 }
 
 
-<form action="/Admin/ContactList" id="form1" method="post">
+<form action="/Admin/ContactDetails" id="form1" method="post">
     <div class="pcoded-inner-content">
         <div class="main-body">
             <div class="page-wrapper">
@@ -29,6 +29,7 @@
                                                     <th>Email-Id</th>
                                                     <th>Subject</th>
                                                     <th>Message</th>
+                                                    <th>Date</th>
                                                 </tr>
 
                                             </thead>
@@ -47,6 +48,7 @@
                                                                 <td>@Item.Email</td>
                                                                 <td>@Item.Subject</td>
                                                                 <td>@Item.Message</td>
+                                                                <td>@Item.Date</td>
                                                             </tr>
                                                             i = i + 1;
                                                         }

@@ -6,51 +6,52 @@
 }
 
 
-@using (Html.BeginForm("AddGallery", "Master", FormMethod.Post, new { @id = "form1", @class= "forms-sample", enctype = "multipart/form-data" }))
-{
-   
-    <div class="row">
-            <div class="col-md-12 grid-margin stretch-card">
-                <div class="card">
-                    <div class="card-body">
-                        <span style="color: red">
-                            @TempData["msg"]
-                        </span><br/>
-                        <h3 class="card-title">Gallery Banner</h3>
-                            <div class="form-group">
-                                <label>Gallery Heading <span style="color: red">*</span></label>
-                                @Html.TextBoxFor(m => m.Discription, new { @placeholder = "Gallery Heading", @class = "form-control" })
-                                @Html.HiddenFor(m => m.GalleryID)
-                            </div>
-                            <div class="form-group">
-                                <label>Upload Gallery Banner <span style="color: red">*</span></label><br />
-                                <input type="file" id="Gallery" name="Gallery" class="form-control" />
-                            </div>
 
-                                <div class="form-group">
-                                    @Html.HiddenFor(m => m.Pk_GalleryId)
-                                    @if (Model == null)
-                                    {
-                                        <input type="submit" id="btnSave" name="btnSave" class="btn btn-success pull-right" value="Save" onclick="return savegallery();" />
-                                    }
-                                    else
-                                    {
-                                        <input type="submit" id="btnUpdate" name="btnUpdate" class="btn btn-success pull-right" value="Update" onclick="return savegallery();" />
-                                    }
-                                    <a href="/Master/GalleryimageList" class="btn btn-primary pull-right">Gallery List</a>
-                                </div>
-                            </div>
+@using (Html.BeginForm("AddGallery", "Master", FormMethod.Post, new { @id = "form1", @class = "forms-sample", enctype = "multipart/form-data" }))
+{
+
+    <div class="row">
+        <div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <span style="color: red">
+                        @TempData["msg"]
+                    </span><br />
+                    <h3 class="card-title">Gallery Banner</h3>
+                    <div class="form-group">
+                        <label>Gallery Heading <span style="color: red">*</span></label>
+                        @Html.TextBoxFor(m => m.Discription, new { @placeholder = "Gallery Heading", @class = "form-control" })
+                        @Html.HiddenFor(m => m.GalleryID)
+                    </div>
+                    <div class="form-group">
+                        <label>Upload Gallery Banner <span style="color: red">*</span></label><br />
+                        <input type="file" id="Gallery" name="Gallery" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        @Html.HiddenFor(m => m.Pk_GalleryId)
+                        @if (Model == null)
+                        {
+                            <input type="submit" id="btnSave" name="btnSave" class="btn btn-success pull-right" value="Save" onclick="return savegallery();" />
+                        }
+                        else
+                        {
+                            <input type="submit" id="btnUpdate" name="btnUpdate" class="btn btn-success pull-right" value="Update" onclick="return savegallery();" />
+                        }
+                        <a href="/Master/GalleryimageList" class="btn btn-primary pull-right">Gallery List</a>
                     </div>
                 </div>
-                    </div>
+            </div>
+        </div>
+    </div>
 
-                    }
-                    <style>
-                        .errortext {
-                            border: 2px solid red !important;
-                        }
-                    </style>
-                    <script>
+}
+<style>
+    .errortext {
+        border: 2px solid red !important;
+    }
+</style>
+<script>
                         function savegallery() {
                             $(".errortext").removeClass("errortext");
                             if ($('#Discription').val() == '') {
@@ -66,7 +67,9 @@
                         }
 
 
-                    </script>
+</script>
+
+
 
 
 

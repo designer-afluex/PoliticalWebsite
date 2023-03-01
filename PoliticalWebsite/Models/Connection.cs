@@ -17,8 +17,7 @@ namespace PoliticalWebsite.Models
         {
             try
             {
-                //DESKTOP - 54ILC94; Initial Catalog = PoliticalWebsiteDB; Integrated Security = True
-                connectionString = "Data Source=DESKTOP-54ILC94;Initial Catalog=PoliticalWebsiteDB;Integrated Security=True";
+                connectionString = "Data Source=DESKTOP-JR58KGS;Initial Catalog=PoliticalWebsiteDB;Integrated Security=True";
             }
             catch (Exception)
             {

@@ -13,7 +13,156 @@ namespace PoliticalWebsite.Controllers
     public class MasterController : AdminBaseController
     {
         // GET: Master
+        #region SliderBannerMaster
 
+        public ActionResult AddSliderBanner(string Id)
+        {
+            if (Id != null)
+            {
+                Master obj = new Master();
+                try
+                {
+                    obj.SliderBannerID = Id;
+
+                    DataSet ds = obj.SliderBannerList();
+                    if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                    {
+                        obj.Pk_SliderBannerId = ds.Tables[0].Rows[0]["Pk_SliderBannerId"].ToString();
+                        obj.SliderBannerImage = ds.Tables[0].Rows[0]["SliderBannerImage"].ToString();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    TempData["msg"] = ex.Message;
+                }
+                return View(obj);
+            }
+            else
+            {
+                return View();
+            }
+            return View();
+        }
+
+
+        [HttpPost]
+        [ActionName("AddSliderBanner")]
+        [OnAction(ButtonName = "btnSave")]
+        public ActionResult SaveSliderBannerAction(HttpPostedFileBase SliderBanner)
+        {
+            Master obj = new Master();
+            try
+            {
+                if (SliderBanner != null)
+                {
+                    obj.SliderBanner = "../BannerImages/" + Guid.NewGuid() + Path.GetExtension(SliderBanner.FileName);
+                    SliderBanner.SaveAs(Path.Combine(Server.MapPath(obj.SliderBanner)));
+                }
+                obj.AddedBy = Session["PK_AdminId"].ToString();
+                DataSet ds = obj.SaveSliderBanner();
+                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                {
+                    if ((ds.Tables[0].Rows[0][0].ToString() == "1"))
+                    {
+                        TempData["msg"] = "Slider Banner saved successfully";
+                    }
+                    else
+                    {
+                        TempData["msg"] = ds.Tables[0].Rows[0]["ErrorMessage"].ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["msg"] = ex.Message;
+            }
+            return RedirectToAction("AddSliderBanner", "Master");
+        }
+
+        public ActionResult SliderBannerList(Master model)
+        {
+            List<Master> lst = new List<Master>();
+            DataSet ds = model.SliderBannerList();
+
+            if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            {
+                foreach (DataRow r in ds.Tables[0].Rows)
+                {
+                    Master obj = new Master();
+                    obj.Pk_SliderBannerId = r["Pk_SliderBannerId"].ToString();
+                    obj.SliderBannerImage = r["SliderBannerImage"].ToString();
+                    lst.Add(obj);
+                }
+                model.lstSliderBanner = lst;
+            }
+            return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("AddSliderBanner")]
+        [OnAction(ButtonName = "btnUpdate")]
+        public ActionResult UpdateSliderBannerAction(string Pk_SliderBannerId, HttpPostedFileBase SliderBanner)
+        {
+            Master obj = new Master();
+            try
+            {
+                obj.SliderBannerID = Pk_SliderBannerId;
+                if (SliderBanner != null)
+                {
+                    obj.SliderBanner = "../BannerImages/" + Guid.NewGuid() + Path.GetExtension(SliderBanner.FileName);
+                    SliderBanner.SaveAs(Path.Combine(Server.MapPath(obj.SliderBanner)));
+                }
+                obj.AddedBy = Session["PK_AdminId"].ToString();
+                DataSet ds = obj.UpdateSliderBanner();
+                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                {
+                    if ((ds.Tables[0].Rows[0][0].ToString() == "1"))
+                    {
+                        TempData["msg"] = "Slider Banner updated successfully";
+                    }
+                    else
+                    {
+                        TempData["msg"] = ds.Tables[0].Rows[0]["ErrorMessage"].ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["msg"] = ex.Message;
+            }
+            return RedirectToAction("AddSliderBanner", "Master");
+        }
+
+
+
+        public ActionResult DeleteSliderBanner(string Id)
+        {
+            try
+            {
+                Master obj = new Master();
+                obj.SliderBannerID = Id;
+                obj.AddedBy = Session["PK_AdminId"].ToString();
+                DataSet ds = obj.DeleteSliderBanner();
+                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                {
+                    if ((ds.Tables[0].Rows[0][0].ToString() == "1"))
+                    {
+                        TempData["msg"] = "Slider Banner deleted successfully";
+                    }
+                    else
+                    {
+                        TempData["msg"] = ds.Tables[0].Rows[0]["ErrorMessage"].ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                TempData["msg"] = ex.Message;
+            }
+
+            return RedirectToAction("SliderBannerList", "Master");
+        }
+        #endregion
 
 
         #region GalleryMaster
@@ -210,7 +359,7 @@ namespace PoliticalWebsite.Controllers
         [HttpPost]
         [ActionName("AddEvent")]
         [OnAction(ButtonName = "btnSave")]
-        public ActionResult SaveEventAction(HttpPostedFileBase Event, string Discription,string City,string Town_Village, string Date)
+        public ActionResult SaveEventAction(HttpPostedFileBase Event, string Discription, string City, string Town_Village, string Date)
         {
             Master obj = new Master();
             try
@@ -378,7 +527,7 @@ namespace PoliticalWebsite.Controllers
         [HttpPost]
         [ActionName("AddNews")]
         [OnAction(ButtonName = "btnSave")]
-        public ActionResult SaveNewsAction(HttpPostedFileBase News, string Discription,string Date,string Message)
+        public ActionResult SaveNewsAction(HttpPostedFileBase News, string Discription, string Date, string Message)
         {
             Master obj = new Master();
             try
@@ -503,6 +652,5 @@ namespace PoliticalWebsite.Controllers
             return RedirectToAction("NewsimageList", "Master");
         }
         #endregion
-
     }
 }

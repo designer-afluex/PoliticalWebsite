@@ -34,3 +34,4 @@ D:\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\PoliticalWebsite.dl
 D:\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\PoliticalWebsite.pdb
 D:\Repository-Projects\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.dll
 D:\Repository-Projects\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.pdb
+D:\Repository-Projects\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.csprojResolveAssemblyReference.cache

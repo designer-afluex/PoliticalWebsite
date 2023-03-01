@@ -27108,7 +27108,7 @@ div.tagsinput span.tag a {
   position: absolute;
   width: 5px;
   height: 100%;
-  background: #5f6be3;
+  background: #080000cf;
   left: 0;
   top: 0;
 }
@@ -27165,11 +27165,11 @@ div.tagsinput span.tag a {
 }
 
 .sidebar-dark .sidebar {
-  background: #282f3a;
+  background: #f58321;
 }
 
 .sidebar-dark .sidebar .nav .nav-item .nav-link {
-  color: #d0cfcf;
+  color: #fff;
 }
 
 .sidebar-dark .sidebar .nav .nav-item .nav-link i {
@@ -27177,7 +27177,7 @@ div.tagsinput span.tag a {
 }
 
 .sidebar-dark .sidebar .nav .nav-item .nav-link i.menu-icon {
-  color: #d0cfcf;
+  color: #fff;
 }
 
 .sidebar-dark .sidebar .nav .nav-item .nav-link .menu-title {
@@ -27190,16 +27190,16 @@ div.tagsinput span.tag a {
 
 .sidebar-dark .sidebar .nav .nav-item.active > .nav-link .menu-title,
 .sidebar-dark .sidebar .nav .nav-item.active > .nav-link i {
-  color: #c0bbbb;
+  color: #fff;
 }
 
 .sidebar-dark .sidebar .nav:not(.sub-menu) > .nav-item:hover > .nav-link {
-  background: #59606b;
+  background: #080000cf;
   color: #d0cfcf;
 }
 
 .sidebar-dark .sidebar .nav.sub-menu .nav-item .nav-link {
-  color: #d0cfcf;
+  color: #fff;
 }
 
 .sidebar-dark .sidebar .nav.sub-menu .nav-item .nav-link:before {
@@ -27207,12 +27207,12 @@ div.tagsinput span.tag a {
 }
 
 .sidebar-dark .sidebar .nav.sub-menu .nav-item .nav-link.active {
-  color: #c0bbbb;
+  color: #030303;
   background: transparent;
 }
 
 .sidebar-dark .sidebar .nav.sub-menu .nav-item .nav-link:hover {
-  color: #9a94a7;
+  color: #191919;
 }
 
 .sidebar-dark .sidebar .nav.sub-menu .nav-item:hover {
@@ -27259,7 +27259,7 @@ div.tagsinput span.tag a {
 }
 
 .sidebar-dark .navbar .navbar-brand-wrapper {
-  background: #282f3a;
+  background: #7474741c;
   border-bottom-color: #747474;
 }
 

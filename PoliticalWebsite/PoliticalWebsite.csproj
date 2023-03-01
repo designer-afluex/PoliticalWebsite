@@ -33,6 +33,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <IncludeIisSettings>false</IncludeIisSettings>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -275,28 +276,44 @@
     <Content Include="assets\vendors\tinymce\tinymce.min.js" />
     <Content Include="BannerImages\068bbed1-4c7f-4e1b-9744-2eb069e8f3df.jpg" />
     <Content Include="BannerImages\0c6e1c8f-0ad3-47fe-a801-870e9d121170.jpg" />
+    <Content Include="BannerImages\0ccdd20a-538d-4631-a24e-4c17097006e4.jpg" />
     <Content Include="BannerImages\10713661-8066-4408-93fd-79218451e3f3.jpg" />
+    <Content Include="BannerImages\115e70a7-3e51-4480-b473-64da2f7d55ea.jpg" />
     <Content Include="BannerImages\124bab4a-0246-4631-991a-e042bb68ea82.jpg" />
     <Content Include="BannerImages\1b8d358a-0050-4829-94cf-ff93cb3fb243.png" />
     <Content Include="BannerImages\1e4ed77d-9826-428f-855d-64406a705f7d.jpg" />
     <Content Include="BannerImages\1e57af42-dee4-44eb-a274-618fdebb3eea.jpg" />
     <Content Include="BannerImages\1fb3f53b-8d2b-48a9-9839-dec4a9d48376.jpg" />
     <Content Include="BannerImages\264e3bf3-56cc-4266-acab-c52d2b1d9d4f.jpg" />
+    <Content Include="BannerImages\274bcedf-d6bb-4a81-b52c-77d430d7a113.jpg" />
+    <Content Include="BannerImages\2993205e-9c46-4f87-aceb-1de49b210fb7.jpg" />
     <Content Include="BannerImages\2ae0c85c-13ee-4fe5-8416-64f6164f0490.jpg" />
+    <Content Include="BannerImages\2e7b7d6d-ee39-462a-b0a9-b081cbb99305.jpg" />
+    <Content Include="BannerImages\30016a66-cea7-4411-ba20-312a2453196d.jpeg" />
     <Content Include="BannerImages\34c3297b-7eeb-484f-9ed4-4147ccb440bb.jpg" />
+    <Content Include="BannerImages\36a9863b-c64e-4a2d-a020-be30c4faa2da.jpg" />
     <Content Include="BannerImages\419e9eed-565e-468f-8797-b443cce360d0.jpg" />
+    <Content Include="BannerImages\42e73efa-979b-4a0a-8d00-0bcb38b275c2.jpg" />
     <Content Include="BannerImages\453dbd53-9358-49e5-bca8-e281704ce9b5.jpg" />
     <Content Include="BannerImages\45bd2a3b-3798-44ad-baa6-3256aa1a15a5.jpg" />
     <Content Include="BannerImages\46a82126-3e24-4d4c-b888-b5a86f5e120e.jpg" />
     <Content Include="BannerImages\486c466d-b707-43f3-a0a7-73ee19b76490.jpg" />
     <Content Include="BannerImages\48ac71b4-e2f0-4e84-a47a-ffc2085c0df4.png" />
+    <Content Include="BannerImages\4b39caeb-46eb-4fa0-8277-f98021f9f75a.jpg" />
     <Content Include="BannerImages\4b71cc35-51e7-4f62-a440-ac4e89f99f8c.jpg" />
     <Content Include="BannerImages\515ee874-4959-4b75-9e2d-11f61914b9aa.jpg" />
     <Content Include="BannerImages\51d9e076-a07f-40b6-abbe-8940e8e08a44.jpg" />
     <Content Include="BannerImages\531bc711-9d4e-4db6-bde9-b9c67031f479.jpg" />
+    <Content Include="BannerImages\560e15e8-4c33-4ac8-9ae7-e87b3fbd2bb0.jpeg" />
+    <Content Include="BannerImages\56c0ed9b-5b82-4f32-864c-617c5fb6bdcd.jpg" />
+    <Content Include="BannerImages\56cf48c6-2e3b-4828-ba3b-c35cedef0bc3.jpg" />
+    <Content Include="BannerImages\5829db93-35ae-442f-9f01-c8a223294f05.jpg" />
+    <Content Include="BannerImages\585ba19f-ac5b-4970-aa81-d3e7dd3f62d2.jpg" />
     <Content Include="BannerImages\5cc2122c-cdb8-4205-a9f0-14ae23d40fee.jpg" />
+    <Content Include="BannerImages\6454f66a-4066-43ab-8ac7-ee6496e50790.jpg" />
     <Content Include="BannerImages\6791596a-e590-4c0d-ab66-472650ca5605.jpeg" />
     <Content Include="BannerImages\681037d0-9a4d-4fa9-8699-cf14e17b686d.jpg" />
+    <Content Include="BannerImages\6914fc81-83b2-4a33-abea-0d3d42be1677.jpg" />
     <Content Include="BannerImages\69318162-e122-4b87-a305-123d23ebe809.jpg" />
     <Content Include="BannerImages\6989250f-dfe7-4b2f-a49a-f00c055a73c1.jpg" />
     <Content Include="BannerImages\6a5f99b1-46df-4568-b981-d111ec05a464.jpg" />
@@ -305,22 +322,28 @@
     <Content Include="BannerImages\70ffffbc-1f2c-499b-b207-e34fe410e8bc.jpeg" />
     <Content Include="BannerImages\71dddf7f-9319-4390-9bc2-4d119eb4b6b4.jpg" />
     <Content Include="BannerImages\73a3b0b9-4866-48e9-8bc3-c5c9a11707ba.jpg" />
+    <Content Include="BannerImages\788e450b-8995-49cd-9d99-e80423a11e39.jpg" />
     <Content Include="BannerImages\7ac78040-8256-4708-ac42-2220f1f12602.jpg" />
     <Content Include="BannerImages\7edf09fd-2809-4d29-8e54-535abbcdabfb.jpg" />
     <Content Include="BannerImages\8647326d-e51f-4c58-a8c8-b7bcf77afaf8.jpg" />
     <Content Include="BannerImages\8a1015a1-5089-4131-9998-3466fbf6c408.jpg" />
     <Content Include="BannerImages\8a32150c-56a9-468f-9fad-dfe979a89707.jpg" />
+    <Content Include="BannerImages\8b24fc64-e457-437b-8294-e99978a0ff30.jpg" />
     <Content Include="BannerImages\8c6ad967-1468-4b6c-a7fd-6b4668dff218.jpg" />
     <Content Include="BannerImages\8f3f96a5-4d99-4c61-8461-e17e0aa9487f.jpg" />
     <Content Include="BannerImages\903acec0-90a7-45bd-b182-24a7e513b4e2.jpg" />
     <Content Include="BannerImages\931c1b7c-dccb-4e95-bdbc-70a3f9ad230d.jpg" />
+    <Content Include="BannerImages\950bf550-12cb-47db-8d7b-cb77291c0b71.jpg" />
     <Content Include="BannerImages\9614cb1c-1f87-4bbe-a5b2-3f78bfa1a6d2.jpg" />
+    <Content Include="BannerImages\98ee4dc6-dead-436d-ad69-f8958734dc7b.jpg" />
     <Content Include="BannerImages\993a19f9-72bd-40bd-bdb5-8348a77ab108.jpeg" />
     <Content Include="BannerImages\998feab7-2915-4f64-9ce7-dd55e01006b4.jpg" />
+    <Content Include="BannerImages\9a8cda65-1a04-4a4a-b1ed-bdf6b2b311ed.jpg" />
     <Content Include="BannerImages\9d1ba595-815b-4f3f-aeed-da14cebbfa80.jpg" />
     <Content Include="BannerImages\9decc276-674d-4c64-abce-7aeae33f7dc2.jpg" />
     <Content Include="BannerImages\9efa2a9f-4173-4626-a90a-d104dce5bd9b.jpg" />
     <Content Include="BannerImages\9f318c96-3bca-4cd9-b916-12c80a8fb2e3.jpg" />
+    <Content Include="BannerImages\9fc04372-9cbc-4876-b476-c2bed47a9e15.jpg" />
     <Content Include="BannerImages\a066f2e2-5d4c-4056-ada6-79e2c92d675d.jpg" />
     <Content Include="BannerImages\a077dfc3-4349-4b51-9717-859f42f41be0.jpg" />
     <Content Include="BannerImages\a1d118ef-8a87-4480-82c1-b9ba3bef63f3.png" />
@@ -331,15 +354,24 @@
     <Content Include="BannerImages\b9c6ca87-66b2-437d-9e0a-589550c5a407.jpg" />
     <Content Include="BannerImages\b9e15295-4836-4d26-b1c7-779fa87fc10e.jpg" />
     <Content Include="BannerImages\bd8d4a8d-aae8-41b4-a12f-16351d3c2e77.jpg" />
+    <Content Include="BannerImages\c2208a35-83d3-4500-9855-6a96329ed090.jpeg" />
+    <Content Include="BannerImages\c4713940-1602-4b3a-8d54-af4f1af1318c.jpg" />
+    <Content Include="BannerImages\c6690d7e-26b6-4b03-b3bc-cf7b04aaf68e.jpg" />
+    <Content Include="BannerImages\cf096df7-831d-4cd0-b949-cb6138b8caa3.jpg" />
     <Content Include="BannerImages\d0f68b20-ce20-4583-b8b1-37ebb9d8c99a.jpg" />
     <Content Include="BannerImages\d403ff60-7ef6-46e4-b1c6-7d5242bc4e48.jpg" />
     <Content Include="BannerImages\d64c1a4b-7de6-4745-98ad-6ea04ecb5a07.jpg" />
+    <Content Include="BannerImages\d6f6121d-abe4-4e95-93fc-5e1b6937d1d0.jpg" />
+    <Content Include="BannerImages\d7b93246-52ea-4e18-9f38-026590e32ec8.jpg" />
     <Content Include="BannerImages\d99235da-909b-4fdb-a230-30ed7e70f1c1.jpeg" />
     <Content Include="BannerImages\db6fe080-2431-4cec-a6ed-1c0beba89852.jpg" />
     <Content Include="BannerImages\dc5f2c2e-a8ba-4dca-989b-9b4e5062d814.png" />
     <Content Include="BannerImages\df0959eb-9ff3-40e6-ba42-6a0c47ebf159.jpg" />
     <Content Include="BannerImages\e02401d0-90f4-49c9-bd3d-d399ecccd915.jpg" />
     <Content Include="BannerImages\e2a603d7-8ecf-47f3-b7bd-f573b1f94e56.jpg" />
+    <Content Include="BannerImages\e774b115-6476-438c-8e97-44eaaa3e6bcc.jpg" />
+    <Content Include="BannerImages\e7764d28-5bbc-4438-a835-f4757bab099d.png" />
+    <Content Include="BannerImages\ea1fcd40-5c04-4388-a9fe-ca72b6b9df36.jpg" />
     <Content Include="BannerImages\ef6d7cd7-3689-421f-a2ff-424c14c5aba7.jpg" />
     <Content Include="BannerImages\f970d76c-b80e-48d2-9874-945568dd0ae0.jpeg" />
     <Content Include="BannerImages\f985d01a-df85-4d36-96c2-777329dd27de.jpg" />

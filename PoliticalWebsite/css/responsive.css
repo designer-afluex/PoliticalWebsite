@@ -447,7 +447,7 @@ body {
 	}
 	/** Contact **/
 	.pbmit-ihbox-style-4 .d-flex {
-		display: block!important;
+		/*display: block!important;*/
 	}
 	.pbmit-ihbox-style-4 .pbmit-ihbox-contents {
 		margin-top: 15px;
@@ -543,7 +543,7 @@ body {
 }
 @media(max-width:767px) {
 	/** Section Padding **/ 
-	.section-lg{ padding-top: 60px; padding-bottom:40px;}
+	.section-lg{ padding-top: 60px; padding-bottom:70px;}
 	.section-lgx{ padding-top: 60px; padding-bottom:60px;}
 	.section-lgt{ padding-top: 60px; }
 	.section-lgb{ padding-bottom:60px;}

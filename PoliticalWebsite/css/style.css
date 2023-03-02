@@ -253,11 +253,11 @@ h3.wpem-heading-text {
     font-size: 18px;
     line-height: 22px;
     font-weight: 700;
+    margin-top:8px;
     margin-bottom: 0;
     color: var(--pbmit-blackish-color);
     display: -webkit-box;
     -webkit-line-clamp: 2;
-    margin: 0;
 }
 .pbmit-event-meta {
     display: flex;
@@ -2448,3 +2448,50 @@ i.fa.fas.fa-exclamation-triangle{
     list-style-image: none;
     margin: 0 5px 5px 0;
 }
+
+@media(max-width:768px)
+{
+    .wpem-event-banner-img
+    {
+        width:100%;
+    }
+    .news_img
+    {
+        height:250px;
+        width:100%
+    }
+    .slider_img
+    {
+        height:300px
+    }
+}
+
+@media(min-width:1000px)
+{
+    .desktop_hide
+    {
+        display:none;
+    }
+}
+
+.word-break
+{
+   word-break: break-word;
+}
+
+    .page-header-en, .page-header-hi {
+    margin: 0;
+    padding: 127px 0 167px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+    @media(max-width:768px)
+    {
+        .page-header-en, .page-header-hi
+        {
+             padding: 55px 0 35px;
+        }
+    }

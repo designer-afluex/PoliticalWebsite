@@ -16,6 +16,7 @@ namespace PoliticalWebsite.Models
         public string Mobile { get; set; }
         public string Subject { get; set; }
         public string Message { get; set; }
+        public string Date { get; set; }
 
         public DataSet GetDetails()
         {

@@ -906,6 +906,7 @@
     <Content Include="Views\Master\NewsimageList.cshtml" />
     <Content Include="Views\Master\AddSliderBanner.cshtml" />
     <Content Include="Views\Master\SliderBannerList.cshtml" />
+    <Content Include="Views\Master\ChangePassword.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

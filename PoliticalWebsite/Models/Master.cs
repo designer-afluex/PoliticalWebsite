@@ -9,6 +9,11 @@ namespace PoliticalWebsite.Models
 {
     public class Master
     {
+        public string OldPassword { get; set; }
+        public string NewPassword { get; set; }
+        public string ConfirmPassword { get; set; }
+
+
         #region SliderBannerMaster
         public string SliderBannerID { get; set; }
         public string Pk_SliderBannerId { get; set; }
@@ -250,5 +255,18 @@ namespace PoliticalWebsite.Models
         }
 
         #endregion
+
+
+        public DataSet ChangePassword()
+        {
+            SqlParameter[] para =
+            {
+                new SqlParameter("@OldPassword",OldPassword),
+                new SqlParameter("@NewPassword",NewPassword),
+                 new SqlParameter("@UpdatedBy",AddedBy)
+            };
+            DataSet ds = Connection.ExecuteQuery("AdminChangePassword", para);
+            return ds;
+        }
     }
 }

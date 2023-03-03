@@ -61,45 +61,46 @@
                         </div>
                     </div>
 
-                    <div class="row">
-                        @if (Model != null)
-                        {
-                            <div class="col-lg-12">
-                                <div class="form-group">
-                                    <label>Upload News Banner </label><br />
-                                    <input type="file" id="News" name="News" class="form-control" />
+                        <div class="row">
+                            @if (Model != null)
+                            {
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label>Upload News Banner </label><br />
+                                        <input type="file" id="News" name="News" class="form-control" />
+                                    </div>
                                 </div>
-                            </div>
-                        }
-                        else
-                        {
-                            <div class="col-lg-12">
-                                <div class="form-group">
-                                    <label>Upload News Banner <span style="color: red">*</span></label><br />
-                                    <input type="file" id="News" name="News" class="form-control" />
+                            }
+                            else
+                            {
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label>Upload News Banner <span style="color: red">*</span></label><br />
+                                        <input type="file" id="News" name="News" class="form-control" />
+                                    </div>
                                 </div>
-                            </div>
-                        }
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-9">
-                            <div class="form-group">
-                                @Html.HiddenFor(m => m.Pk_NewsId)
-                                @if (Model == null)
-                                {
-                                    <input type="submit" id="btnSave" name="btnSave" class="btn btn-success pull-right" value="Save" onclick="return saveNews();" />
-                                }
-                                else
-                                {
-                                    <input type="submit" id="btnUpdate" name="btnUpdate" class="btn btn-success pull-right" value="Update" onclick="return updateNews();" />
-                                }
-                                <a href="/Master/NewsimageList" class="btn btn-primary pull-right">News List</a>
+                            }
+                        </div>
+                        <label>नोट: बैनर का साइज (ऊंचाई 720 पिक्सेल और चौड़ाई 960 पिक्सेल) होनी चाहिए ।</label>
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <div class="form-group">
+                                    @Html.HiddenFor(m => m.Pk_NewsId)
+                                    @if (Model == null)
+                                    {
+                                        <input type="submit" id="btnSave" name="btnSave" class="btn btn-success pull-right" value="Save" onclick="return saveNews();" />
+                                    }
+                                    else
+                                    {
+                                        <input type="submit" id="btnUpdate" name="btnUpdate" class="btn btn-success pull-right" value="Update" onclick="return updateNews();" />
+                                    }
+                                    <a href="/Master/NewsimageList" class="btn btn-primary pull-right">News List</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+
     }
 </body>
 

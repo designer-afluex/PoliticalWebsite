@@ -2494,4 +2494,9 @@ i.fa.fas.fa-exclamation-triangle{
         {
              padding: 55px 0 35px;
         }
+        .slider_img
+        {
+            height:280px;
+            width:100%;
+        }
     }

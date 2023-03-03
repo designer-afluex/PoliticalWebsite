@@ -42,13 +42,13 @@
                                <span>@Session["Name"]</span> (<span>@Session["LoginId"]</span>)
                             </div>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+                        @*<div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="/Home/Login">
                                 <i class="mdi mdi-logout text-primary"></i>
                                 Logout
                             </a>
-                        </div>
+                        </div>*@
                     </li>
                 </ul>
             </div>
@@ -102,6 +102,13 @@
                             <span class="menu-title">Change Password</span>
                         </a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/Login">
+                            <i class="mdi mdi-logout text-primary-outline menu-icon"></i>
+                            <span class="menu-title">Logout</span>
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <!-- partial -->
@@ -145,5 +152,11 @@
     <script src="/assets/js/data-table.js"></script>
     <!-- Custom js for this page-->
     <script src="/assets/js/dashboard.js"></script>
+    <script>
+        jQuery(document).ready(function () {
+            Main.init();
+            Index.init();
+        });
+    </script>
 </body>
 </html>

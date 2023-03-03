@@ -28447,5 +28447,20 @@ div.tagsinput span.tag a {
     display: none;
   }
 }
+@media(max-width:768px)
+{
+    .auth .login-half-bg
+        {
+            background:none
+        }
+}
+@media(max-width:400px)
+{
+  .auth .login-half-bg
+        {
+            background:none !important;
+        }
+}
+
 
 /*# sourceMappingURL=../maps/vertical-layout-light/style.css.map */

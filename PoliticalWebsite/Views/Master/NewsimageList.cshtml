@@ -30,11 +30,9 @@
                                                 <tr>
                                                     <th>S No.</th>
                                                     <th>News Banner</th>
-
-                                                    <th>Discription</th>
+                                                    <th>Description</th>
                                                     <th>Date</th>
                                                     <th>Action</th>
-                                                    <th></th>
                                                 </tr>
 
                                             </thead>
@@ -58,23 +56,12 @@
                                                                     <a class="btn btn-sm btn-info" href="/Master/AddNews?Id=@Item.Pk_NewsId">Edit</a>
                                                                     <a class="btn btn-sm btn-danger" href="/Master/DeleteNewsBanner?Id=@Item.Pk_NewsId" onclick="return confirm('Are you sure you want to delete banner image ?')">Delete</a>
                                                                 </td>
-                                                                <td></td>
                                                             </tr>
                                                             i = i + 1;
                                                         }
                                                     }
                                                 }
                                             </tbody>
-                                            <tfoot>
-                                                <tr>
-                                                    <th></th>
-                                                    <th></th>
-
-                                                    <th></th>
-                                                    <th></th>
-                                                    <th></th>
-                                                </tr>
-                                            </tfoot>
                                         </table>
                                     </div>
                                 </div>

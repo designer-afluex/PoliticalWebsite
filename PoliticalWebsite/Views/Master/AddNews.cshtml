@@ -39,8 +39,8 @@
                     </div>
                     <div class="col-lg-12">
                         <div class="form-group">
-                            <label>News Message <span style="color: red">*</span></label>
-                            <input type="text" id="summernoteExample"/>
+                            <label>News Message </label>
+                            @*<input type="text" id="summernoteExample"/>*@
                             @*<div id="summernoteExample">
                                 <p class="text-justify">
                                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -56,7 +56,7 @@
                             </div>*@
 
 
-                            @*@Html.TextBoxFor(m => m.Message, new { @placeholder = "News Heading", @class = "form-control" })*@
+                            @Html.TextBoxFor(m => m.Message, new { @placeholder = "news heading", @class = "form-control" })
                         </div>
                     </div>
                 </div>
@@ -129,7 +129,10 @@
 
 
 <script>
+
     function saveNews() {
+        debugger;
+
         $(".errortext").removeClass("errortext");
         if ($('#Discription').val() == '') {
             $("#Discription").addClass('errortext');
@@ -142,11 +145,11 @@
             $('#Date').focus();
             return false;
         }
-        if ($('#Message').val() == '') {
-            $("#Message").addClass('errortext');
-            $('#Message').focus();
-            return false;
-        }
+        //if ($('#Message').val() == '') {
+        //    $("#Message").addClass('errortext');
+        //    $('#Message').focus();
+        //    return false;
+        //}
         if ($('#News').val() == '') {
             $("#News").addClass('errortext');
             $('#News').focus();
@@ -154,6 +157,8 @@
         }
     }
 </script>
+
+
 
 
 

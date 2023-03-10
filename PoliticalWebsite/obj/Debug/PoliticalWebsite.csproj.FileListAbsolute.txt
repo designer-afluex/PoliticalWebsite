@@ -35,3 +35,4 @@ D:\Repository-Projects\PoliticalWebsite\PoliticalWebsite\bin\PoliticalWebsite.pd
 D:\Repository-Projects\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.dll
 D:\Repository-Projects\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.pdb
 D:\Repository-Projects\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.csprojResolveAssemblyReference.cache
+F:\Ashwani Afluex\repository\PoliticalWebsite\PoliticalWebsite\obj\Debug\PoliticalWebsite.csprojResolveAssemblyReference.cache

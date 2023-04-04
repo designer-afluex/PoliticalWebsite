@@ -128,35 +128,31 @@
     .errortext {
         border: 2px solid red !important;
     }
-
-    }
 </style>
 <script>
-                    function saveEvent() {
-                        $(".errortext").removeClass("errortext");
-                        if ($('#Discription').val() == '') {
-                            $("#Discription").addClass('errortext');
-                            $('#Discription').focus();
-                            return false;
-                        }
-                        if ($('#City').val() == '') {
-                            $("#City").addClass('errortext');
-                            $('#City').focus();
-                            return false;
-                        }
-                        if ($('#Date').val() == '') {
-                            $("#Date").addClass('errortext');
-                            $('#Date').focus();
-                            return false;
-                        }
-                        if ($('#Event').val() == '') {
-                            $("#Event").addClass('errortext');
-                            $('#Event').focus();
-                            return false;
-                        }
-                    }
-
-
+    function saveEvent() {
+        $(".errortext").removeClass("errortext");
+        if ($('#Discription').val() == '') {
+            $("#Discription").addClass('errortext');
+            $('#Discription').focus();
+            return false;
+        }
+        if ($('#City').val() == '') {
+            $("#City").addClass('errortext');
+            $('#City').focus();
+            return false;
+        }
+        if ($('#Date').val() == '') {
+            $("#Date").addClass('errortext');
+            $('#Date').focus();
+            return false;
+        }
+        if ($('#Event').val() == '') {
+            $("#Event").addClass('errortext');
+            $('#Event').focus();
+            return false;
+        }
+    }
 </script>
 
 

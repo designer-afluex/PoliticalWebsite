@@ -213,7 +213,7 @@ namespace PoliticalWebsite.Models
             SqlParameter[] para = {
                     new SqlParameter("@NewsImage", News),
                     new SqlParameter("@Discription", Discription),
-                     new SqlParameter("@Message", Message),
+                    new SqlParameter("@Message", Message),
                     new SqlParameter("@Date", NewsDate),
                     new SqlParameter("@AddedBy", AddedBy)
 

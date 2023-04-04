@@ -830,7 +830,7 @@ h2.pbmit-title:after{
 }
 .pbmit-ourhistory-type2 .pbmit-ourhistory-right .content .simple-text p {
     margin-bottom: 0;
-    font-size:18px;
+    font-size:19px;
 }
 .pbmit-ourhistory-type2 .pbmit-ourhistory-center span {
     position: absolute;
@@ -2481,7 +2481,7 @@ i.fa.fas.fa-exclamation-triangle{
 
     .page-header-en, .page-header-hi {
     margin: 0;
-    padding: 127px 0 167px;
+    padding: 160px 0 167px;
     position: relative;
     overflow: hidden;
     z-index: 1;

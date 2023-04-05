@@ -9,7 +9,6 @@
 <div class="page-wrapper">
     <!-- Page Content -->
     <div class="page-content">
-
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 p-0">
@@ -31,7 +30,7 @@
                                     foreach (var item in Model.lstSliderBanner)
                                     {
                                         <div class="carousel-item active">
-                                            <img src="@item.SliderBannerImage" class="d-block w-100 img-fluid" alt="...">
+                                            <img src="@item.SliderBannerImage" class="d-block w-100 img-fluid slider_img" alt="...">
                                         </div>
                                         i++;
                                     }
@@ -53,6 +52,9 @@
 
             </div>
         </div>
+
+
+
         <!-- About Start -->
         <section class="section-lg pbmit-bg-color-light home1-about-us">
             <div class="container">
@@ -64,25 +66,15 @@
                     </div>
                     <div class="col-xxl-8 col-xl-7 col-md-6">
                         <div class="pbmit-heading-subheading text-left">
-                            <h2 class="pbmit-title">सुरेंद्र चौरसिया के बारे में</h2>
+                            <h2 class="pbmit-title">सुरेन्द्र चौरसिया के बारे में</h2>
                             <div id="google_translate_element"></div>
                             <div class="pbmit-heading-desc pe-5">
-                                सुरेंद्र चौरसिया जी का जन्म 22 जुलाई 1989 को देवरिया जिले के ग्राम कुशहरी में एक साधारण
-                                परिवार में हुआ था। अखिल भारतीय विद्यार्थी परिषद से जुड़कर छात्र राजनीति की शुरुआत की और फिर
-                                उत्तर प्रदेश के मुख्यमंत्री योगी आदित्यनाथ के मार्गदर्शन में हिंदुत्व की विचारधारा को अपनाते
-                                हुए हिंदू युवा वाहिनी में शामिल हो गए।चैरसिया जी बहुत ही सरल स्वाभाव व्यक्तित्व के है। हर
-                                किसी के प्रति चौरसिया जी का व्यक्तित्व बहुत ही मिलनसार है।
-
-                                सुरेंद्र चौरसिया जी वर्तमान में रामपुर कारखाना (देवरिया) जिले के विधायक है |
+                                सुरेन्द्र चौरसिया जी का जन्म 22 जुलाई 1989 को देवरिया जिले के ग्राम कुशहरी में एक साधारण परिवार में हुआ था। अखिल भारतीय विद्यार्थी परिषद से जुड़कर छात्र राजनीति की शुरुआत की और फिर उत्तर प्रदेश के मुख्यमंत्री योगी आदित्यनाथ के मार्गदर्शन में हिंदुत्व की विचारधारा को अपनाते हुए हिंदू युवा वाहिनी में शामिल हो गए। सुरेन्द्र चौरसिया जी वर्तमान में 339- विधानसभा रामपुर कारखाना (देवरिया) के विधायक है |
                                 <br />
-                                सुरेंद्र चौरसिया जी सभी लोगों के बीच में लोकप्रिय नेता हैं। अपने कार्यालय में चौरसिया जी जनसुनवाई करके विधानसभा के लोगो की
-                                समस्याओं का निवारण करते हैं। उनकी कार्य प्रणाली और आम आदमी के प्रति संवेदनशीलता ने उन्हें एक
-                                विशेष दर्जा दिया और उन्हें जनता के बीच जनता के नेता के रूप में बहुत लोकप्रिय बना दिया।
-                                चौरसिया जी द्वारा जनता दर्शन कार्यक्रम में आने वाले सभी लोगों तथा कुछ खास समूहों जैसे
-                                दिव्यांगों, वरिष्ठ नागरिकों व महिलाओं की समस्याओं को विशेष वरीयता दी जाती है |
+                                सुरेन्द्र चौरसिया जी सभी लोगों के बीच में लोकप्रिय हैं। अपने कार्यालय में चौरसिया जी जनसुनवाई करके विधानसभा के लोगो की समस्याओं का निवारण करते हैं। उनकी कार्य प्रणाली और आम आदमी के प्रति संवेदनशीलता ने उन्हें एक विशेष दर्जा दिया और उन्हें जनता के बीच जनता के नेता के रूप में बहुत लोकप्रिय बना दिया। चौरसिया जी द्वारा जनता दर्शन कार्यक्रम में आने वाले सभी लोगों तथा कुछ खास समूहों जैसे दिव्यांगों, वरिष्ठ नागरिकों व महिलाओं की समस्याओं को विशेष वरीयता दी जाती है |
                             </div>
                             <a href="/Home/About" class="pbmit-btn pbmit-btn-hover-secondary">
-                                <span>पार्टी के बारे में</span>
+                                <span>हमारे बारे में</span>
                             </a>
                         </div>
                     </div>
@@ -90,14 +82,17 @@
             </div>
         </section>
         <!-- About End -->
+
+
+
         <!-- Service Start -->
         <section class="section-lg">
-            <div class="home1-service-section">
+            <div class="home1-service-section container-fluid">
                 <div class="row">
                     <div class="col-xl-4 col-lg-12 service-tbox-left home1-service-arrow">
                         <div class="pbmit-heading-subheading text-left">
-                            <h2 class="pbmit-title  text-white">
-                                हमारी गैलरी
+                            <h2 class="pbmit-title text-white">
+                                हमारी फोटो गैलरी
                             </h2>
                         </div>
                     </div>
@@ -118,9 +113,9 @@
                                                     <div class="pbminfotech-post-item">
                                                         <div class="pbmit-service-img-wrapper">
                                                             <div class="pbmit-featured-wrapper">
-                                                                <a href="@item.GalleryImage">
+                                                                <a href="/Home/Gallery">
                                                                     <img src="@item.GalleryImage" class="img-fluid gallery_img"
-                                                                         alt="Political_Image" style="height:320px">
+                                                                         alt="Political_Image">
                                                                 </a>
                                                             </div>
                                                         </div>
@@ -228,7 +223,7 @@
                                             <div class="pbmit-imgbox col-md-6 col-sm-12"
                                                  style="background-image:url('@item.NewsImage')">
                                                 <div class="pbmit-imgbox-wrapper">
-                                                    <img src="@item.NewsImage" alt="Political Commentator" />
+                                                    <img src="@item.NewsImage" class="news_img" alt="Political Commentator" />
                                                 </div>
                                             </div>
                                             <div class="pbmit-contentbox col-md-6 col-sm-12">

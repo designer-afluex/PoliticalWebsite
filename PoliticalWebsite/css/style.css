@@ -1275,7 +1275,7 @@ h2.pbmit-title{
     margin-top: 10px;
     padding-bottom: 15px;
     display: flex !important;
-    align-items: center;
+    /*align-items: center;*/
     width: 100%;
 }
 .sidebar .recent-post-list li:last-child{
@@ -1685,8 +1685,8 @@ article.post .post-content{
     padding-top: 20px;
 }
 article.post .post-box-title{
-    font-size: 36px;
-    line-height: 36px;
+    font-size: 25px;
+    line-height: 35px;
     margin-top: 10px;
     margin-bottom: 15px;
     letter-spacing: -0.8px;

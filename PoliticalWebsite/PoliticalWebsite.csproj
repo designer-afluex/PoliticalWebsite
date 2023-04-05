@@ -853,6 +853,8 @@
     <Content Include="obj\Release\TransformWebConfig\original\Web.config" />
     <Content Include="obj\Release\TransformWebConfig\transformed\Web.config" />
     <None Include="Properties\PublishProfiles\MLA.pubxml" />
+    <None Include="Properties\PublishProfiles\MlaWebsite.pubxml" />
+    <None Include="Properties\PublishProfiles\Political-Website.pubxml" />
     <None Include="Properties\PublishProfiles\Political.pubxml" />
     <None Include="Properties\PublishProfiles\PoliticalWebsite.pubxml" />
     <Content Include="Web.config" />

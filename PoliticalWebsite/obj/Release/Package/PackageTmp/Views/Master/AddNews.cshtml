@@ -12,75 +12,89 @@
             @TempData["msg"]
         </span>
         <br />
-        <div class="row">
-            <div class="col-lg-12 grid-margin stretch-card">
-                <div class="card">
-                    <div class="card-body">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-12">
                         <h3 class="card-title">News Banner</h3>
-                        <div class="row mt-4">
-                            <div class="col-lg-4">
-                                <div class="form-group">
-                                    <label>News Heading <span style="color: red">*</span></label>
-                                    @Html.TextBoxFor(m => m.Discription, new { @placeholder = "News Heading", @class = "form-control" })
-                                    @Html.HiddenFor(m => m.NewsID)
-                                </div>
-                            </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label>News Heading <span style="color: red">*</span></label>
+                            @Html.TextBoxFor(m => m.Discription, new { @placeholder = "News Heading", @class = "form-control" })
+                            @Html.HiddenFor(m => m.NewsID)
+                        </div>
+                    </div>
 
-                            <div class="col-lg-4">
-                                <div class="form-group">
-                                    <label>Date <span style="color: red">*</span></label>
-                                    <div id="datepicker-popup" class="input-group date datepicker">
-                                        @Html.TextBoxFor(m => m.Date, new { @placeholder = "Date", @class = "form-control", @autocomplete = "off" })
-                                        <span class="input-group-addon input-group-append border-left">
-                                            <span class="mdi mdi-calendar input-group-text"></span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="form-group">
-                                    <label>News Message <span style="color: red">*</span></label>
-                                    @Html.TextBoxFor(m => m.Message, new { @placeholder = "News Heading", @class = "form-control" })
-                                </div>
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label>Date <span style="color: red">*</span></label>
+                            <div id="datepicker-popup" class="input-group date datepicker">
+                                @Html.TextBoxFor(m => m.Date, new { @placeholder = "Date", @class = "form-control", @autocomplete = "off" })
+                                <span class="input-group-addon input-group-append border-left">
+                                    <span class="mdi mdi-calendar input-group-text"></span>
+                                </span>
                             </div>
                         </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label>News Message </label>
+                            @*<input type="text" id="summernoteExample"/>*@
+                            @*<div id="summernoteExample">
+                                <p class="text-justify">
+                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                </p>
+                                <p class="text-justify">
+                                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                                    veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur
+                                    magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"
+                                </p>
+                            </div>*@
 
-                        <div class="row">
-                            @if (Model != null)
+
+                            @Html.TextBoxFor(m => m.Message, new { @placeholder = "news heading", @class = "form-control" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    @if (Model != null)
+                    {
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label>Upload News Banner </label><br />
+                                <input type="file" id="News" name="News" class="form-control" />
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label>Upload News Banner <span style="color: red">*</span></label><br />
+                                <input type="file" id="News" name="News" class="form-control" />
+                            </div>
+                        </div>
+                    }
+                </div>
+                <label>नोट: बैनर का साइज (ऊंचाई 720 पिक्सेल और चौड़ाई 960 पिक्सेल) होनी चाहिए ।</label>
+                <div class="row">
+                    <div class="col-lg-9">
+                        <div class="form-group">
+                            @Html.HiddenFor(m => m.Pk_NewsId)
+                            @if (Model == null)
                             {
-                                <div class="col-lg-12">
-                                    <div class="form-group">
-                                        <label>Upload News Banner </label><br />
-                                        <input type="file" id="News" name="News" class="form-control" />
-                                    </div>
-                                </div>
+                                <input type="submit" id="btnSave" name="btnSave" class="btn btn-success pull-right" value="Save" onclick="return saveNews();" />
                             }
                             else
                             {
-                                <div class="col-lg-12">
-                                    <div class="form-group">
-                                        <label>Upload News Banner <span style="color: red">*</span></label><br />
-                                        <input type="file" id="News" name="News" class="form-control" />
-                                    </div>
-                                </div>
+                                <input type="submit" id="btnUpdate" name="btnUpdate" class="btn btn-success pull-right" value="Update" onclick="return updateNews();" />
                             }
-                        </div>
-
-                        <div class="row">
-                            <div class="col-lg-9">
-                                <div class="form-group">
-                                    @Html.HiddenFor(m => m.Pk_NewsId)
-                                    @if (Model == null)
-                                    {
-                                        <input type="submit" id="btnSave" name="btnSave" class="btn btn-success pull-right" value="Save" onclick="return saveNews();" />
-                                    }
-                                    else
-                                    {
-                                        <input type="submit" id="btnUpdate" name="btnUpdate" class="btn btn-success pull-right" value="Update" onclick="return updateNews();" />
-                                    }
-                                    <a href="/Master/NewsimageList" class="btn btn-primary pull-right">News List</a>
-                                </div>
-                            </div>
+                            <a href="/Master/NewsimageList" class="btn btn-primary pull-right">News List</a>
                         </div>
                     </div>
                 </div>
@@ -89,6 +103,7 @@
 
     }
 </body>
+
 <style>
     .errortext {
         border: 2px solid red !important;
@@ -114,7 +129,10 @@
 
 
 <script>
+
     function saveNews() {
+        debugger;
+
         $(".errortext").removeClass("errortext");
         if ($('#Discription').val() == '') {
             $("#Discription").addClass('errortext');
@@ -127,11 +145,11 @@
             $('#Date').focus();
             return false;
         }
-        if ($('#Message').val() == '') {
-            $("#Message").addClass('errortext');
-            $('#Message').focus();
-            return false;
-        }
+        //if ($('#Message').val() == '') {
+        //    $("#Message").addClass('errortext');
+        //    $('#Message').focus();
+        //    return false;
+        //}
         if ($('#News').val() == '') {
             $("#News").addClass('errortext');
             $('#News').focus();
@@ -139,6 +157,8 @@
         }
     }
 </script>
+
+
 
 
 

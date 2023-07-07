@@ -1,0 +1,153 @@
+﻿@model RadhekunkInfra.Models.Home
+@{
+    Layout = null;
+}
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>Admin Login</title>
+<link rel="shortcut icon" href="~/WebsiteCss/assets/images/favicon.png" type="image/x-icon">
+<link rel='shortcut icon' type='image/x-icon' href="/AssociatePanelcss/assets/img/logo.png" />
+<link href="../../WebsiteCss/css/bootstrap.css" rel="stylesheet">
+<link href="../../WebsiteCss/assets/css/custom-style.css" rel="stylesheet">
+
+@*<section class="form-section">
+    <div class="form-wrapper">
+       <p class="text-white"> @TempData["Login"] </p>
+            @using (Html.BeginForm("LoginAction", "Home", FormMethod.Post, new { @id = "signupForm" }))
+            {
+            <div class="photo-info">
+                <img src="~/WebsiteCss/assets/images/radhekunj_logo.png" class="img-fluid" alt="logo1">
+                @*<img src="https://avatars3.githubusercontent.com/u/57417305?s=460&u=4d6ec04baabeba7ca24f2f05f90ed85a85ceb742&v=4" alt="">
+                <h3>Admin Login</h3>
+            </div>
+            <div class="input-block email">
+                @Html.TextBoxFor(m => m.LoginId, new { @Placeholder = "Login Id", @required = "required" })
+                @*<input id="login-email" type="email" placeholder="Email" />
+            </div>
+            <div class="input-block password">
+                @Html.PasswordFor(m => m.Password, new { @Placeholder = "Password", @required = "required" })
+                @*<input type="password" id="login-email" placeholder="Password" />
+            </div>
+            <input type="submit" id="Login" class="btn-login" name="Login" value="Sign In">
+            @*<button type="submit" class="btn-login">Sign In</button>
+            <p><a href="~/Home/ForgetPassword" class="span">Forgot Password ?</a></p>
+    }
+    </div>
+</section>
+
+<ul class="squares"></ul>*@
+
+@*<script src="script.js"></script>*@
+<section class="h-100 gradient-form">
+    <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-xl-9">
+                <div class="card rounded-3">
+                    <div class="row g-0">
+                        <div class="col-lg-5 offset-1 d-flex align-items-center">
+                            <center>
+                                <img src="~/WebsiteCss/assets/images/side_logo.png" style="height:250px;" class="img-fluid login-img" />
+                            </center>
+                        </div>
+                        <div class="col-lg-6 gradient-custom-2" style="border-radius:0px 40px 40px 0">
+                            <div class="card-body">
+                                <div class="text-center">
+                                    @*<img src="~/WebsiteCss/assets/images/radhekunj_logo.png" style="height:80px;" class="img-fluid" alt="logo">*@
+                                    <h5 class="mt-3 mb-5 pb-1">Please login to your account</h5>
+                                </div>
+                                <p style="color:red"> @TempData["Login"] </p>
+                               @using (Html.BeginForm("LoginAction", "Home", FormMethod.Post, new { @id = "signupForm" }))
+                               {
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="form2Example11">Enter your login id</label>
+                                        @Html.TextBoxFor(m => m.LoginId, new {@class="form-control", @Placeholder = "Login Id", @required = "required" })
+                                       
+                                    </div>
+
+                                    <div class="form-outline mb-4">
+                                        <label class="form-label" for="form2Example22">Enter your password</label>
+                                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", @Placeholder = "Password", @required = "required" })
+                                        
+                                    </div>
+
+                                    <div class="text-center pt-1 mb-2">
+                                        <input type="submit" id="Login" class="text-white btn btn-block btn-login fa-lg btn-green btn-bg mb-3 p-3" name="Login" value="Sign In">
+                                        
+                                        <a class="text-muted" href="~/Home/ForgetPassword">Forgot password?</a>
+                                    </div>
+                               }
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@*<body class="login-section">
+    <section>
+        <div class="auto-container">
+            <div class="row clearfix">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="col-sm-6">
+
+                        </div>
+                        <div class="col-sm-6">
+
+                        </div>
+                    </div>
+                </div>*@
+                @*<div class="column col-lg-12 col-md-12 col-sm-12">
+
+                    <!-- Login Form --
+                    <div class="login-form">
+                        <!--Login Form--
+                        <p style="color:red"> @TempData["Login"] </p>
+                        @using (Html.BeginForm("LoginAction", "Home", FormMethod.Post, new { @id = "signupForm" }))
+                        {
+                                <div class="center">
+                                    <img src="/AssociatePanelcss/assets/img/logo.png" class="img-fluid" alt="logo1">
+                                    <h2 class="text-center mt-2 text-uppercase">Admin Login</h2>
+                                </div>
+                               
+                            <div class="form-group">
+                                <label>Login Id </label>
+                                @Html.TextBoxFor(m => m.LoginId, new { @Placeholder = "Login Id", @required = "required" })
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                @Html.PasswordFor(m => m.Password, new { @Placeholder = "Password", @required = "required" })
+
+                            </div>
+                            <div class="clearfix">
+                                <div class="pull-left">
+                                    <div class="form-group no-margin" style="padding-top:13px;">
+                                        <a style="color: #413b34;font-size: 16px;font-weight: 500;" href="~/Home/ForgetPassword">Forgot Password</a>
+                                    </div>
+                                </div>
+                                <div class="pull-right">
+                                    <div class="form-group no-margin">
+                                        @*<a class="theme-btn btn-style-one" href="http://moonliteagro.com/">Back To Home</a>*
+                                        <input type="submit" id="Login" class="theme-btn btn-style-one signdown" name="Login" value="Sign In">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        }
+                    </div>
+                    <!--End Login Form -->
+                @*</div>*@
+            @*</div>
+        </div>
+    </section>
+</body>*@
+<script src="../../WebsiteCss/js/jquery.js"></script>
+<script src="../../WebsiteCss/js/popper.min.js"></script>
+<script src="../../WebsiteCss/js/bootstrap.min.js"></script>
+<script src="../../WebsiteCss/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="../../WebsiteCss/assets/js/script.js"></script>
+<!--Clients Section-->

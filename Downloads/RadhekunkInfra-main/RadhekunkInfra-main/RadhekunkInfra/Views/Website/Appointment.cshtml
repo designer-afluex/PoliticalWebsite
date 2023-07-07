@@ -1,0 +1,81 @@
+﻿@{
+    Layout = "~/Views/Shared/WebsiteLayout.cshtml";
+}
+
+<main>
+    <div class="filter-bar filter-bar-2 primary-bg text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <h3 class="text-white text-center">Appointment Form</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container pri-pad">
+        <form action="#" class="property-submit">
+            <div class="row">
+                <div class="form-group col-sm-4">
+                    <label>Name</label>
+                    <input type="text">
+                </div>
+
+                <div class="form-group select col-sm-4 mb-30">
+                    <label>Mobile No.</label>
+                    <input type="number">
+                </div>
+                <!--status-->
+
+                <div class="form-group col-sm-4 mb-30">
+                    <label>Email Address</label>
+                    <input type="email">
+                </div>
+
+                <div class="form-group col-sm-4 mb-30">
+                    <label>Date OF Birth</label>
+                    <input type="date">
+                </div>
+
+                <div class="form-group select col-sm-4 mb-30">
+                    <label>Project Name</label>
+                    <select name="project">
+                        <option value="Aradhna Vihar">Select</option>
+                        <option value="Aradhna Vihar">Aradhna Vihar</option>
+                        <option value="SANGAM VIHAR 1ST">SANGAM VIHAR 1ST</option>
+                        <option value="SANGAM VIHAR 2ND">SANGAM VIHAR 2ND </option>
+                        <option value="SANGAM VIHAR 3RD">SANGAM VIHAR 3RD</option>
+                        <option value="shikhar green">Shikhar Green </option>
+                        <option value="royal prayag">Royal Prayag</option>
+                        <option value="madhuvan vihar 1st">Madhuvan Vihar 1ST</option>
+                        <option value="madhuvan vihar 2nd">Madhuvan Vihar 2ND</option>
+                    </select>
+                </div>
+                <div class="form-group col-sm-4 mb-30">
+                    <label>Best Day To Meet</label>
+                    <select name="day">
+                        <option value="Monday"> Monday </option>
+                        <option value="Tuesday"> Tuesday </option>
+                        <option value="Wednesday"> Wednesday </option>
+                        <option value="Thursday"> Thursday </option>
+                        <option value="Friday"> Friday </option>
+                        <option value="Saturday"> Saturday </option>
+                    </select>
+                </div>
+               
+            </div>
+            <!--property description-->
+
+            <div class="row mb-30">
+                <div class="form-group col-sm-12 mb-30">
+                    <label>Address</label>
+                    <textarea></textarea>
+                </div>
+            </div>
+
+            <a href="#" class="btn btn-sucess btn-lg shadow faa-parent animated-hover">
+                Submit <i class="fa fa-long-arrow-right faa-passing"></i>
+            </a>
+        </form>
+    </div>
+</main>
+<!--main-->

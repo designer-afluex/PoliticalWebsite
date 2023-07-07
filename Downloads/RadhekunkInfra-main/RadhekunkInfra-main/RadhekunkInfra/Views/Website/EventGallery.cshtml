@@ -1,0 +1,157 @@
+﻿@model RadhekunkInfra.Models.Website
+
+@{
+    ViewBag.Title = "Events";
+    Layout = "~/Views/Shared/WebsiteLayout.cshtml";
+}
+
+<main>
+    <div class="filter-bar filter-bar-2 primary-bg text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <h3 class="text-white text-center">Our Latest Event</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="margin:100px 0px 100px 0">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-4">
+                <h1 class="text-center">Coming Soon........</h1>
+            </div>
+        </div>
+    </div>
+    @*<div class="photo-gallery">
+        <div class="container">
+            <div class="row photos">
+                <div class="col-sm-6 col-md-4 col-lg-3 item">
+                 <a href="~/WebsiteCss/assets/images/gallery/gallery-1.jpg" data-lightbox="photos">
+                    <img class="img-fluid gallery-img" src="~/WebsiteCss/assets/images/gallery/gallery-1.jpg">
+                  </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item">
+                  <a href="~/WebsiteCss/assets/images/gallery/gallery-2.jpg" data-lightbox="photos">
+                    <img class="img-fluid gallery-img" src="~/WebsiteCss/assets/images/gallery/gallery-2.jpg">
+                  </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item">
+                  <a href="~/WebsiteCss/assets/images/gallery/gallery-3.jpg" data-lightbox="photos">
+                    <img class="img-fluid gallery-img" src="~/WebsiteCss/assets/images/gallery/gallery-3.jpg">
+                  </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item">
+                  <a href="~/WebsiteCss/assets/images/gallery/gallery-4.jpg" data-lightbox="photos">
+                    <img class="img-fluid gallery-img" src="~/WebsiteCss/assets/images/gallery/gallery-4.jpg">
+                  </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item">
+                    <a href="~/WebsiteCss/assets/images/gallery/gallery-5.jpg" data-lightbox="photos">
+                        <img class="img-fluid gallery-img" src="~/WebsiteCss/assets/images/gallery/gallery-5.jpg">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item">
+                    <a href="~/WebsiteCss/assets/images/gallery/gallery-6.jpg" data-lightbox="photos">
+                        <img class="img-fluid gallery-img" src="~/WebsiteCss/assets/images/gallery/gallery-6.jpg">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item">
+                    <a href="~/WebsiteCss/assets/images/gallery/gallery-7.jpg" data-lightbox="photos">
+                        <img class="img-fluid gallery-img" src="~/WebsiteCss/assets/images/gallery/gallery-7.jpg">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item">
+                    <a href="~/WebsiteCss/assets/images/gallery/gallery-8.jpg" data-lightbox="photos">
+                        <img class="img-fluid gallery-img" src="~/WebsiteCss/assets/images/gallery/gallery-8.jpg">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item">
+                    <a href="~/WebsiteCss/assets/images/gallery/gallery-9.jpg" data-lightbox="photos">
+                        <img class="img-fluid gallery-img" src="~/WebsiteCss/assets/images/gallery/gallery-9.jpg">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item">
+                    <a href="~/WebsiteCss/assets/images/gallery/gallery-10.jpg" data-lightbox="photos">
+                        <img class="img-fluid gallery-img" src="~/WebsiteCss/assets/images/gallery/gallery-10.jpg">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item">
+                    <a href="~/WebsiteCss/assets/images/gallery/gallery-11.jpg" data-lightbox="photos">
+                        <img class="img-fluid gallery-img" src="~/WebsiteCss/assets/images/gallery/gallery-11.jpg">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item">
+                    <a href="~/WebsiteCss/assets/images/gallery/gallery-12.jpg" data-lightbox="photos">
+                        <img class="img-fluid gallery-img" src="~/WebsiteCss/assets/images/gallery/gallery-12.jpg">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item">
+                    <a href="~/WebsiteCss/assets/images/gallery/gallery-13.jpg" data-lightbox="photos">
+                        <img class="img-fluid gallery-img" src="~/WebsiteCss/assets/images/gallery/gallery-13.jpg">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item">
+                    <a href="~/WebsiteCss/assets/images/gallery/gallery-14.jpg" data-lightbox="photos">
+                        <img class="img-fluid gallery-img" src="~/WebsiteCss/assets/images/gallery/gallery-14.jpg">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item">
+                    <a href="~/WebsiteCss/assets/images/gallery/gallery-15.jpg" data-lightbox="photos">
+                        <img class="img-fluid gallery-img" src="~/WebsiteCss/assets/images/gallery/gallery-15.jpg">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item">
+                    <a href="~/WebsiteCss/assets/images/gallery/gallery-16.jpg" data-lightbox="photos">
+                        <img class="img-fluid gallery-img" src="~/WebsiteCss/assets/images/gallery/gallery-16.jpg">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item">
+                    <a href="~/WebsiteCss/assets/images/gallery/gallery-17.jpg" data-lightbox="photos">
+                        <img class="img-fluid gallery-img" src="~/WebsiteCss/assets/images/gallery/gallery-17.jpg">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item">
+                    <a href="~/WebsiteCss/assets/images/gallery/gallery-18.jpg" data-lightbox="photos">
+                        <img class="img-fluid gallery-img" src="~/WebsiteCss/assets/images/gallery/gallery-18.jpg">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item">
+                    <a href="~/WebsiteCss/assets/images/gallery/gallery-19.jpg" data-lightbox="photos">
+                        <img class="img-fluid gallery-img" src="~/WebsiteCss/assets/images/gallery/gallery-19.jpg">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item">
+                    <a href="~/WebsiteCss/assets/images/gallery/gallery-20.jpg" data-lightbox="photos">
+                        <img class="img-fluid gallery-img" src="~/WebsiteCss/assets/images/gallery/gallery-20.jpg">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item">
+                    <a href="~/WebsiteCss/assets/images/gallery/gallery-21.jpg" data-lightbox="photos">
+                        <img class="img-fluid gallery-img" src="~/WebsiteCss/assets/images/gallery/gallery-21.jpg">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item">
+                    <a href="~/WebsiteCss/assets/images/gallery/gallery-22.jpg" data-lightbox="photos">
+                        <img class="img-fluid gallery-img" src="~/WebsiteCss/assets/images/gallery/gallery-22.jpg">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item">
+                    <a href="~/WebsiteCss/assets/images/gallery/gallery-23.jpg" data-lightbox="photos">
+                        <img class="img-fluid gallery-img" src="~/WebsiteCss/assets/images/gallery/gallery-23.jpg">
+                    </a>
+                </div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item">
+                    <a href="~/WebsiteCss/assets/images/gallery/gallery-24.jpg" data-lightbox="photos">
+                        <img class="img-fluid gallery-img" src="~/WebsiteCss/assets/images/gallery/gallery-24.jpg">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>*@
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+
+

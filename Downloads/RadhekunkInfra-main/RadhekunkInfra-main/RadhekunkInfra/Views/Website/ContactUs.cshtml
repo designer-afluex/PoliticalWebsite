@@ -1,0 +1,170 @@
+﻿@model RadhekunkInfra.Models.Website
+
+@{
+    ViewBag.Title = "ContactUs";
+    Layout = "~/Views/Shared/WebsiteLayout.cshtml";
+}
+<main class="contact-block pri-pad-b">
+    <div class="map-hold  pri-pad-b">
+        <div class="overlay">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3603.652989205388!2d81.8038503150139!3d25.41642378379464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398535ccd495b3a9%3A0x283922a0cf11b673!2sShri%20Radhey%20Kunj%20Infratech%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1567087583089!5m2!1sen!2sin" width="100%" height="450" frameborder="0" style="border:0;left:0; top:0;" allowfullscreen=""></iframe>
+        </div>
+    </div>
+    <!--map-->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-sm-7 contact-left left-block">
+                <div class="content-wrap mb-50">
+                    <h3 class="lh-normal">Get in touch</h3>
+                    <p>
+                        If you have any query, do not hesitate. Please contact with us, <br />we will call you as soon as possible.
+                    </p>
+                </div>
+                <!--top-->
+
+                <div class="info-box">
+                    <div>
+                        <span class="fa fa-map-marker"></span>
+                        <h5 class="mb-10">Official Address</h5>
+                        <p>
+                            L-12-303, Budh Vihar Colony Dev Ghat Jhalwa Allahabad - 211016 U.P. India
+                        </p>
+                    </div>
+                    <!--address-->
+
+                    <div>
+                        <span class="fa fa-phone"></span>
+                        <h5 class="mb-10">Phone Number</h5>
+                        <p>
+                            (+91) 7317767707
+                        </p>
+                    </div>
+                    <!--address-->
+
+                    <div>
+                        <span class="fa fa-envelope-open"></span>
+                        <h5 class="mb-10">Email Address</h5>
+                        <p>
+                            <a href="#">admin@shriradheykunj.com, info@shriradheykunj.com</a>
+                        </p>
+                    </div>
+                    <!--address-->
+                </div>
+            </div>
+            <!--left block-->
+
+            <div class="col-md-5 col-sm-5 contact-form">
+                <div class="box box-shadow">
+                    <div class="box-title">
+                        <h4 class="lh-normal text-white mb-0">Say something for us...</h4>
+                    </div>
+                    <!--title-->
+
+                    <form action="/Website/ContactUs" method="post">
+                        <div class="form-group">
+                            <label>How would you like us to call you?<span style="color:red;"> *</span></label>
+                            <input type="text" id="Name" name="Name" placeholder="Please write your name here" onkeypress = "return onlyAlphabets();">
+                        </div>
+                        <!--name-->
+
+                        <div class="form-group">
+                            <label>Which inbox should we reply on?<span style="color:red;"> *</span></label>
+                            <input type="text" id="Email" name="Email" placeholder="Enter your email address here">
+                        </div>
+                        <!--email-->
+                        <div class="form-group">
+                            <label>Which number should we call on? <span style="color:red;"> *</span></label>
+                            <input type="text" id="Mobile" name="Mobile" placeholder="Enter your phone no here" onkeypress = "return isNumberKey(event);">
+                        </div>
+                        <div class="form-group">
+                            <label>How can we help you?</label>
+                            <textarea placeholder="Please write your message here" id="Address" name="Address"></textarea>
+                        </div>
+                        <!--message-->
+
+                        <div class="form-group">
+                            <input type="submit" class="fa fa-long-arrow-right" value="Send Message" name="btnsave" id="btnsave" onclick="return Validate();" />
+                            <span style="color:red;">
+                                &nbsp;&nbsp; @TempData["Contactmsg"]
+                            </span>
+                           
+                            @*<button type="submit"  name="btnsave" id="btnsave" onclick="return Validate();">
+                                Send Message <i class="fa fa-long-arrow-right"></i>
+                            </button>*@
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--contact form-->
+        </div>
+    </div>
+</main>
+<!--main-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    function Validate() {
+        debugger;
+        if ($("#Name").val() == "") {
+            $("#Name").addClass('errortext');
+            $("#Name").focus();
+            return false;
+        }
+        else if ($("#Email").val() == "") {
+            $("#Email").addClass('errortext');
+            $("#Email").focus();
+            return false;
+        }
+        else if ($("#Mobile").val() == "") {
+            $("#Mobile").addClass('errortext');
+            $("#Mobile").focus();
+            return false;
+        }
+        return true;
+    }
+
+    
+
+    function isNumberKey(evt) {
+
+        var charCode = (evt.which) ? evt.which : event.keyCode;
+        if (charCode != 46 && charCode > 31
+          && (charCode < 48 || charCode > 57))
+            return false;
+
+        return true;
+    }
+
+
+    
+
+    function onlyAlphabets(e, t) {
+        try {
+            if (window.event) {
+                var charCode = window.event.keyCode;
+            }
+            else if (e) {
+                var charCode = e.which;
+            }
+            else { return true; }
+            if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || (charCode == 32))
+                return true;
+            else
+                return false;
+        }
+        catch (err) {
+            alert(err.Description);
+        }
+    }
+
+
+
+</script>
+
+<style>
+    .errortext {
+        border: 1px solid red !important;
+        background-color: #e47575 !important;
+    }
+</style>

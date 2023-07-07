@@ -1,0 +1,504 @@
+﻿@model RadhekunkInfra.Models.Plot
+
+@{
+    Layout = null;
+}
+<html>
+<head>
+    <link rel='shortcut icon' type='image/x-icon' href="~/WebsiteCss/assets/images/favicon.png" />
+    <title>PrintPlotBooking</title>
+    <style>
+        table, th, td {
+            font-size: 12px;
+            /*border: 1px solid black;*/
+            border-collapse: collapse;
+        }
+
+        th, td {
+            font-size: 12px;
+            padding: 2px;
+        }
+
+        @@media print {
+            #printPageButton {
+                display: none;
+            }
+              th, td {
+                  font-size:18px !important;
+                  padding:1px 3px 1px 3px !important;
+               }
+              .sp
+              {
+                  padding-top:50px !important;
+              }
+               .company_name
+              {
+                  margin-left:100px !important;
+                  line-height:7px !important;
+              }
+             .logo
+             {
+                 margin-top:10px !important;
+             }
+        }
+    </style>
+
+</head>
+<body>
+    <div style="border:2px solid #2e1437;padding-left:10px;padding-right:10px;">
+        <table style="border: 0px none black;">
+            <tr style="border: 0px none black;">
+                <td style="float:left">
+                    <img src="~/WebsiteCss/assets/images/radhekunj_logo.png" class="img-fluid logo" alt="logo1" style="max-width:90%;margin-left:12%" />
+
+                </td>
+                <td>
+                    <h3 class="company_name" style="margin-left:500px;">Shri Radhekunj infra-tech pvt ltd</h3>
+                    <p class="company_name" style="margin-left:500px;"><b>CIN:</b> U70109UP2017PTC093686</p>
+                </td>
+                <td>
+                    <button style="color:#ffffff;margin-left:500px; background:#a20e0e; padding: 5px" id="printPageButton" onclick="window.print()">Print</button>
+
+                </td>
+            </tr>
+        </table>
+        <table style="width:100%;background:#3b802a;color:white;margin-top:10px;">
+            <tr>
+                <td style="text-align:center">
+                    Customer Copy
+                </td>
+            </tr>
+        </table>
+
+        <table style="width: 100%;" class="table table-striped">
+            <tr>
+                <td style="border: 1px solid black;"><b>Booking For:    </b>@ViewBag.SiteName</td>
+                <td colspan="3" style="border: 1px solid black;"><b>Date :    </b> @ViewBag.BookingDate
+                @*@DateTime.Now.ToString("dd/MM/yyyy")*@
+                </td>
+                <td style="border: 1px solid black;"><b>Receipt No.    </b>@ViewBag.ReceiptNo</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black;" colspan="3"><b>Customer Id:    </b>@ViewBag.CustomerID</td>
+                <td style="border: 1px solid black;" colspan="2"><b>Mobile No.</b>@ViewBag.customerMobile</td>
+            </tr>
+            <tr><td style="border: 1px solid black;" colspan="5"><b>Received with thanks from:    </b>@ViewBag.CustomerName</td></tr>
+            <tr>
+                <td colspan="5" style="border: 1px solid black;"><b>Address:    </b>@ViewBag.Address</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black;"><b>State:    </b>@ViewBag.State</td>
+                <td style="border: 1px solid black;" colspan="3"><b>City:    </b>@ViewBag.City</td>
+                <td style="border: 1px solid black;"><b>Pin Code:    </b>@ViewBag.Pin</td>
+            </tr>
+            <tr>
+
+                <td style="border: 1px solid black;" colspan="2"><b> Site:    </b>@ViewBag.SiteName</td>
+                <td style="border: 1px solid black;"><b>Sector:    </b>@ViewBag.SectorName</td>
+                <td style="border: 1px solid black;"><b>Block:    </b>@ViewBag.BlockName</td>
+                <td style="border: 1px solid black;"><b> Plot No:    </b>@ViewBag.PlotNo</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black;" colspan="2"><b>Plot Amount:     </b>@ViewBag.NetPlotAmount /-</td>
+                <td style="border: 1px solid black;" colspan="3"><b>In Words:     </b>@ViewBag.NetPlotAmountInWords</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black;" colspan="2"><b>Deposit Amount:     </b>@ViewBag.PaidAmount /-</td>
+                <td style="border: 1px solid black;" colspan="3"><b>In Words:     </b>@ViewBag.AmountInWords</td>
+            </tr>
+            <tr>
+                @if (ViewBag.PaymentMode == "Cash")
+                {
+                    <td style="border: 1px solid black;" colspan="5"><b> Via:    </b>@ViewBag.PaymentMode</td>
+                }
+                else
+                {
+                    if (ViewBag.PaymentMode == "Cheque")
+                    {
+                        <td style="border: 1px solid black;"><b> Via:    </b>@ViewBag.PaymentMode</td>
+                        <td style="border: 1px solid black;"><b> ChequeNo:    </b>@ViewBag.TransactionNo</td>
+                        <td style="border: 1px solid black;"><b> ChequeDate:    </b>@ViewBag.TransactionDate</td>
+                        <td style="border: 1px solid black;"><b> BankName:    </b>@ViewBag.BankName</td>
+                        <td style="border: 1px solid black;"><b> BankBranch:    </b>@ViewBag.BankBranch</td>
+                    }
+                    else if (ViewBag.PaymentMode == "NEFT")
+                    {
+                        <td style="border: 1px solid black;"><b> Via:    </b>@ViewBag.PaymentMode</td>
+                        <td style="border: 1px solid black;"><b> NEFTNo:    </b>@ViewBag.TransactionNo</td>
+                        <td style="border: 1px solid black;"><b> NEFTDate:    </b>@ViewBag.TransactionDate</td>
+                        <td style="border: 1px solid black;"><b> BankName:    </b>@ViewBag.BankName</td>
+                        <td style="border: 1px solid black;"><b> BankBranch:    </b>@ViewBag.BankBranch</td>
+                    }
+                    else if (ViewBag.PaymentMode == "DD")
+                    {
+                        <td style="border: 1px solid black;"><b> Via:    </b>@ViewBag.PaymentMode</td>
+                        <td style="border: 1px solid black;"><b> DD No:    </b>@ViewBag.TransactionNo</td>
+                        <td style="border: 1px solid black;"><b> DD Date:    </b>@ViewBag.TransactionDate</td>
+                        <td style="border: 1px solid black;"><b> BankName:    </b>@ViewBag.BankName</td>
+                        <td style="border: 1px solid black;"><b> BankBranch:    </b>@ViewBag.BankBranch</td>
+                    }
+                    else
+                    {
+                        <td style="border: 1px solid black;"><b> Via:    </b>@ViewBag.PaymentMode</td>
+                        <td style="border: 1px solid black;"><b> Transdaction No:    </b>@ViewBag.TransactionNo</td>
+                        <td style="border: 1px solid black;"><b> Transdaction Date:    </b>@ViewBag.TransactionDate</td>
+                        <td style="border: 1px solid black;"><b> BankName:    </b>@ViewBag.BankName</td>
+                        <td style="border: 1px solid black;"><b> BankBranch:    </b>@ViewBag.BankBranch</td>
+                    }
+                }
+            </tr>
+            <tr>
+                <td style="border: 1px solid black;"><b>Area:    </b>@ViewBag.PlotArea</td>
+                @*<td style="border: 1px solid black;"><b>PLC:    </b>@ViewBag.PLC</td>*@
+                <td style="border: 1px solid black;" colspan="2"><b>Payment For:    </b>@ViewBag.ReasonOfPayment</td>
+                <td style="border: 1px solid black;" colspan="2"><b>Payment Date:    </b>@ViewBag.PaymentDate</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="border: 1px solid black;"><b>Associate Id:    </b>@ViewBag.AssociateID  </td>
+                <td style="border: 1px solid black;" colspan="3"><b> Name:    </b>@ViewBag.AssociateName @ViewBag.City</td>
+                @*<td style="border: 1px solid black;"><b>Mobile No.     </b>@ViewBag.Contact</td>*@
+            </tr>
+        </table>
+        @if (ViewBag.SiteName == "KamadGiri Nagar")
+        {
+            <table style="width: 50%;float:left" class="table table-striped">
+                <tr>
+                    <th style="text-align:left">Amenities-</th>
+                </tr>
+                <tr>
+                    <td>
+                        <ul style="padding-left:20px;">
+                            <li>Gated colony</li>
+                            <li>Park</li>
+                            <li>Greenery</li>
+                            <li>Electricity poles</li>
+                            <li>60ft wide damar road</li>
+                            <li>30ft wide wmm road</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+            <table style="width: 50%;float:left" class="table table-striped">
+                <tr>
+                    <td style="text-align:left;" colspan="2"><b>  Remark :-   </b></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left;" colspan="2">
+                        1.The applicant shall be liable/responsible for any payment
+                        made by him any third account and right created from there and company shall have no liability
+                        in this regards.
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:left;" colspan="2">2.This receipt is not transferable unless consented by the company.</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left;" colspan="2">
+                        3.Please keep this document in safe custody and in case same is lost/misplaced
+                        please inform to company immediately with request letter copy of fir news cutting and affidavit.
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:left;" colspan="2">4.This money receipt is subject to realization of payment mode.</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left;" colspan="2">5.In case of refund 35% of total plot amount is subject to deducation in favour of company.</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left;" colspan="2">6.Booking amount is not refundable.</td>
+                </tr>
+                <tr>
+
+                    <td style="text-align:right;margin-right:100px;"><b style="margin-right: 40px;">Accountant</b></td>
+                </tr>
+                <tr>
+                    <td class="sp" style="padding-top:30px;"></td>
+                </tr>
+            </table>
+        }
+        else
+        {
+            <table style="width: 100%;float:left" class="table table-striped">
+                <tr>
+                    <td style="text-align:left;" colspan="2"><b>  Remark :-   </b></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left;" colspan="2">
+                        1.The applicant shall be liable/responsible for any payment
+                        made by him any third account and right created from there and company shall have no liability
+                        in this regards.
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:left;" colspan="2">2.This receipt is not transferable unless consented by the company.</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left;" colspan="2">
+                        3.Please keep this document in safe custody and in case same is lost/misplaced
+                        please inform to company immediately with request letter copy of fir news cutting and affidavit.
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:left;" colspan="2">4.This money receipt is subject to realization of payment mode.</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left;" colspan="2">5.In case of refund 35% of total plot amount is subject to deducation in favour of company.</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left;" colspan="2">6.Booking amount is not refundable.</td>
+                </tr>
+                <tr>
+
+                    <td style="text-align:right;margin-right:100px;"><b style="margin-right: 40px;">Accountant</b></td>
+                </tr>
+                <tr>
+                    <td class="sp" style="padding-top:30px;"></td>
+                </tr>
+            </table>
+        }
+        <table style="width: 100%;text-align:center">
+            <tr>
+                <td>
+                    <b>Website:</b><br />   @ViewBag.Website
+                </td>
+                <td><b>Email : </b><br /> @ViewBag.EmailID</td>
+                <td><b>Contact no-</b><br /> @ViewBag.ContactNo</td>
+            </tr>
+        </table>
+        <table style="width:100%;background:#3b802a;color:white;">
+            <tr>
+                <td style="text-align:center">
+                    @ViewBag.CompanyAddress
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    <p style="page-break-after: always;">&nbsp;</p>
+    <div style="border:3px solid #2e1437;padding-left:10px;padding-right:10px;">
+        <table style="border: 0px none black;">
+            <tr style="border: 0px none black;">
+                <td>
+                    <img src="~/WebsiteCss/assets/images/radhekunj_logo.png" class="img-fluid" alt="logo1" style="max-width:90%;margin-left:12%" />
+                   
+                </td>
+                <td>
+                    <h3 class="company_name" style="margin-left:500px;">Shri Radhekunj infra-tech pvt ltd</h3>
+                    <p class="company_name" style="margin-left:500px;"><b>CIN:</b> U70109UP2017PTC093686</p>
+                </td>
+            </tr>
+
+        </table>
+        <table style="width:100%;background:#3b802a;color:white;margin-top:10px;">
+            <tr>
+                <td style="text-align:center">
+                    Office Copy
+                </td>
+            </tr>
+        </table>
+        <table style="width: 100%;" class="table table-striped">
+            <tr>
+                <td style="border: 1px solid black;"><b>Booking For:    </b>@ViewBag.SiteName</td>
+                <td colspan="3" style="border: 1px solid black;"><b>Booking Date :    </b>@ViewBag.BookingDate
+                @*@DateTime.Now.ToString("dd/MM/yyyy")*@
+                </td>
+                <td style="border: 1px solid black;"><b>Receipt No.    </b>@ViewBag.ReceiptNo</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black;" colspan="3"><b>Customer Id:    </b>@ViewBag.CustomerID</td>
+                <td style="border: 1px solid black;" colspan="2"><b>Mobile No.</b>@ViewBag.customerMobile</td>
+            </tr>
+            <tr><td style="border: 1px solid black;" colspan="5"><b>Received with thanks from:    </b>@ViewBag.CustomerName</td></tr>
+            <tr>
+                <td colspan="5" style="border: 1px solid black;"><b>Address:    </b>@ViewBag.Address</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black;"><b>State:    </b>@ViewBag.State</td>
+                <td style="border: 1px solid black;" colspan="3"><b>City:    </b>@ViewBag.City</td>
+                <td style="border: 1px solid black;"><b>Pin Code:    </b>@ViewBag.Pin</td>
+            </tr>
+            <tr>
+
+                <td style="border: 1px solid black;" colspan="2"><b> Site:    </b>@ViewBag.SiteName</td>
+                <td style="border: 1px solid black;"><b>Sector:    </b>@ViewBag.SectorName</td>
+                <td style="border: 1px solid black;"><b>Block:    </b>@ViewBag.BlockName</td>
+                <td style="border: 1px solid black;"><b> Plot No:    </b>@ViewBag.PlotNo</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black;" colspan="2"><b>Plot Amount:     </b>@ViewBag.NetPlotAmount /-</td>
+                <td style="border: 1px solid black;" colspan="3"><b>In Words:     </b>@ViewBag.NetPlotAmountInWords</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black;" colspan="2"><b>Deposit Amount:     </b>@ViewBag.PaidAmount /-</td>
+                <td style="border: 1px solid black;" colspan="3"><b>In Words:     </b>@ViewBag.AmountInWords</td>
+            </tr>
+            <tr>
+                @if (ViewBag.PaymentMode == "Cash")
+                {
+                    <td style="border: 1px solid black;" colspan="5"><b> Via:    </b>@ViewBag.PaymentMode</td>
+                }
+                else
+                {
+                    if (ViewBag.PaymentMode == "Cheque")
+                    {
+                        <td style="border: 1px solid black;"><b> Via:    </b>@ViewBag.PaymentMode</td>
+                        <td style="border: 1px solid black;"><b> ChequeNo:    </b>@ViewBag.TransactionNo</td>
+                        <td style="border: 1px solid black;"><b> ChequeDate:    </b>@ViewBag.TransactionDate</td>
+                        <td style="border: 1px solid black;"><b> BankName:    </b>@ViewBag.BankName</td>
+                        <td style="border: 1px solid black;"><b> BankBranch:    </b>@ViewBag.BankBranch</td>
+                    }
+                    else if (ViewBag.PaymentMode == "NEFT")
+                    {
+                        <td style="border: 1px solid black;"><b> Via:    </b>@ViewBag.PaymentMode</td>
+                        <td style="border: 1px solid black;"><b> NEFTNo:    </b>@ViewBag.TransactionNo</td>
+                        <td style="border: 1px solid black;"><b> NEFTDate:    </b>@ViewBag.TransactionDate</td>
+                        <td style="border: 1px solid black;"><b> BankName:    </b>@ViewBag.BankName</td>
+                        <td style="border: 1px solid black;"><b> BankBranch:    </b>@ViewBag.BankBranch</td>
+                    }
+                    else if (ViewBag.PaymentMode == "DD")
+                    {
+                        <td style="border: 1px solid black;"><b> Via:    </b>@ViewBag.PaymentMode</td>
+                        <td style="border: 1px solid black;"><b> DD No:    </b>@ViewBag.TransactionNo</td>
+                        <td style="border: 1px solid black;"><b> DD Date:    </b>@ViewBag.TransactionDate</td>
+                        <td style="border: 1px solid black;"><b> BankName:    </b>@ViewBag.BankName</td>
+                        <td style="border: 1px solid black;"><b> BankBranch:    </b>@ViewBag.BankBranch</td>
+                    }
+                    else
+                    {
+                        <td style="border: 1px solid black;"><b> Via:    </b>@ViewBag.PaymentMode</td>
+                        <td style="border: 1px solid black;"><b> Transdaction No:    </b>@ViewBag.TransactionNo</td>
+                        <td style="border: 1px solid black;"><b> Transdaction Date:    </b>@ViewBag.TransactionDate</td>
+                        <td style="border: 1px solid black;"><b> BankName:    </b>@ViewBag.BankName</td>
+                        <td style="border: 1px solid black;"><b> BankBranch:    </b>@ViewBag.BankBranch</td>
+                    }
+                }
+            </tr>
+            <tr>
+                <td style="border: 1px solid black;"><b>Area:    </b>@ViewBag.PlotArea</td>
+                @*<td style="border: 1px solid black;"><b>PLC:    </b>@ViewBag.PLC</td>*@
+                <td style="border: 1px solid black;" colspan="2"><b>Payment For:    </b>@ViewBag.ReasonOfPayment</td>
+                <td style="border: 1px solid black;" colspan="2"><b>Payment Date:    </b>@ViewBag.PaymentDate</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="border: 1px solid black;"><b>Associate Id:    </b>@ViewBag.AssociateID  </td>
+                <td style="border: 1px solid black;" colspan="3"><b> Name:    </b>@ViewBag.AssociateName @ViewBag.City</td>
+                @*<td style="border: 1px solid black;"><b>Mobile No.     </b>@ViewBag.Contact</td>*@
+            </tr>
+        </table>
+       @if (ViewBag.SiteName == "KamadGiri Nagar")
+       {
+        <table style="width: 50%;float:left" class="table table-striped">
+            <tr>
+                <th style="text-align:left">Amenities-</th>
+            </tr>
+            <tr>
+                <td>
+                    <ul style="padding-left:20px;">
+                        <li>Gated colony</li>
+                        <li>Park</li>
+                        <li>Greenery</li>
+                        <li>Electricity poles</li>
+                        <li>60ft wide damar road</li>
+                        <li>30ft wide wmm road</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+            <table style="width: 50%;float:left" class="table table-striped">
+                <tr>
+                    <td style="text-align:left;" colspan="2"><b>  Remark :-   </b></td>
+                </tr>
+                <tr>
+                    <td style="text-align:left;" colspan="2">
+                        1.The applicant shall be liable/responsible for any payment
+                        made by him any third account and right created from there and company shall have no liability
+                        in this regards.
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:left;" colspan="2">2.This receipt is not transferable unless consented by the company.</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left;" colspan="2">
+                        3.Please keep this document in safe custody and in case same is lost/misplaced
+                        please inform to company immediately with request letter copy of fir news cutting and affidavit.
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align:left;" colspan="2">4.This money receipt is subject to realization of payment mode.</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left;" colspan="2">5.In case of refund 35% of total plot amount is subject to deducation in favour of company.</td>
+                </tr>
+                <tr>
+                    <td style="text-align:left;" colspan="2">6.Booking amount is not refundable.</td>
+                </tr>
+                <tr>
+
+                    <td style="text-align:right;margin-right:100px;"><b style="margin-right: 40px;">Accountant</b></td>
+                </tr>
+                <tr>
+                    <td class="sp" style="padding-top:30px;"></td>
+                </tr>
+            </table>
+       }
+       else
+       {
+        <table style="width: 100%;float:left" class="table table-striped">
+            <tr>
+                <td style="text-align:left;" colspan="2"><b>  Remark :-   </b></td>
+            </tr>
+            <tr>
+                <td style="text-align:left;" colspan="2">
+                    1.The applicant shall be liable/responsible for any payment
+                    made by him any third account and right created from there and company shall have no liability
+                    in this regards.
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:left;" colspan="2">2.This receipt is not transferable unless consented by the company.</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;" colspan="2">
+                    3.Please keep this document in safe custody and in case same is lost/misplaced
+                    please inform to company immediately with request letter copy of fir news cutting and affidavit.
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:left;" colspan="2">4.This money receipt is subject to realization of payment mode.</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;" colspan="2">5.In case of refund 35% of total plot amount is subject to deducation in favour of company.</td>
+            </tr>
+            <tr>
+                <td style="text-align:left;" colspan="2">6.Booking amount is not refundable.</td>
+            </tr>
+            <tr>
+
+                <td style="text-align:right;margin-right:100px;"><b style="margin-right: 40px;">Accountant</b></td>
+            </tr>
+            <tr>
+                <td class="sp" style="padding-top:30px;"></td>
+            </tr>
+        </table>
+       }
+        <table style="width: 100%;text-align:center">
+            <tr>
+                <td>
+                    <b>Website:</b><br/>   @ViewBag.Website
+                </td>
+                <td><b>Email : </b><br /> @ViewBag.EmailID</td>
+                <td><b>Contact no-</b><br /> @ViewBag.ContactNo</td>
+            </tr>
+        </table>
+        <table style="width:100%;background:#3b802a;color:white;">
+            <tr>
+                <td style="text-align:center">
+                    @ViewBag.CompanyAddress
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
+

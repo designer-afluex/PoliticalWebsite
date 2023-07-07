@@ -1,0 +1,104 @@
+﻿@model PoliticalWebsite.Models.Admin
+
+@{
+    ViewBag.Title = "AdminDashboard";
+    Layout = "~/Views/Shared/Admin_LayoutPage.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+        <div class="card bg-gradient-primary text-white text-center card-shadow-primary">
+            <a href="/Master/GalleryimageList" style="text-decoration:none;color:white">
+                <div class="card-body">
+                    <h3 class="font-weight-normal">Gallery</h3>
+                    <h2 class="mb-0">@ViewBag.GalleryImage</h2>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+        <div class="card bg-gradient-danger text-white text-center card-shadow-danger">
+            <a href="/Master/EventimageList" style="text-decoration:none;color:white">
+                <div class="card-body">
+                    <h3 class="font-weight-normal">Events</h3>
+                    <h2 class="mb-0">@ViewBag.EventImage</h2>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+        <div class="card bg-gradient-warning text-white text-center card-shadow-warning">
+            <a href="/Master/NewsimageList" style="text-decoration:none;color:white">
+                <div class="card-body">
+                    <h3 class="font-weight-normal">News Press Release</h3>
+                    <h2 class="mb-0">@ViewBag.NewsImage</h2>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+        <div class="card bg-gradient-info text-white text-center card-shadow-info">
+            <a href="/Master/NewsimageList" style="text-decoration:none;color:white">
+                <div class="card-body">
+                    <h3 class="font-weight-normal">Contact Details</h3>
+                    <h2 class="mb-0">@ViewBag.Contact</h2>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<form action="/Admin/ContactList" id="form1" method="post">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- HTML5 Export Buttons table start -->
+            <div class="card">
+                <div class="card-header mt-3">
+                    <h4>Contact Details</h4>
+                </div>
+                <div class="card-body">
+                    <div class="dt-responsive table-responsive">
+                        <table id="order-listing" class="table table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>S No.</th>
+                                    <th>Name</th>
+                                    <th>Contact No.</th>
+                                    <th>Email-Id</th>
+                                    <th>Subject</th>
+                                    <th>Message</th>
+                                    <th>Date</th>
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                                @if (Model != null)
+                                {
+                                    if (Model.lstcontact != null)
+                                    {
+                                        int i = 1;
+                                        foreach (var Item in Model.lstcontact)
+                                        {
+                                            <tr>
+                                                <td>@i</td>
+                                                <td>@Item.Name</td>
+                                                <td>@Item.Mobile</td>
+                                                <td>@Item.Email</td>
+                                                <td>@Item.Subject</td>
+                                                <td>@Item.Message</td>
+                                                <td>@Item.Date</td>
+                                            </tr>
+                                            i = i + 1;
+                                        }
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
+

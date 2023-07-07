@@ -1,0 +1,362 @@
+﻿@model PoliticalWebsite.Models.Home
+
+@{
+    ViewBag.Title = "NewsPressRelease";
+    Layout = "~/Views/Shared/WebsiteLayout.cshtml";
+}
+
+<style>
+
+.nav-pills-custom .nav-link {
+    color: #aaa;
+    background: #fff;
+    position: relative;
+}
+
+.nav-pills-custom .nav-link.active {
+    color: #080000;
+    background: #fff;
+}
+
+
+/* Add indicator arrow for the active tab */
+@@media (min-width: 992px) {
+    .nav-pills-custom .nav-link::before {
+        content: '';
+        display: block;
+        border-top: 8px solid transparent;
+        border-left: 10px solid #fff;
+        border-bottom: 8px solid transparent;
+        position: absolute;
+        top: 50%;
+        right: -10px;
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+}
+
+.nav-pills-custom .nav-link.active::before {
+    opacity: 1;
+}
+.media-body
+{
+    margin-left:1rem;
+}
+
+</style>
+
+<!-- Page Wrapper -->
+<div class="page-wrapper">
+    <section class="page-header-hi" style="background-image: url('/images/ab_bg.jpg');">
+        <div class="container">
+            <div class="pbmit-title-bar-content">
+                <div class="pbmit-title-bar-content-inner">
+                    <div class="pbmit-tbar">
+                        <div class="pbmit-tbar-inner container">
+                            <h1 class="pbmit-tbar-title">समाचार और प्रेस</h1>
+                        </div>
+                    </div>
+                    <div class="pbmit-breadcrumb">
+                        <div class="pbmit-breadcrumb-inner">
+                            <span><a href="/Home/Index" class="home"><span>होम</span></a></span>
+                            <span class="sep"><i class="pbmit-base-icon-angle-double-right"></i></span>
+                            <span>
+                                <span class="post-root post post-post current-item">
+                                    समाचार और प्रेस विज्ञप्ति
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Page Content -->
+    @*<div class="page-content">
+
+        <!-- Blog Classic  -->
+        <section class="section-lgx">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 col-lg-9 blog-right-col">
+                        <div class="row">
+                            <!-- Blog 01 -->
+                            <div class="col-md-12">
+                                <article class="post blog-classic">
+                                    <div class="post-thumbnail pbmit-blog-style-2 ">
+                                        <div class="pbmit-featured-container">
+                                            <div class="pbmit-featured-wrapper">
+                                                <img src="@ViewBag.TopMainNewsImage" class="img-fluid w-100" alt="" />
+                                            </div>
+                                            <div class="pbmit-meta-date-wrapper">
+                                                <span class="pbmit-date">@ViewBag.Month</span>
+                                                <span class="pbmit-month">@ViewBag.Day</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="post-content">
+                                        <h3 class="post-box-title">@ViewBag.TopMainDiscription</h3>
+
+                                        <p>@ViewBag.TopMessage</p>
+                                        <div class="d-flex align-item-center justify-content-between">
+                                            <a href="#" class="pbmit-btn">
+                                                <span>Read More</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="post blog-classic">
+                                    <div class="post-thumbnail pbmit-blog-style-2 ">
+                                        <div class="pbmit-featured-container">
+                                            <div class="pbmit-featured-wrapper">
+                                                <img src="@ViewBag.MainNewsImage" class="img-fluid w-100" alt="" />
+                                            </div>
+                                            <div class="pbmit-meta-date-wrapper">
+                                                <span class="pbmit-date">@ViewBag.MainMonth</span>
+                                                <span class="pbmit-month">@ViewBag.MainDay</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="post-content">
+                                        @*<h3 class="post-box-title">How to invent a law & pass it in parliament</h3>*
+                                        <h3 class="post-box-title">@ViewBag.MainDiscription</h3>
+
+                                        <p>@ViewBag.MainMessage</p>
+                                        <div class="d-flex align-item-center justify-content-between">
+                                            <a href="#" class="pbmit-btn">
+                                                <span>Read More</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 blog-left-col">
+                        <aside class="sidebar">
+                            <aside class="widget widget-recent-post">
+                                <h2 class="widget-title">नवीनतम पोस्ट</h2>
+                                @if (Model != null)
+                                {
+                                    if (Model.lstNews != null)
+                                    {
+                                        int i = 0;
+                                        foreach (var item in Model.lstNews)
+                                        {
+                                            <ul class="recent-post-list">
+                                                <li class="recent-post-list-li">
+                                                    <a class="recent-post-thum" href="#">
+                                                        <img src="@item.NewsImage" class="img-fluid" alt="" />
+                                                    </a>
+                                                    <div class="media-body">
+                                                        <a href="#">@item.Discription</a>
+                                                        <span class="post-date">@item.Date</span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            i++;
+                                        }
+                                    }
+                                }
+                            </aside>
+                            </aside>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Blog Classic  End -->
+
+    </div>*@
+    <!-- Page Content End --
+</div>
+<!-- Page Wrapper End -->
+
+
+<!-- Demo header-->
+<section class="py-5 header">
+    <div class="container py-4">
+        <div class="row">
+            <div class="col-md-3">
+                <!-- Tabs nav -->
+                <div class="nav flex-column nav-pills nav-pills-custom" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link mb-3 p-3 shadow active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                        <aside class="sidebar">
+                            <ul class="recent-post-list">
+                                <li class="recent-post-list-li">
+                                    <img src="~/images/blog/blog-single1.jpg" class="img-fluid" style="height:90px" alt="" />
+                                    <div class="media-body">
+                                        <span>आज अपने विधानसभा के पगरा उर्फ़ परसिया से रिवैम्पड</span>
+                                        <span class="post-date">Date</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </aside>
+                    </a>
+
+                    <a class="nav-link mb-3 p-3 shadow" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                      
+                    <aside class="sidebar">
+                        <ul class="recent-post-list">
+                            <li class="recent-post-list-li">
+                                <img src="~/images/blog/blog-single1.jpg" class="img-fluid" style="height:90px" alt="" />
+                                <div class="media-body">
+                                    <span>Description</span>
+                                    <span class="post-date">Date</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </aside>
+                    </a>
+
+                    <a class="nav-link mb-3 p-3 shadow" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">
+                        <aside class="sidebar">
+                            <ul class="recent-post-list">
+                                <li class="recent-post-list-li">
+                                    <img src="~/images/blog/blog-single1.jpg" class="img-fluid" style="height:90px" alt="" />
+                                    <div class="media-body">
+                                        <span>Description</span>
+                                        <span class="post-date">Date</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </aside>
+                    </a>
+
+                    <a class="nav-link mb-3 p-3 shadow" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">
+                        <aside class="sidebar">
+                            <ul class="recent-post-list">
+                                <li class="recent-post-list-li">
+                                    <img src="~/images/blog/blog-single1.jpg" class="img-fluid" style="height:90px" alt="" />
+                                    <div class="media-body">
+                                        <span>Description</span>
+                                        <span class="post-date">Date</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </aside>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="col-md-9">
+                <!-- Tabs content -->
+                <div class="tab-content p-0" id="v-pills-tabContent">
+                    <div class="tab-pane fade shadow rounded bg-white show active p-5" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                        <article class="post blog-classic">
+                            <div class="post-thumbnail pbmit-blog-style-2 ">
+                                <div class="pbmit-featured-container">
+                                    <div class="pbmit-featured-wrapper">
+                                        <img src="@ViewBag.TopMainNewsImage" class="img-fluid w-100" alt="" />
+                                    </div>
+                                    <div class="pbmit-meta-date-wrapper">
+                                        <span class="pbmit-date">@ViewBag.Month</span>
+                                        <span class="pbmit-month">@ViewBag.Day</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-content">
+                                <h3 class="post-box-title">@ViewBag.TopMainDiscription</h3>
+
+                                <p>@ViewBag.TopMessage</p>
+                                <div class="d-flex align-item-center justify-content-between">
+                                    <a href="#" class="pbmit-btn">
+                                        <span>Read More</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                        <article class="post blog-classic">
+                            <div class="post-thumbnail pbmit-blog-style-2 ">
+                                <div class="pbmit-featured-container">
+                                    <div class="pbmit-featured-wrapper">
+                                        <img src="@ViewBag.TopMainNewsImage" class="img-fluid w-100" alt="" />
+                                    </div>
+                                    <div class="pbmit-meta-date-wrapper">
+                                        <span class="pbmit-date">@ViewBag.Month</span>
+                                        <span class="pbmit-month">@ViewBag.Day</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-content">
+                                <h3 class="post-box-title">@ViewBag.TopMainDiscription</h3>
+
+                                <p>@ViewBag.TopMessage</p>
+                                <div class="d-flex align-item-center justify-content-between">
+                                    <a href="#" class="pbmit-btn">
+                                        <span>Read More</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                        <article class="post blog-classic">
+                            <div class="post-thumbnail pbmit-blog-style-2 ">
+                                <div class="pbmit-featured-container">
+                                    <div class="pbmit-featured-wrapper">
+                                        <img src="@ViewBag.TopMainNewsImage" class="img-fluid w-100" alt="" />
+                                    </div>
+                                    <div class="pbmit-meta-date-wrapper">
+                                        <span class="pbmit-date">@ViewBag.Month</span>
+                                        <span class="pbmit-month">@ViewBag.Day</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-content">
+                                <h3 class="post-box-title">@ViewBag.TopMainDiscription</h3>
+
+                                <p>@ViewBag.TopMessage</p>
+                                <div class="d-flex align-item-center justify-content-between">
+                                    <a href="#" class="pbmit-btn">
+                                        <span>Read More</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="tab-pane fade shadow rounded bg-white p-5" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                        <article class="post blog-classic">
+                            <div class="post-thumbnail pbmit-blog-style-2 ">
+                                <div class="pbmit-featured-container">
+                                    <div class="pbmit-featured-wrapper">
+                                        <img src="@ViewBag.TopMainNewsImage" class="img-fluid w-100" alt="" />
+                                    </div>
+                                    <div class="pbmit-meta-date-wrapper">
+                                        <span class="pbmit-date">@ViewBag.Month</span>
+                                        <span class="pbmit-month">@ViewBag.Day</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-content">
+                                <h3 class="post-box-title">@ViewBag.TopMainDiscription</h3>
+
+                                <p>@ViewBag.TopMessage</p>
+                                <div class="d-flex align-item-center justify-content-between">
+                                    <a href="#" class="pbmit-btn">
+                                        <span>Read More</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    </div>
+
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+

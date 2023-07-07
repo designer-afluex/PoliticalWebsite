@@ -1,0 +1,64 @@
+﻿@model PoliticalWebsite.Models.Master
+
+@{
+    ViewBag.Title = "AddSliderBanner";
+    Layout = "~/Views/Shared/Admin_LayoutPage.cshtml";
+}
+
+
+
+@using (Html.BeginForm("AddSliderBanner", "Master", FormMethod.Post, new { @id = "form1", enctype = "multipart/form-data" }))
+{
+
+    <div class="row">
+        <div class="col-md-12 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <span style="color: red">
+                        @TempData["msg"]
+                    </span><br />
+                    <h3 class="card-title">Slider Banner</h3>
+                    <div class="form-group">
+                        <label>Upload Slider Banner <span style="color: red">*</span></label><br />
+                        <input type="file" id="SliderBanner" name="SliderBanner" class="form-control" />
+                    </div>
+                    <label>नोट: बैनर का साइज (ऊंचाई 626 पिक्सेल और चौड़ाई 1583 पिक्सेल) होनी चाहिए, जिससे बैनर सही दिखेगा ।</label>
+                    <div class="form-group">
+                        @Html.HiddenFor(m => m.Pk_SliderBannerId)
+                        @if (Model == null)
+                        {
+                            <input type="submit" id="btnSave" name="btnSave" class="btn btn-success pull-right" value="Save" onclick="return saveSliderBanner();" />
+                        }
+                        else
+                        {
+                            <input type="submit" id="btnUpdate" name="btnUpdate" class="btn btn-success pull-right" value="Update" onclick="return saveSliderBanner();" />
+                        }
+                        <a href="/Master/SliderBannerList" class="btn btn-primary pull-right">Slider Banner List</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+<style>
+    .errortext {
+        border: 2px solid red !important;
+    }
+</style>
+<script>
+    function saveSliderBanner() {
+        $(".errortext").removeClass("errortext");
+        if ($('#SliderBanner').val() == '') {
+            $("#SliderBanner").addClass('errortext');
+            $('#SliderBanner').focus();
+            return false;
+        }
+    }
+</script>
+
+
+
+
+
+

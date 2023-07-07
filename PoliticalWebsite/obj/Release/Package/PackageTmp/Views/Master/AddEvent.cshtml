@@ -1,0 +1,166 @@
+﻿@model PoliticalWebsite.Models.Master
+
+@{
+    ViewBag.Title = "AddEvent";
+    Layout = "~/Views/Shared/Admin_LayoutPage.cshtml";
+}
+
+<body onload="date()">
+    @using (Html.BeginForm("AddEvent", "Master", FormMethod.Post, new { @id = "form1", enctype = "multipart/form-data" }))
+    {
+        <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <span style="color: red">
+                            @TempData["msg"]
+                        </span>
+                        <br />
+                        <h3 class="card-title">Event Banner</h3>
+                        <div class="row mt-4">
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Event Heading <span style="color: red">*</span></label>
+                                    @Html.TextBoxFor(m => m.Discription, new { @placeholder = "Event Heading", @class = "form-control" })
+                                    @Html.HiddenFor(m => m.EventID)
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Town/Village</label>
+                                    @Html.TextBoxFor(m => m.Town_Village, new { @placeholder = "Town/Village", @class = "form-control"})
+                                </div>
+                            </div>
+
+                            @if (Model != null)
+                            {
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label>City/State <span style="color: red">*</span></label>
+                                        <input type="text" id="City" name="City" class="form-control" value="@ViewBag.City" placeholder="City" />
+                                    </div>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="col-lg-4">
+                                    <div class="form-group">
+                                        <label>City/State <span style="color: red">*</span></label>
+                                        <input type="text" id="City" name="City" class="form-control" value="Deoria, Uttar Pradesh" placeholder="City" />
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>Date <span style="color: red">*</span></label>
+                                    <div id="datepicker-popup" class="input-group date datepicker">
+                                        @Html.TextBoxFor(m => m.Date, new { @placeholder = "Date", @class = "form-control", @autocomplete = "off"})
+                                        <span class="input-group-addon input-group-append border-left">
+                                            <span class="mdi mdi-calendar input-group-text"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            @if (Model != null)
+                            {
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Upload Event Banner</label><br />
+                                        <input type="file" id="Event" name="Event" class="form-control" />
+                                    </div>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Upload Event Banner <span style="color: red">*</span></label><br />
+                                        <input type="file" id="Event" name="Event" class="form-control" />
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                        <label>नोट: बैनर का साइज (ऊंचाई 150 पिक्सेल और चौड़ाई 150 पिक्सेल) होनी चाहिए, जिससे बैनर सही दिखेगा । </label>
+                        <div class="row">
+                            <div class="col-lg-9">
+                                <div class="form-group">
+                                    @Html.HiddenFor(m => m.Pk_EventId)
+                                    @if (Model == null)
+                                    {
+                                        <input type="submit" id="btnSave" name="btnSave" class="btn btn-success pull-right" value="Save" onclick="return saveEvent();" />
+                                    }
+                                    else
+                                    {
+                                        <input type="submit" id="btnUpdate" name="btnUpdate" class="btn btn-success pull-right" value="Update"  />
+                                    }
+                                    <a href="/Master/EventimageList" class="btn btn-primary pull-right">Event List</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    }
+</body>
+
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script type="text/javascript">
+    debugger;
+    function date() {
+        $('#Date').datepicker({
+            format: 'dd/mm/yyyy',
+            changeYear: true,
+            changeMonth: true,
+            maxDate: 0
+        });
+    }
+                   
+</script>
+<style>
+    .errortext {
+        border: 2px solid red !important;
+    }
+</style>
+<script>
+    function saveEvent() {
+        $(".errortext").removeClass("errortext");
+        if ($('#Discription').val() == '') {
+            $("#Discription").addClass('errortext');
+            $('#Discription').focus();
+            return false;
+        }
+        if ($('#City').val() == '') {
+            $("#City").addClass('errortext');
+            $('#City').focus();
+            return false;
+        }
+        if ($('#Date').val() == '') {
+            $("#Date").addClass('errortext');
+            $('#Date').focus();
+            return false;
+        }
+        if ($('#Event').val() == '') {
+            $("#Event").addClass('errortext');
+            $('#Event').focus();
+            return false;
+        }
+    }
+</script>
+
+
+
+
+
+
+
+
+
+

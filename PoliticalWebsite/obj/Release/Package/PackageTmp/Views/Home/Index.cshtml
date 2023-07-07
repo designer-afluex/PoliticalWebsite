@@ -1,0 +1,256 @@
+﻿@model PoliticalWebsite.Models.Home
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/WebsiteLayout.cshtml";
+}
+
+<!-- page wrapper -->
+<div class="page-wrapper">
+    <!-- Page Content -->
+    <div class="page-content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 p-0">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            @if (Model != null)
+                            {
+                                if (Model.lstSliderBanner != null)
+                                {
+                                    int i = 1;
+                                    foreach (var item in Model.lstSliderBanner)
+                                    {
+                                        <div class="carousel-item active">
+                                            <img src="@item.SliderBannerImage" class="d-block w-100 img-fluid slider_img" alt="...">
+                                        </div>
+                                        i++;
+                                    }
+                                }
+                            }
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                                data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                                data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <!-- About Start -->
+        <section class="section-lg pbmit-bg-color-light home1-about-us">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xxl-4 col-xl-5 col-md-6">
+                        <div class="home1-about-us-img-left">
+                            <img src="~/images/about.png" class="rounded-circle img-fluid" style="width: 100%;" alt="">
+                        </div>
+                    </div>
+                    <div class="col-xxl-8 col-xl-7 col-md-6">
+                        <div class="pbmit-heading-subheading text-left">
+                            <h2 class="pbmit-title">सुरेन्द्र चौरसिया के बारे में</h2>
+                            <div id="google_translate_element"></div>
+                            <div class="pbmit-heading-desc pe-5">
+                                सुरेन्द्र चौरसिया जी का जन्म 22 जुलाई 1989 को देवरिया जिले के ग्राम कुशहरी में एक साधारण परिवार में हुआ था। अखिल भारतीय विद्यार्थी परिषद से जुड़कर छात्र राजनीति की शुरुआत की और फिर उत्तर प्रदेश के मुख्यमंत्री योगी आदित्यनाथ के मार्गदर्शन में हिंदुत्व की विचारधारा को अपनाते हुए हिंदू युवा वाहिनी में शामिल हो गए। सुरेन्द्र चौरसिया जी वर्तमान में 339- विधानसभा रामपुर कारखाना (देवरिया) के विधायक है |
+                                <br />
+                                सुरेन्द्र चौरसिया जी सभी लोगों के बीच में लोकप्रिय हैं। अपने कार्यालय में चौरसिया जी जनसुनवाई करके विधानसभा के लोगो की समस्याओं का निवारण करते हैं। उनकी कार्य प्रणाली और आम आदमी के प्रति संवेदनशीलता ने उन्हें एक विशेष दर्जा दिया और उन्हें जनता के बीच जनता के नेता के रूप में बहुत लोकप्रिय बना दिया। चौरसिया जी द्वारा जनता दर्शन कार्यक्रम में आने वाले सभी लोगों तथा कुछ खास समूहों जैसे दिव्यांगों, वरिष्ठ नागरिकों व महिलाओं की समस्याओं को विशेष वरीयता दी जाती है |
+                            </div>
+                            <a href="/Home/About" class="pbmit-btn pbmit-btn-hover-secondary">
+                                <span>हमारे बारे में</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About End -->
+
+
+
+        <!-- Service Start -->
+        <section class="section-lg">
+            <div class="home1-service-section container-fluid">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-12 service-tbox-left home1-service-arrow">
+                        <div class="pbmit-heading-subheading text-left">
+                            <h2 class="pbmit-title text-white">
+                                हमारी फोटो गैलरी
+                            </h2>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-8 col-lg-12">
+                        <div class="swiper-slider" data-autoplay="false" data-dots="false" data-arrows="true"
+                             data-arrows-class="home1-service-arrow" data-columns="3" data-margin="30" data-effect="slide">
+                            <div class="swiper-wrapper">
+                                @if (Model != null)
+                                {
+                                    if (Model.lstgallery != null)
+                                    {
+                                        int i = 0;
+                                        foreach (var item in Model.lstgallery)
+                                        {
+                                            <div class="swiper-slide">
+                                                <article class="pbmit-service-style-2">
+                                                    <div class="pbminfotech-post-item">
+                                                        <div class="pbmit-service-img-wrapper">
+                                                            <div class="pbmit-featured-wrapper">
+                                                                <a href="/Home/Gallery">
+                                                                    <img src="@item.GalleryImage" class="img-fluid gallery_img"
+                                                                         alt="Political_Image">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </article>
+                                            </div>
+                                            i++;
+                                        }
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Service End -->
+        <!-- Future Start -->
+        <section class="section-lgb pbmit-bg-color-light">
+            <div class="container">
+                <div class="pbmit-heading-subheading text-center pt-5">
+                    <h2 class="pbmit-title">हमारे राजनीतिक भविष्य में भाग लें</h2>
+                </div>
+                <div class="row">
+                    @if (Model != null)
+                    {
+                        if (Model.lstevent != null)
+                        {
+                            int i = 0;
+                            foreach (var item in Model.lstevent)
+                            {
+                                <div class="col-xl-6 col-lg-12">
+                                    <div class="wpem-event-action-url event-style-color tour">
+                                        <div class="wpem-event-banner">
+                                            <div class="wpem-event-banner-img"
+                                                 style="background-image: url('@item.EventImage')">
+                                                <div class="wpem-event-date">
+                                                    <div class="wpem-event-date-type">
+                                                        <div class="wpem-from-date">
+                                                            <div class="wpem-date">29</div>
+                                                            <div class="wpem-month">Jul</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="wpem-event-infomation">
+                                            <div class="wpem-event-date">
+                                                <div class="wpem-event-date-type">
+                                                    <div class="wpem-from-date">
+                                                        <div class="wpem-date">29</div>
+                                                        <div class="wpem-month">Jul</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="wpem-event-details">
+                                                <div class="wpem-event-title">
+                                                    <h3 class="wpem-heading-text">
+                                                        <a href="#">@item.Discription</a>
+                                                    </h3>
+                                                </div>
+                                                <div class="pbmit-event-meta">
+                                                    <div class="wpem-event-location">
+                                                        <span class="wpem-event-location-text">@item.Town_Village @item.City</span>
+                                                    </div>
+                                                    <div class="wpem-event-date-time">
+                                                        <span class="wpem-event-date-time-text">@item.Date</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="pbmit-event-arrow-link">
+                                            <a href="#" class="event-style-color tour"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                i++;
+                            }
+                        }
+                    }
+                </div>
+            </div>
+        </section>
+        <!-- Future End -->
+        <!-- Portfolio Start -->
+        <section class="section-lg">
+            <div class="pbmit-heading-subheading text-center">
+                <h2 class="pbmit-title"> नवीनतम समाचार और प्रेस</h2>
+            </div>
+            <div class="container">
+                <div class="swiper-slider" data-autoplay="false" data-dots="true" data-arrows="false" data-columns="1"
+                     data-margin="" data-effect="slide">
+                    <div class="swiper-wrapper">
+                        @if (Model != null)
+                        {
+                            if (Model.lstNews != null)
+                            {
+                                int i = 0;
+                                foreach (var item in Model.lstNews)
+                                {
+
+                                    <div class="swiper-slide">
+                                        <!-- Slide1 -->
+                                        <article class="pbmit-static-box-style-1">
+                                            <div class="pbmit-imgbox col-md-6 col-sm-12"
+                                                 style="background-image:url('@item.NewsImage')">
+                                                <div class="pbmit-imgbox-wrapper">
+                                                    <img src="@item.NewsImage" class="news_img" alt="Political Commentator" />
+                                                </div>
+                                            </div>
+                                            <div class="pbmit-contentbox col-md-6 col-sm-12">
+                                                <div class="pbminfotech-box-number">
+                                                    <h4>@item.Year</h4>
+                                                </div>
+                                                <div class="pbminfotech-box-title">
+                                                    <h4>Political Commentator</h4>
+                                                </div>
+                                                <div class="pbminfotech-static-box-desc">
+                                                    @item.Discription
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                    i++;
+                                }
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Portfolio End -->
+    </div>
+    <!-- Page Content End -->
+</div>
+<!-- page wrapper End -->
+
+
